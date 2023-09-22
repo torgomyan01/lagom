@@ -32,6 +32,12 @@
   background-size: cover;
 }
 
+@mixin flexCenter(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // HELPER SECTION
 
 $mobile: 320px;

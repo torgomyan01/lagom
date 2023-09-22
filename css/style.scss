@@ -15,12 +15,12 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
+  background: #303030;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background:linear-gradient(172deg, rgba(88, 81, 219, 0.97), #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
+  background: #595959;
 }
 
 
@@ -55,8 +55,166 @@ a {
   }
 }
 
+$c-black: #303030;
 
 .container{
-  max-width: 1347px;
+  max-width: 1360px;
   width: 100%;
 }
+
+
+.btn-green{
+  border-radius: 100px;
+  background: #50BA1E;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.btn-white{
+  border-radius: 100px;
+  background: #FFF;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+$transMenu: 0.8s;
+
+.max-header{
+
+
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    height: 615px;
+    transition: $transMenu;
+    z-index: 1;
+
+    .nav-menu{
+      height: 96px;
+      @include flex('sb', 'c');
+      position: relative;
+    }
+    .nav-logo{
+      //width: 104px;
+      //height: 32px;
+      width: 772px;
+      height: 237px;
+      position: absolute;
+      left: 50%;
+      top: 255px;
+      transform: translate(-50%, -50%);
+      transition: $transMenu;
+      svg{
+        width: 100%;
+        height: 100%;
+        path{
+          transition: $transMenu;
+        }
+      }
+    }
+    .home-for-people{
+      margin-left: 0;
+      transition: $transMenu;
+    }
+    .btn-menu, .btn-white{
+      transition: $transMenu;
+    }
+  }
+
+  header{
+    width: 100%;
+    height: 900px;
+    background: url("../images/header-bg.png") no-repeat center;
+    background-size: cover;
+    transform: translateY(615px);
+    transition: $transMenu;
+  }
+
+  &.nav--fixed{
+    header{
+      transform: translateY(96px);
+    }
+    nav{
+      height: 96px;
+      background: transparent;
+
+      .nav-logo{
+        width: 104px;
+        height: 32px;
+        left: 0;
+        top: 27px;
+        transform: translate(0, 0);
+        svg{
+          width: 100%;
+          height: 100%;
+          path{
+            fill: #fff;
+          }
+        }
+      }
+      .home-for-people{
+        margin-left: 200px;
+        color: #fff;
+      }
+      a{
+        color: #fff;
+      }
+      .btn-menu{
+        color: #fff;
+      }
+      .btn-white{
+        border-color: #fff;
+      }
+    }
+  }
+
+
+  .good-luck{
+    @include flex('s', 'c');
+    &-item{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      @include flexCenter;
+      background: #50BA1E;
+      color: #fff;
+      margin-left: -10px;
+      border: 1px solid #fff;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:hover{
+        position: relative;
+        z-index: 10;
+      }
+    }
+  }
+
+}
+
+.custom-tooltip{
+
+  .tooltip-inner{
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.10);
+    padding: 12px;
+    color: $c-black;
+    text-align: left;
+
+  }
+  .tooltip-arrow{
+    &:before{
+      display: none !important;
+    }
+  }
+}
+

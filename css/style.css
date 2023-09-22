@@ -13,12 +13,12 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
+  background: #303030;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(172deg, rgba(88, 81, 219, 0.97), #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
+  background: #595959;
 }
 
 * {
@@ -51,8 +51,146 @@ a {
   }
 }
 .container {
-  max-width: 1347px;
+  max-width: 1360px;
   width: 100%;
+}
+
+.btn-green {
+  border-radius: 100px;
+  background: #50BA1E;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.btn-white {
+  border-radius: 100px;
+  background: #FFF;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.max-header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  height: 615px;
+  transition: 0.8s;
+  z-index: 1;
+}
+.max-header nav .nav-menu {
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.max-header nav .nav-logo {
+  width: 772px;
+  height: 237px;
+  position: absolute;
+  left: 50%;
+  top: 255px;
+  transform: translate(-50%, -50%);
+  transition: 0.8s;
+}
+.max-header nav .nav-logo svg {
+  width: 100%;
+  height: 100%;
+}
+.max-header nav .nav-logo svg path {
+  transition: 0.8s;
+}
+.max-header nav .home-for-people {
+  margin-left: 0;
+  transition: 0.8s;
+}
+.max-header nav .btn-menu, .max-header nav .btn-white {
+  transition: 0.8s;
+}
+.max-header header {
+  width: 100%;
+  height: 900px;
+  background: url("../images/header-bg.png") no-repeat center;
+  background-size: cover;
+  transform: translateY(615px);
+  transition: 0.8s;
+}
+.max-header.nav--fixed header {
+  transform: translateY(96px);
+}
+.max-header.nav--fixed nav {
+  height: 96px;
+  background: transparent;
+}
+.max-header.nav--fixed nav .nav-logo {
+  width: 104px;
+  height: 32px;
+  left: 0;
+  top: 27px;
+  transform: translate(0, 0);
+}
+.max-header.nav--fixed nav .nav-logo svg {
+  width: 100%;
+  height: 100%;
+}
+.max-header.nav--fixed nav .nav-logo svg path {
+  fill: #fff;
+}
+.max-header.nav--fixed nav .home-for-people {
+  margin-left: 200px;
+  color: #fff;
+}
+.max-header.nav--fixed nav a {
+  color: #fff;
+}
+.max-header.nav--fixed nav .btn-menu {
+  color: #fff;
+}
+.max-header.nav--fixed nav .btn-white {
+  border-color: #fff;
+}
+.max-header .good-luck {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.max-header .good-luck-item {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #50BA1E;
+  color: #fff;
+  margin-left: -10px;
+  border: 1px solid #fff;
+}
+.max-header .good-luck-item:first-child {
+  margin-left: 0;
+}
+.max-header .good-luck-item:hover {
+  position: relative;
+  z-index: 10;
+}
+
+.custom-tooltip .tooltip-inner {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  color: #303030;
+  text-align: left;
+}
+.custom-tooltip .tooltip-arrow:before {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
