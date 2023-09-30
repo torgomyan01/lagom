@@ -62,6 +62,11 @@ $c-black: #303030;
   width: 100%;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+
 
 .btn-green{
   border-radius: 100px;
@@ -82,6 +87,20 @@ $c-black: #303030;
 }
 
 $transMenu: 0.8s;
+
+
+.heading{
+  color: #303030;
+  font-size: 13.5rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -12.96px;
+  text-transform: capitalize;
+}
+
+
+// Max Header
+
 
 .max-header{
 
@@ -186,7 +205,7 @@ $transMenu: 0.8s;
       @include flexCenter;
       background: #50BA1E;
       color: #fff;
-      margin-left: -10px;
+      margin-left: -0.625rem;
       border: 1px solid #fff;
       &:first-child{
         margin-left: 0;
@@ -205,8 +224,8 @@ $transMenu: 0.8s;
   .tooltip-inner{
     border-radius: 8px;
     background: #FFF;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.10);
-    padding: 12px;
+    box-shadow: 0 0.125rem 1rem 0 rgba(0, 0, 0, 0.10);
+    padding: 0.75rem;
     color: $c-black;
     text-align: left;
 
@@ -218,3 +237,306 @@ $transMenu: 0.8s;
   }
 }
 
+
+//.. Max header
+
+
+//.... .......About
+
+
+.lagom-about{
+  margin-top: 150px;
+  margin-bottom: 112px;
+  .about-subtitle{
+    color: rgba(48, 48, 48, 0.60);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    max-width: 500px;
+    width: 100%;
+    margin: 58px auto 0 auto;
+  }
+
+
+  .user-about{
+    display: flex;
+    justify-content: end;
+    margin-top: -40px;
+    h4{
+      color: #303030;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    span{
+      color: #303030;
+      font-size: 0.875rem;
+      font-weight: 400;
+      text-align: right;
+      display: block;
+    }
+  }
+
+
+}
+
+//................. Aboout -end
+
+
+
+//.........principles_of_Lagom_house
+
+.link-right{
+    width: 4rem;
+    height: 4rem;
+  background: #50BA1E;
+  text-align: right;
+  padding: 8px 8px 0 0;
+  cursor: pointer;
+  img{
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#panels #panels-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+}
+#panels #panels-container .panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.panel-title{
+  color: #303030;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.gallery{
+  position: relative;
+  left: -30px;
+  top: 100px;
+  .box1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
+    max-width: 960px;
+    width: 100%;
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    .link-right1{
+      position: absolute;
+      left: -64px;
+      bottom: -64px;
+    }
+  }
+  .box2{
+    position: absolute;
+    top: 22px;
+    left: 100px;
+    max-width: 212px;
+    width: 100%;
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    .link-right1{
+      position: absolute;
+      left: -64px;
+      bottom: -64px;
+    }
+  }
+
+  .box3{
+    position: absolute;
+    top: 450px;
+    left: 280px;
+    max-width: 282px;
+    width: 100%;
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    .link-right1{
+      position: absolute;
+      right: -64px;
+      top: -64px;
+    }
+  }
+
+  .box4{
+    position: absolute;
+    right: 0;
+    top: -40px;
+    max-width: 308px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .link-right1{
+      position: absolute;
+      left: -64px;
+      bottom: -64px;
+    }
+  }
+  .box5{
+    position: absolute;
+    right: 80px;
+    top: 490px;
+    max-width: 230px;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .link-right1{
+      position: absolute;
+      left: -64px;
+      bottom: -64px;
+    }
+  }
+
+  }
+
+
+.inner{
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  .box-title{
+    margin-right: 400px;
+    margin-left: -30px;
+    position: relative;
+    top: 50px;
+    h3{
+      color: #303030;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+
+  .gallery2{
+    position: relative;
+    top: 70px;
+
+    .box1{
+      max-width: 400px;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .link-right1{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      .box1-text{
+        right: -200px;
+        position: absolute;
+        color: rgba(48, 48, 48, 0.60);
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.32px;
+      }
+    }
+    .box2{
+      max-width: 200px;
+      width: 100%;
+      position: absolute;
+      left: -170px;
+      top: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .link-right1{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      .box1-text{
+        left: -180px;
+        top: 80%;
+        position: absolute;
+        color: rgba(48, 48, 48, 0.60);
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.32px;
+        span{
+          margin-left: 65px;
+        }
+      }
+    }
+    .box3{
+      max-width: 200px;
+      width: 100%;
+      position: absolute;
+      bottom: -30px;
+      right: -110px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .link-right1{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      .box1-text{
+        right: -180px;
+        top: 80%;
+        position: absolute;
+        color: rgba(48, 48, 48, 0.60);
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.32px;
+      }
+    }
+
+  }
+
+
+}
+
+
+//........... principles_of_Lagom_house End
