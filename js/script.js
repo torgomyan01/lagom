@@ -132,3 +132,24 @@ tween = gsap.to(panels, {
 // });
 
 
+
+// ....... planning
+
+
+const btn_col = document.querySelector('#col-box1-btn')
+const btn_buy = document.querySelector('#btn-buy')
+const btn_prev = document.querySelector('#btn-prev')
+const col_box1 = document.querySelector('#col-box1')
+const col_box2 = document.querySelector('#col-box2')
+
+btn_col.addEventListener('click', ()=>{
+    col_box1.classList.remove('active')
+    col_box2.classList.add('active')
+})
+
+btn_prev.addEventListener('click', ()=>{
+    col_box1.classList.add('active')
+    col_box2.classList.remove('active')
+})
+
+

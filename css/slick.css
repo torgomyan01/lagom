@@ -117,3 +117,49 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+.def-switch span {
+    border-radius: 30px;
+    background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+    width: 44px;
+    height: 24px;
+    padding: 0 2px;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: 0.3s background-color;
+    transition: 0.3s background-color;
+}
+
+.def-switch span:hover{
+    background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+}
+
+.def-switch span:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 22px;
+    background: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+.def-switch input {
+    display: none;
+}
+
+.def-switch input:checked ~ span:after {
+    left: 21px;
+}
+
+.def-switch input:checked ~ span {
+    background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+}
+
+.def-switch input:checked ~ span:hover{
+    background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+}

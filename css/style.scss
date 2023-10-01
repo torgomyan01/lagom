@@ -343,16 +343,16 @@ $transMenu: 0.8s;
 .gallery{
   position: relative;
   left: -30px;
-  top: 90px;
+  top: 80px;
   .box1{
     position: absolute;
     left: 50%;
-    transform: translateX(-45%);
-    max-width: 960px;
+    transform: translateX(-50%);
+    max-width: 950px;
     width: 100%;
     img {
     width: 100%;
-    height: 100%;
+      height: 100%;
     object-fit: cover;
   }
     .link-right1{
@@ -438,23 +438,23 @@ $transMenu: 0.8s;
 .inner{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 60px;
   .box-title{
-    margin-right: 400px;
-    margin-left: -30px;
     position: relative;
     top: 50px;
+    left: -30px;
     h3{
       color: #303030;
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: 700;
     }
   }
 
   .gallery2{
     position: relative;
-    top: 70px;
-
+    top: 40px;
+    left: -180px;
     .box1{
       max-width: 400px;
       width: 100%;
@@ -472,7 +472,7 @@ $transMenu: 0.8s;
         right: -200px;
         position: absolute;
         color: rgba(48, 48, 48, 0.60);
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         letter-spacing: -0.32px;
       }
@@ -501,7 +501,7 @@ $transMenu: 0.8s;
         top: 80%;
         position: absolute;
         color: rgba(48, 48, 48, 0.60);
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         letter-spacing: -0.32px;
         span{
@@ -535,7 +535,7 @@ $transMenu: 0.8s;
         top: 80%;
         position: absolute;
         color: rgba(48, 48, 48, 0.60);
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         letter-spacing: -0.32px;
       }
@@ -559,9 +559,9 @@ $transMenu: 0.8s;
 
   .title{
     color: #303030;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 24px; /* 150% */
+    line-height: 1.5rem; /* 150% */
     max-width: 480px;
     width: 100%;
   }
@@ -570,16 +570,16 @@ $transMenu: 0.8s;
     max-width: 480px;
     width: 100%;
     color: rgba(48, 48, 48, 0.60);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 24px; /* 150% */
+    line-height: 1.5rem; /* 150% */
   }
 
   .title5{
     color: #303030;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 1.5rem;
     max-width: 511px;
     width: 100%;
     margin-left: -70px;
@@ -587,7 +587,7 @@ $transMenu: 0.8s;
 
   .heading-5{
     color: #303030;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
   }
 
@@ -601,9 +601,9 @@ $transMenu: 0.8s;
     align-items: center;
     cursor: pointer;
     color: #FFF;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
-    line-height: 14px; /* 100% */
+    line-height: 0.875rem; /* 100% */
   }
 
 
@@ -616,3 +616,280 @@ $transMenu: 0.8s;
 }
 
 //........... principles_of_Lagom_house End
+
+
+//. ........ Planning .......
+
+
+
+.planning{
+
+  .image-box{
+    width: 100%;
+    height: 100%;
+  }
+
+  .container1{
+    margin-top: 90px;
+  }
+
+  .col-box{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    background: linear-gradient(0deg, #50BA1E 0%, #50BA1E 100%);
+
+    h5{
+      color: rgba(255, 255, 255, 0.60);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1rem; /* 133.333% */
+      letter-spacing: -0.36px;
+    }
+
+    .box-head{
+      color: #FFF;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .box-title{
+      color: rgba(255, 255, 255, 0.80);
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+    }
+
+    .select-box{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .select{
+        width: 45%;
+        margin-bottom: 15px;
+
+
+
+        select{
+          width: 100%;
+          padding: 16px;
+          background: #fff;
+          border-radius: 4px;
+          color: #303030;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: -0.42px;
+          option{
+            padding: 15px 0;
+          }
+        }
+
+      }
+
+    }
+
+
+    .check-box{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      .check{
+        margin-right: 26px;
+        display: flex;
+        align-items: center;
+        &:last-child{
+          margin-right: 0;
+        }
+        input{
+          width: 20px;
+          height: 20px;
+        }
+        span{
+          color: #FFF;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 16px; /* 114.286% */
+          letter-spacing: -0.42px;
+        }
+      }
+
+    }
+
+
+    .btn-planning{
+      width: 100%;
+      margin-top: 130px;
+      button{
+        display: flex;
+        width: 100%;
+        padding: 16px 24px 18px 24px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        background: #FFF;
+        color: #303030;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 14px; /* 100% */
+      }
+    }
+
+  }
+
+  .col-box1{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+
+  .col-box2{
+    display: none;
+    &.active{
+      display: block;
+    }
+    .buttons-icons{
+      margin-top: 24px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .button-icon{
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: #F5F7F9;
+        color: #303030;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 14px; /* 100% */
+        cursor: pointer;
+      }
+
+      .icon{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffff;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+    }
+
+    .box-title2{
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+      margin: 24px 0;
+    }
+
+
+    .scroll-box{
+      height: 200px;
+      overflow-y: auto;
+      &::-webkit-scrollbar-thumb {
+        background: #fff;
+      }
+      &::-webkit-scrollbar-track {
+        background: #beb9b9;
+      }
+      p{
+        color: #FFF;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1rem; /* 114.286% */
+      }
+    }
+
+    .switch-box{
+      padding: 24px 0;
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+      span{
+        color: #FFF;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px; /* 114.286% */
+      }
+
+    }
+
+
+    .price-box{
+      display: flex;
+      justify-content: space-between;
+      margin: 24px 0;
+      h4{
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.5rem; /* 171.429% */
+      }
+      .price{
+        samp{
+          color: rgba(255, 255, 255, 0.60);
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 24px; /* 150% */
+          text-decoration: line-through;
+        }
+        span{
+          color: #FFF;
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 1.5rem; /* 100% */
+        }
+      }
+    }
+
+
+    .buttons{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      button{
+        display: flex;
+        padding: 1rem 1.5rem 1.125rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        background: #FFF;
+        color: #303030;
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 14px; /* 100% */
+      }
+      .btn-white{
+        width: 70%;
+      }
+
+      .btn-green{
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        background: transparent;
+        color: #fff;
+        width: 30%;
+      }
+
+    }
+
+  }
+
+
+}
+
+
+
+
+
+//............ Planning end
+
+
