@@ -75,17 +75,31 @@ tween = gsap.to(panels, {
 });
 
 
-gsap.to(".img-1", {
-    y: 100,
-    duration: 2,
-    ease: "elastic",
-    scrollTrigger: {
-        trigger: ".img-1",
-        containerAnimation: tween,
-        start: "left center",
-        toggleActions: "play none none reset"
-    }
-});
+// gsap.to(".gallery2", {
+//     y: -100,
+//     x: -100,
+//     duration: 2,
+//     ease: "elastic",
+//     scrollTrigger: {
+//         trigger: ".gallery2",
+//         containerAnimation: tween,
+//         start: "left center",
+//         toggleActions: "play none none reset"
+//     }
+// });
+
+// gsap.to(".image-3-1", {
+//     y: -100,
+//     x: -100,
+//     duration: 2,
+//     ease: "elastic",
+//     scrollTrigger: {
+//         trigger: ".image-3-1",
+//         containerAnimation: tween,
+//         start: "left center",
+//         toggleActions: "play none none reset"
+//     }
+// });
 
 
 // let elements = gsap.utils.toArray(document.querySelectorAll(".panel h2"));

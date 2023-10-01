@@ -246,7 +246,7 @@ $transMenu: 0.8s;
 
 .lagom-about{
   margin-top: 150px;
-  margin-bottom: 112px;
+  margin-bottom: 100px;
   .about-subtitle{
     color: rgba(48, 48, 48, 0.60);
     font-size: 1rem;
@@ -343,7 +343,7 @@ $transMenu: 0.8s;
 .gallery{
   position: relative;
   left: -30px;
-  top: 100px;
+  top: 90px;
   .box1{
     position: absolute;
     left: 50%;
@@ -427,8 +427,8 @@ $transMenu: 0.8s;
     }
     .link-right1{
       position: absolute;
-      left: -64px;
-      bottom: -64px;
+      right: -64px;
+      top: -64px;
     }
   }
 
@@ -476,6 +476,9 @@ $transMenu: 0.8s;
         font-weight: 400;
         letter-spacing: -0.32px;
       }
+      .box2-text{
+        right: -150px ;
+      }
     }
     .box2{
       max-width: 200px;
@@ -505,6 +508,11 @@ $transMenu: 0.8s;
           margin-left: 65px;
         }
       }
+      .box2-text{
+       span{
+         margin-left: 100px;
+       }
+      }
     }
     .box3{
       max-width: 200px;
@@ -531,6 +539,9 @@ $transMenu: 0.8s;
         font-weight: 400;
         letter-spacing: -0.32px;
       }
+      .box2-text{
+        right: -150px;
+        }
     }
 
   }
@@ -538,5 +549,70 @@ $transMenu: 0.8s;
 
 }
 
+.inner2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  width: 100%;
+  height: 100%;
+
+  .title{
+    color: #303030;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .title2{
+    max-width: 480px;
+    width: 100%;
+    color: rgba(48, 48, 48, 0.60);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+  }
+
+  .title5{
+    color: #303030;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    max-width: 511px;
+    width: 100%;
+    margin-left: -70px;
+  }
+
+  .heading-5{
+    color: #303030;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .green-box{
+    width: 172px;
+    height: 172px;
+    background: #50BA1E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px; /* 100% */
+  }
+
+
+}
+
+
+.inner3{
+  justify-content: center;
+  gap: 600px;
+}
 
 //........... principles_of_Lagom_house End
