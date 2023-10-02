@@ -141,6 +141,12 @@ const btn_buy = document.querySelector('#btn-buy')
 const btn_prev = document.querySelector('#btn-prev')
 const col_box1 = document.querySelector('#col-box1')
 const col_box2 = document.querySelector('#col-box2')
+const switch_planning = document.querySelector('#switch-planning input')
+const container1 = document.querySelector('#container1')
+const slider_planning = document.querySelector('#slider-image')
+const open_close = document.querySelector('#open-close')
+const col_green2 = document.querySelector('#col-green2')
+const col_green = document.querySelector('#col-green')
 
 btn_col.addEventListener('click', ()=>{
     col_box1.classList.remove('active')
@@ -152,4 +158,99 @@ btn_prev.addEventListener('click', ()=>{
     col_box2.classList.remove('active')
 })
 
+switch_planning.addEventListener('change', (e)=>{
+    if(!e.currentTarget.checked){
+        container1.classList.add('active')
+        slider_planning.classList.remove('active')
+        open_close.classList.remove('active')
+    } else {
+        slider_planning.classList.add('active')
+        container1.classList.remove('active')
+        open_close.classList.add('active')
+    }
+})
 
+
+open_close.addEventListener('click', ()=>{
+    col_green2.classList.toggle('active')
+    col_green.classList.toggle('active')
+})
+
+
+// ......
+
+
+const headerSliderArray = [
+    'images/slider1.png',
+    'https://picsum.photos/2440/1730?random=1',
+    'https://picsum.photos/2440/1730?random=2',
+    'https://picsum.photos/2440/1730?random=3',
+    'https://picsum.photos/2440/1730?random=4',
+]
+
+const left_btn = document.querySelector('.left-btn')
+const right_btn = document.querySelector('.right-btn')
+
+
+left_btn.addEventListener('click', ()=>{
+    ChangeSlider('minus')
+})
+
+right_btn.addEventListener('click', ()=>{
+    ChangeSlider('plus')
+})
+let num = 0;
+
+
+// function clearActive(){
+//     const buttons_span = document.querySelectorAll('.icon-item')
+//     buttons_span.forEach(elem =>{
+//         if(elem.classList.contains('active')){
+//             elem.classList.remove('active')
+//             /* slider_image.forEach(elem => elem.classList.remove('active'))*/
+//         }
+//     })
+//
+// }
+
+const headerImageBlock = document.querySelector('.slider-image');
+const count_span = document.querySelector('.count span');
+const count_samp = document.querySelector('.count samp');
+count_span.innerHTML = `${num + 1} / ${headerSliderArray.length}`
+
+function ChangeSlider(numStatus){
+
+    numStatus === 'plus' ? num++ : num--
+    console.log(num)
+    if(num >= headerSliderArray.length){
+        num = 0
+    } else if(num < 0){
+        num = headerSliderArray.length-1
+    }
+    // clearActive()
+    count_span.innerText = `${num  + 1} / ${headerSliderArray.length}`
+    headerImageBlock.style.backgroundImage = `url(${headerSliderArray[num]})`;
+    // slider_image[num].classList.add('active')
+
+}
+
+
+
+/* Panels */
+const youAdd = gsap.utils.toArray("#you");
+const aaa = gsap.to(youAdd, {
+    yPercent: 100,
+    ease: "none",
+    scrollTrigger: {
+        trigger: "#you-add-body",
+        pin: true,
+        start: "top",
+        end: "top",
+        scrub: 1,
+        snap: {
+            snapTo: 2,
+            inertia: false,
+            // duration: {min: 0.1, max: 0.1}
+        },
+    }
+});

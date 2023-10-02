@@ -20,6 +20,17 @@
     content: "\f005"
 }
 
+.fa-arrow-right:before{
+    content: "\f061"
+}
+
+.fa-arrow-left:before{
+    content: "\f060"
+}
+.fa-caret-up:before{
+    content: "\f0d8"
+}
+
 
 /*---------------------------------*/
 
