@@ -252,20 +252,130 @@ function ChangeSlider(numStatus){
 // gsap.registerPlugin(ScrollTrigger);
 
 
+// const scrollTop = $('#youll-get').offset().top;
+// const contHeight = $('#container').height();
+// const panelss = gsap.utils.toArray(".panel-youl");
+//
+//
+// gsap.to(".panel-youl:not(:last-child)", {
+//     yPercent: -100,
+//     ease: "slow",
+//     stagger: 0.5,
+//     scrollTrigger: {
+//         trigger: "#container",
+//         start: "top top",
+//         end: `+=${panelss.length * contHeight}px`,
+//         scrub: 1,
+//         pin: true,
+//     }
+// });
+//
+//
+// gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
+// const navLinks = gsap.utils.toArray(".section_nav a");
+// navLinks.forEach((link, i) => {
+//     link.addEventListener("click", e => {
+//         e.preventDefault();
+//         console.log(i)
+//         gsap.to(window,
+//           {
+//               scrollTo: scrollTop + (i * contHeight)
+//           });
+//     });
+// });
+//
+// panelss.forEach((panel, i) => {
+//     ScrollTrigger.create({
+//         start: 0,
+//         end: scrollTop + (i * contHeight) - contHeight,
+//         markers: true,
+//         onLeave: () => {
+//             if(navLinks[i + 1]) {
+//                 gsap.to(navLinks[i + 1], {scale: 1.3, color: "red"});
+//                 gsap.to(navLinks[i], {scale: 1, color: "blue"});
+//             }
+//         },
+//         onEnterBack: () => {
+//             gsap.to(navLinks[i], {scale: 1.3, color: "red"});
+//             if(navLinks[i + 1]) {
+//                 gsap.to(navLinks[i + 1], {scale: 1, color: "blue"});
+//             }
+//         },
+//     })
+// });
+
+
+////  22
+
+// gsap.to(".panel-youl:not(:last-child)", {
+//     yPercent: -100,
+//     ease: "slow",
+//     stagger: 0.5,
+//     scrollTrigger: {
+//         trigger: "#container",
+//         start: "top top",
+//         end: "+=500%",
+//         scrub: 1,
+//         pin: true
+//     }
+// });
+//
+// gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
+//
+//
+// const scrollTop = $('#youll-get').offset().top;
+// const contHeight = $('#container').height();
+//
+// const pinSpacer = document.querySelector('.pin-spacer');
+//
+//
+// const navLinks = gsap.utils.toArray(".section_nav a");
+// navLinks.forEach((link, i) => {
+//     link.addEventListener("mouseover", e => {
+//         e.preventDefault();
+//         gsap.to(window, {scrollTo: scrollTop + (i * contHeight)});
+//     });
+// });
+//
+// const panelss = gsap.utils.toArray(".panel-youl");
+// panelss.forEach((panel, i) => {
+//     console.log(navLinks)
+//     ScrollTrigger.create({
+//         start: `${scrollTop}` - 50 ,
+//         end: (i + 1) * contHeight * 2.2,
+//         onLeave: () => {
+//             if(navLinks[i + 1]) {
+//                 gsap.to(navLinks[i + 1], {scale: 1.3, color: "#303030"});
+//                 gsap.to(navLinks[i], {scale: 1, color: "#30303099"});
+//             }
+//         },
+//         onEnterBack: () => {
+//             gsap.to(navLinks[i], {scale: 1.3, color: "#303030"});
+//             if(navLinks[i + 1]) {
+//                 gsap.to(navLinks[i + 1], {scale: 1, color: "#30303099"});
+//             }
+//         },
+//     })
+// });
+
+
+// 2
+
+
 const scrollTop = $('#youll-get').offset().top;
 const contHeight = $('#container').height();
 const panelss = gsap.utils.toArray(".panel-youl");
 
 
-gsap.to(".panel-youl:not(:last-child)", {
+gsap.to(".panel-youl", {
     yPercent: -100,
     ease: "slow",
-    stagger: 0.5,
+    stagger: 1,
     scrollTrigger: {
         trigger: "#container",
-        start: "top top",
-        end: `+=${panelss.length * contHeight}px`,
-        scrub: 1,
+        start: "top",
+        end: `${scrollTop + (panelss.length * contHeight)}`,
+        scrub: 0,
         pin: true,
     }
 });
@@ -274,7 +384,7 @@ gsap.to(".panel-youl:not(:last-child)", {
 gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
 const navLinks = gsap.utils.toArray(".section_nav a");
 navLinks.forEach((link, i) => {
-    link.addEventListener("click", e => {
+    link.addEventListener("mouseover", e => {
         e.preventDefault();
         console.log(i)
         gsap.to(window,
@@ -287,19 +397,66 @@ navLinks.forEach((link, i) => {
 panelss.forEach((panel, i) => {
     ScrollTrigger.create({
         start: 0,
-        end: scrollTop + (i * contHeight) - contHeight,
-        markers: true,
+        end: `${scrollTop + (i * contHeight) + contHeight}`,
         onLeave: () => {
             if(navLinks[i + 1]) {
-                gsap.to(navLinks[i + 1], {scale: 1.3, color: "red"});
-                gsap.to(navLinks[i], {scale: 1, color: "blue"});
+                gsap.to(navLinks[i + 1], {scale: 1.3, color: "#303030"});
+                gsap.to(navLinks[i], {scale: 1, color: "#30303099"});
             }
         },
         onEnterBack: () => {
-            gsap.to(navLinks[i], {scale: 1.3, color: "red"});
+            gsap.to(navLinks[i], {scale: 1.3, color: "#303030"});
             if(navLinks[i + 1]) {
-                gsap.to(navLinks[i + 1], {scale: 1, color: "blue"});
+                gsap.to(navLinks[i + 1], {scale: 1, color: "#30303099"});
             }
         },
     })
+});
+
+
+
+// ........ slick
+
+const allslicLengt = document.querySelectorAll('.slider .image')
+const span_count = document.querySelector('.slider-text samp')
+span_count.innerText = allslicLengt.length
+
+$('.slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
 });
