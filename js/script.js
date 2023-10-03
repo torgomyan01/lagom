@@ -459,4 +459,6 @@ $('.slider').slick({
         // settings: "unslick"
         // instead of a settings object
     ]
+}).on('afterChange', function (e, i){
+    console.log(e, i)
 });
