@@ -202,16 +202,7 @@ right_btn.addEventListener('click', ()=>{
 let num = 0;
 
 
-// function clearActive(){
-//     const buttons_span = document.querySelectorAll('.icon-item')
-//     buttons_span.forEach(elem =>{
-//         if(elem.classList.contains('active')){
-//             elem.classList.remove('active')
-//             /* slider_image.forEach(elem => elem.classList.remove('active'))*/
-//         }
-//     })
-//
-// }
+
 
 const headerImageBlock = document.querySelector('.slider-image');
 const count_span = document.querySelector('.count span');
@@ -227,30 +218,88 @@ function ChangeSlider(numStatus){
     } else if(num < 0){
         num = headerSliderArray.length-1
     }
-    // clearActive()
     count_span.innerText = `${num  + 1} / ${headerSliderArray.length}`
     headerImageBlock.style.backgroundImage = `url(${headerSliderArray[num]})`;
-    // slider_image[num].classList.add('active')
+
 
 }
 
 
 
-/* Panels */
-const youAdd = gsap.utils.toArray("#you");
-const aaa = gsap.to(youAdd, {
-    yPercent: 100,
-    ease: "none",
+// /* Panels */
+// const youAdd = gsap.utils.toArray("#you");
+// const aaa = gsap.to(youAdd, {
+//     yPercent: 100,
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: "#you-add-body",
+//         pin: true,
+//         start: "top",
+//         end: "top",
+//         scrub: 1,
+//         snap: {
+//             snapTo: 2,
+//             inertia: false,
+//             // duration: {min: 0.1, max: 0.1}
+//         },
+//     }
+// });
+
+
+//......... Youll Get
+
+
+// gsap.registerPlugin(ScrollTrigger);
+
+
+const scrollTop = $('#youll-get').offset().top;
+const contHeight = $('#container').height();
+const panelss = gsap.utils.toArray(".panel-youl");
+
+
+gsap.to(".panel-youl:not(:last-child)", {
+    yPercent: -100,
+    ease: "slow",
+    stagger: 0.5,
     scrollTrigger: {
-        trigger: "#you-add-body",
-        pin: true,
-        start: "top",
-        end: "top",
+        trigger: "#container",
+        start: "top top",
+        end: `+=${panelss.length * contHeight}px`,
         scrub: 1,
-        snap: {
-            snapTo: 2,
-            inertia: false,
-            // duration: {min: 0.1, max: 0.1}
-        },
+        pin: true,
     }
+});
+
+
+gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
+const navLinks = gsap.utils.toArray(".section_nav a");
+navLinks.forEach((link, i) => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        console.log(i)
+        gsap.to(window,
+          {
+              scrollTo: scrollTop + (i * contHeight)
+          });
+    });
+});
+
+panelss.forEach((panel, i) => {
+    ScrollTrigger.create({
+        start: 0,
+        end: scrollTop + (i * contHeight) - contHeight,
+        markers: true,
+        onLeave: () => {
+            if(navLinks[i + 1]) {
+                gsap.to(navLinks[i + 1], {scale: 1.3, color: "red"});
+                gsap.to(navLinks[i], {scale: 1, color: "blue"});
+            }
+        },
+        onEnterBack: () => {
+            gsap.to(navLinks[i], {scale: 1.3, color: "red"});
+            if(navLinks[i + 1]) {
+                gsap.to(navLinks[i + 1], {scale: 1, color: "blue"});
+            }
+        },
+    })
 });
