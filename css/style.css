@@ -29,6 +29,7 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: "RF Dewi Extended", serif;
 }
 
@@ -88,6 +89,71 @@ body {
   text-transform: capitalize;
 }
 
+.modal-menu {
+  display: flex !important;
+  justify-content: end !important;
+  align-items: start !important;
+}
+.modal-menu .modal-dialog-menu {
+  margin: 0;
+  height: 100%;
+}
+.modal-menu .modal-dialog-menu .modal-content {
+  height: 100%;
+  padding: 24px 24px 30px 24px;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header {
+  border: 0;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header h5 a {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header h5 i {
+  font-size: 14px;
+  color: #303030;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header .btn-close {
+  border-radius: 100px;
+  border: 1px solid rgba(48, 48, 48, 0.2);
+  padding: 12px;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-body .links a {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(48, 48, 48, 0.6);
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-body .links a:hover {
+  color: #303030;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer {
+  justify-content: start;
+  border: 0;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer .mail {
+  display: block;
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer .button {
+  width: 100%;
+  margin-top: 40px;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer .button button {
+  width: 100%;
+  padding: 13px 24px;
+}
+
+.max-header {
+  position: relative;
+  z-index: 1000;
+}
 .max-header nav {
   position: fixed;
   top: 0;
@@ -97,7 +163,7 @@ body {
   overflow: hidden;
   height: 615px;
   transition: 0.5s;
-  z-index: 1;
+  z-index: 10000000;
 }
 .max-header nav .nav-menu {
   height: 96px;

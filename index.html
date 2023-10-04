@@ -51,7 +51,9 @@
             <a href="tel: +7 (912) 999-99-99" class="me-24 c-black fs-14 fw-bold trans">+7 (912) 999-99-99</a>
             <button class="btn btn-green me-8">Заказать проект</button>
             <button class="btn btn-white me-40 border">Заказать проект</button>
-            <button class="btn c-black fs-14 fw-bold btn-menu">Меню</button>
+            <button  class="btn c-black fs-14 fw-bold btn-menu"
+                     data-bs-toggle="modal"
+                     data-bs-target="#exampleModal">Меню</button>
           </div>
         </div>
 
@@ -88,7 +90,7 @@
   </div>
 
 
-  <section class="lagom-about ">
+  <section id="home-lagom" class="lagom-about ">
 
     <div class="container">
       <h1 class="heading" data-aos="fade-right" data-aos-duration="1000">
@@ -348,7 +350,7 @@
   </section>
 
 
-  <section class="planning">
+  <section id="planning" class="planning">
 
 
     <div id="col-green" class="col-green active">
@@ -612,7 +614,7 @@
   </section>
 
 
-  <section class="authorsProject">
+  <section id="authorsProject" class="authorsProject">
 
     <div class="container">
 
@@ -668,7 +670,7 @@
   </section>
 
 
-  <section class="team">
+  <section id="team" class="team">
 
     <div class="container">
 
@@ -776,7 +778,7 @@
   </section>
 
 
-  <section class="map">
+  <section id="map" class="map">
 
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A751aa60586ceebae3653d96b47bd2c9c6862d3547a5af168b350385012c19ac1&amp;source=constructor"
             width="100%" height="708" frameborder="0"></iframe>
@@ -836,19 +838,37 @@
 <!--</button>-->
 
 
-<div class="modal modal-menu fade"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal modal-menu fade "  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-menu">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">
+          <a href="tel:+7(912)999-99-99">+7 (912) 999-99-99</a>
+          <i class="fa-solid fa-user ms-2"></i>
+        </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="links">
+          <a href="#home-lagom">О доме Лагом</a>
+          <a href="#panels">5 принципов </a>
+          <a href="#planning">Планировки</a>
+          <a href="#">Что вы получите</a>
+          <a href="#">Команда</a>
+          <a href="#">Франшиза</a>
+          <a href="#">Контакты</a>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <a href="#" class="mail">
+          sale@arteltopartel.ru
+        </a>
+        <div class="button">
+          <button class="btn-green">
+            Записаться на консультацию
+            <i class="fa-solid fa-phone ms-2"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>

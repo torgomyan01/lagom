@@ -32,6 +32,7 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: "RF Dewi Extended", serif;
 }
 
@@ -107,14 +108,89 @@ $transMenu: 0.5s;
 
 // ..... Modal end
 
+.modal-menu{
+  display: flex !important;
+  justify-content: end !important;
+  align-items: start !important;
+  //z-index: 100000000;
 
+
+  .modal-dialog-menu{
+    margin: 0;
+    height: 100%;
+
+    .modal-content{
+      height: 100%;
+      padding: 24px 24px 30px 24px;
+      .modal-header{
+        border: 0;
+        h5{
+          a{
+            color: #303030;
+            font-size: 14px;
+            font-weight: 700;
+          }
+          i{
+            font-size: 14px;
+            color: #303030;
+          }
+        }
+
+        .btn-close{
+          border-radius: 100px;
+          border: 1px solid rgba(48, 48, 48, 0.20);
+          padding: 12px;
+        }
+      }
+        .modal-body{
+          .links{
+            a{
+              display: block;
+              margin-bottom: 12px;
+              color: rgba(48, 48, 48, 0.60);
+              font-size: 24px;
+              font-weight: 700;
+              transition: .2s;
+              &:hover{
+                color: #303030;
+              }
+            }
+          }
+        }
+      .modal-footer{
+        justify-content: start;
+        border: 0;
+        .mail{
+          display: block;
+          color: #303030;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px; /* 114.286% */
+        }
+        .button{
+          width: 100%;
+          margin-top: 40px;
+          button{
+            width: 100%;
+            padding: 13px 24px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
 
 
 // Max Header
 
 
 .max-header{
-
+  position: relative;
+  z-index: 1000;
 
   nav{
     position: fixed;
@@ -125,7 +201,7 @@ $transMenu: 0.5s;
     overflow: hidden;
     height: 615px;
     transition: $transMenu;
-    z-index: 1;
+    z-index: 10000000;
 
     .nav-menu{
       height: 96px;
