@@ -599,7 +599,7 @@
             <h2 class="heading" >Лагом</h2>
             <div class="buttons">
               <span>Доставим курьером за 5 дней <br> в любую точку России</span>
-              <button class="ms-4">Оставить заявку</button>
+              <button data-bs-toggle="modal" data-bs-target="#modal-application-" class="ms-4">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -869,6 +869,48 @@
             <i class="fa-solid fa-phone ms-2"></i>
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-application fade"  id="application" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-application">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">
+          Оставить заявку
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <p>
+            Оставьте свои данные, или задайте вопроси
+            мы с вами свяжемся в ближайшее время.
+         </p>
+        <div class="input-boxs">
+          <div class="input-box">
+            <input type="text" placeholder="Имя*">
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Телефон*">
+          </div>
+          <div class="input-box">
+            <textarea placeholder="Сообщение"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="button">
+          <button class="btn-green">
+            Отправить
+          </button>
+        </div>
+        <p>
+          Нажимая на кнопку, вы принимаете
+          политику конфиденциальности и даете согласие
+          на обработку персональных данных.
+        </p>
       </div>
     </div>
   </div>

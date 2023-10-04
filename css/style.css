@@ -150,6 +150,97 @@ body {
   padding: 13px 24px;
 }
 
+.modal-application {
+  display: flex !important;
+  justify-content: end !important;
+  align-items: start !important;
+}
+.modal-application .modal-dialog-application {
+  margin: 0;
+  height: 100%;
+}
+.modal-application .modal-dialog-application .modal-content {
+  height: 100%;
+  padding: 24px 24px 30px 24px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-header {
+  border: 0;
+}
+.modal-application .modal-dialog-application .modal-content .modal-header h5 {
+  color: #303030;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%; /* 24px */
+}
+.modal-application .modal-dialog-application .modal-content .modal-header .btn-close {
+  border-radius: 100px;
+  border: 1px solid rgba(48, 48, 48, 0.2);
+  padding: 12px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-body p {
+  color: rgba(48, 48, 48, 0.6);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 16px;
+  max-width: 341px;
+  width: 100%;
+}
+.modal-application .modal-dialog-application .modal-content .modal-body .input-boxs {
+  margin-top: 54px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-body .input-boxs .input-box {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-body .input-boxs .input-box input {
+  width: 100%;
+  padding: 15px 16px 16px 16px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+  border-radius: 8px;
+  background: var(--base-50, rgba(236, 239, 243, 0.5));
+}
+.modal-application .modal-dialog-application .modal-content .modal-body .input-boxs .input-box input ::placeholder {
+  color: #A1A6AF;
+  font-size: 14px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-body .input-boxs .input-box textarea {
+  width: 100%;
+  padding: 15px 16px 16px 16px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+  border-radius: 8px;
+  background: var(--base-50, rgba(236, 239, 243, 0.5));
+  resize: none;
+  height: 130px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-body .input-boxs .input-box textarea ::placeholder {
+  color: #A1A6AF;
+  font-size: 14px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-footer {
+  justify-content: start;
+  border: 0;
+}
+.modal-application .modal-dialog-application .modal-content .modal-footer .button {
+  width: 100%;
+  margin-top: 40px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-footer .button button {
+  width: 100%;
+  padding: 13px 24px;
+}
+.modal-application .modal-dialog-application .modal-content .modal-footer p {
+  color: rgba(48, 48, 48, 0.4);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
 .max-header {
   position: relative;
   z-index: 1000;

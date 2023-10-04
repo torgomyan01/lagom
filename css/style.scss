@@ -184,6 +184,110 @@ $transMenu: 0.5s;
 
 }
 
+.modal-application{
+  display: flex !important;
+  justify-content: end !important;
+  align-items: start !important;
+  //z-index: 100000000;
+
+
+  .modal-dialog-application{
+    margin: 0;
+    height: 100%;
+
+    .modal-content{
+      height: 100%;
+      padding: 24px 24px 30px 24px;
+      .modal-header{
+        border: 0;
+        h5{
+          color: #303030;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 100%; /* 24px */
+        }
+
+        .btn-close{
+          border-radius: 100px;
+          border: 1px solid rgba(48, 48, 48, 0.20);
+          padding: 12px;
+        }
+      }
+        .modal-body{
+          p{
+            color: rgba(48, 48, 48, 0.60);
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 16px;
+            max-width: 341px;
+            width: 100%;
+          }
+          .input-boxs{
+            margin-top: 54px;
+            .input-box {
+              width: 100%;
+              margin-bottom: 16px;
+
+              input {
+                width: 100%;
+                padding: 15px 16px 16px 16px;
+                color: #303030;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: -0.42px;
+                border-radius: 8px;
+                background: var(--base-50, rgba(236, 239, 243, 0.50));
+
+                ::placeholder {
+                  color: #A1A6AF;
+                  font-size: 14px;
+                }
+              }
+              textarea {
+                width: 100%;
+                padding: 15px 16px 16px 16px;
+                color: #303030;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: -0.42px;
+                border-radius: 8px;
+                background: var(--base-50, rgba(236, 239, 243, 0.50));
+                resize: none;
+                height: 130px;
+                ::placeholder {
+                  color: #A1A6AF;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      .modal-footer{
+        justify-content: start;
+        border: 0;
+        .button{
+          width: 100%;
+          margin-top: 40px;
+          button{
+            width: 100%;
+            padding: 13px 24px;
+          }
+        }
+        p{
+          color: rgba(48, 48, 48, 0.40);
+          font-size: 0.75rem;
+          font-weight: 400;
+          line-height: 16px; /* 133.333% */
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
 
 // Max Header
 
