@@ -1558,6 +1558,7 @@ $transMenu: 0.5s;
 .map{
   min-height: 80vh;
   position: relative;
+  margin-top: 110px;
   iframe{
     opacity: .6;
   }
@@ -1659,6 +1660,7 @@ $transMenu: 0.5s;
 footer{
   background: #50BA1E;
   height: 40px;
+  margin-top: -50px;
   .container-footer{
     .inner{
       height: 40px;

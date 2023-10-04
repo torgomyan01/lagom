@@ -1310,6 +1310,7 @@ body {
 .map {
   min-height: 80vh;
   position: relative;
+  margin-top: 110px;
 }
 .map iframe {
   opacity: 0.6;
@@ -1381,6 +1382,7 @@ body {
 footer {
   background: #50BA1E;
   height: 40px;
+  margin-top: -50px;
 }
 footer .container-footer .inner {
   height: 40px;
