@@ -1378,4 +1378,35 @@ body {
   padding: 13px 24px;
 }
 
+footer {
+  background: #50BA1E;
+  height: 40px;
+}
+footer .container-footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container-footer .inner span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.24px;
+}
+footer .container-footer .inner p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  margin: 0;
+}
+footer .container-footer .inner p a {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
