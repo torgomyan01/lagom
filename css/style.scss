@@ -100,27 +100,26 @@ $transMenu: 0.5s;
   text-transform: capitalize;
 }
 
-//......... Modal End
 
+//........ Modal
 
-
-
-
-// ..... Modal end
+.modal-dialog{
+  position: absolute;
+  right: 0;
+  .modal-content{
+    border: 0;
+    border-radius: 0;
+  }
+}
 
 .modal-menu{
-  display: flex !important;
-  justify-content: end !important;
-  align-items: start !important;
-  //z-index: 100000000;
-
 
   .modal-dialog-menu{
     margin: 0;
     height: 100%;
 
     .modal-content{
-      height: 100%;
+      height: auto;
       padding: 24px 24px 30px 24px;
       .modal-header{
         border: 0;
@@ -185,18 +184,13 @@ $transMenu: 0.5s;
 }
 
 .modal-application{
-  display: flex !important;
-  justify-content: end !important;
-  align-items: start !important;
-  //z-index: 100000000;
-
 
   .modal-dialog-application{
     margin: 0;
     height: 100%;
 
     .modal-content{
-      height: 100%;
+      height: auto;
       padding: 24px 24px 30px 24px;
       .modal-header{
         border: 0;
@@ -288,6 +282,225 @@ $transMenu: 0.5s;
 
 }
 
+.modal-purchase{
+
+  .modal-dialog-purchase{
+    margin: 0;
+    height: 100%;
+
+    .modal-content{
+      height: auto;
+      padding: 24px 24px 30px 24px;
+      .modal-header{
+        border: 0;
+        h5{
+          color: #303030;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 100%;
+        }
+        .btn-close{
+          border-radius: 100px;
+          border: 1px solid rgba(48, 48, 48, 0.20);
+          padding: 12px;
+        }
+      }
+        .modal-body2{
+          display: none;
+          margin-top: 180px;
+          &.active{
+            display: block;
+          }
+          .head-modal{
+            text-align: center;
+            color: #303030;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 16px;
+          }
+          p{
+            color: rgba(48, 48, 48, 0.60);
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            a{
+              color: #303030;
+            }
+          }
+        }
+        .modal-body{
+          display: none;
+          &.active{
+            display: block;
+          }
+          .buttons{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2px;
+            padding-right: 20px;
+            margin-top: 24px;
+            .button{
+              padding: 4px 8px 6px 8px;
+              border-radius: 4px;
+              background: #F5F7F9;
+              color: #303030;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 14px; /* 100% */
+              &.active{
+                color: #FFF;
+                background: #50BA1E;
+                i{
+                  color: #FFFFFF;
+                }
+              }
+            }
+          }
+          .input-boxs{
+            margin-top: 24px;
+            .input-box {
+              width: 100%;
+              margin-bottom: 16px;
+
+              input {
+                width: 100%;
+                padding: 15px 16px 16px 16px;
+                color: #303030;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: -0.42px;
+                border-radius: 8px;
+                background: var(--base-50, rgba(236, 239, 243, 0.50));
+
+                ::placeholder {
+                  color: #A1A6AF;
+                  font-size: 14px;
+                }
+              }
+              textarea {
+                width: 100%;
+                padding: 15px 16px 16px 16px;
+                color: #303030;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: -0.42px;
+                border-radius: 8px;
+                background: var(--base-50, rgba(236, 239, 243, 0.50));
+                resize: none;
+                height: 130px;
+                ::placeholder {
+                  color: #A1A6AF;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .image{
+            width: 100%;
+            margin: 16px 0;
+            img{
+              width: 100%;
+            }
+          }
+          .image-title{
+            display: flex;
+            align-items: start;
+            a{
+              color: #50BA1E;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 18px;
+              text-decoration-line: underline;
+            }
+          }
+        }
+      .modal-footer2{
+        display: none;
+        justify-content: start;
+        border: 0;
+        &.active{
+          display: block;
+        }
+        .button{
+          width: 100%;
+          margin: 16px 0;
+          button{
+            width: 100%;
+            padding: 13px 24px;
+          }
+        }
+      }
+      .modal-footer{
+        justify-content: start;
+        border: 0;
+        display: none;
+        &.active{
+          display: block;
+        }
+        .prices{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          h4{
+            color: #303030;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 18px; /* 112.5% */
+          }
+          .price{
+            display: flex;
+            align-items: center;
+
+            samp{
+              color: rgba(48, 48, 48, 0.40);
+              font-size: 1rem;
+              font-weight: 600;
+              text-decoration: line-through;
+            }
+            span{
+              color: #303030;
+              font-size: 1.5rem;
+              font-weight: 600;
+            }
+          }
+        }
+        .button{
+          width: 100%;
+          margin: 16px 0;
+          button{
+            width: 100%;
+            padding: 13px 24px;
+          }
+        }
+        .banks{
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          width: 100%;
+          p{
+            color: rgba(48, 48, 48, 0.60);
+            font-size: 12px;
+            font-weight: 400;
+            max-width: 198px;
+            width: 100%;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+
+
+//... Modal- end
 
 // Max Header
 

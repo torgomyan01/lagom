@@ -599,7 +599,7 @@
             <h2 class="heading" >Лагом</h2>
             <div class="buttons">
               <span>Доставим курьером за 5 дней <br> в любую точку России</span>
-              <button data-bs-toggle="modal" data-bs-target="#modal-application-" class="ms-4">Оставить заявку</button>
+              <button data-bs-toggle="modal" data-bs-target="#modal-application" class="ms-4">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -874,7 +874,7 @@
   </div>
 </div>
 
-<div class="modal modal-application fade"  id="application" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+<div class="modal modal-application fade"  id="modal-application" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog modal-dialog-application">
     <div class="modal-content">
       <div class="modal-header">
@@ -911,6 +911,106 @@
           политику конфиденциальности и даете согласие
           на обработку персональных данных.
         </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-purchase fade show" style="display: block" id="modal-purchase" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-purchase">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel3">
+          Покупка проекта <br>
+          дома Лагом
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body active">
+         <div class="buttons">
+             <div class="button active">
+               <i class="fa-solid fa-bolt-lightning"></i>
+               Скидка 10%
+             </div>
+             <div class="button">
+               2 спальни
+             </div>
+             <div class="button">
+               1 санузел
+             </div>
+             <div class="button">
+               гостиная
+             </div>
+             <div class="button">
+               детская
+             </div>
+         </div>
+        <div class="image">
+          <img src="images/image-purchase.png" alt="purchase">
+        </div>
+        <div class="image-title">
+          <img class="me-2" src="images/purchase-icon.svg" alt="purchase">
+          <a href="#">
+            Посмотреть какой пакет документации
+            вы получите по проекту
+          </a>
+        </div>
+        <div class="input-boxs">
+          <div class="input-box">
+            <input type="text" placeholder="Имя*">
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Телефон*">
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Адрес доставки*">
+          </div>
+        </div>
+      </div>
+      <div class="modal-body2">
+          <div class="image text-center">
+            <img src="images/check-green.svg" alt="check">
+          </div>
+        <h4 class="head-modal">Успешно!</h4>
+        <p class="mb-2">Поздравляем! Вы успешно
+          приобрели проект своего нового дома мечты - Лагом. Проект будет
+          отправлен вам на почту по адресу <br>
+          <a href="mailto:mail@mail.ru">mail@mail.ru</a>
+        </p>
+        <p class="mb-2">Так же вы можете видеть свои проекты в <br>
+          <a href="mailto:mail@mail.ru">личном кабинете.</a>
+        </p>
+      </div>
+      <div class="modal-footer active">
+        <div class="prices">
+          <h4>К оплате:</h4>
+          <div class="price">
+            <samp class="me-1">12 500 ₽ </samp>
+            <span>9 900 ₽</span>
+          </div>
+        </div>
+        <div class="button">
+          <button class="btn-green">
+            Отправить
+          </button>
+        </div>
+        <div class="banks">
+          <p>
+          Мы принимаем оплату картами:
+        </p>
+          <div class="bank-icons">
+            <img src="images/mir.svg" class="me-1" alt="mir">
+            <img src="images/mastecard.svg" class="me-1" alt="mir">
+            <img src="images/visa.svg" alt="mir">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer2 ">
+        <div class="button">
+          <button class="btn-green">
+            Отправить
+          </button>
+        </div>
       </div>
     </div>
   </div>

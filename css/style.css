@@ -89,17 +89,21 @@ body {
   text-transform: capitalize;
 }
 
-.modal-menu {
-  display: flex !important;
-  justify-content: end !important;
-  align-items: start !important;
+.modal-dialog {
+  position: absolute;
+  right: 0;
 }
+.modal-dialog .modal-content {
+  border: 0;
+  border-radius: 0;
+}
+
 .modal-menu .modal-dialog-menu {
   margin: 0;
   height: 100%;
 }
 .modal-menu .modal-dialog-menu .modal-content {
-  height: 100%;
+  height: auto;
   padding: 24px 24px 30px 24px;
 }
 .modal-menu .modal-dialog-menu .modal-content .modal-header {
@@ -150,17 +154,12 @@ body {
   padding: 13px 24px;
 }
 
-.modal-application {
-  display: flex !important;
-  justify-content: end !important;
-  align-items: start !important;
-}
 .modal-application .modal-dialog-application {
   margin: 0;
   height: 100%;
 }
 .modal-application .modal-dialog-application .modal-content {
-  height: 100%;
+  height: auto;
   padding: 24px 24px 30px 24px;
 }
 .modal-application .modal-dialog-application .modal-content .modal-header {
@@ -239,6 +238,211 @@ body {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 16px; /* 133.333% */
+}
+
+.modal-purchase .modal-dialog-purchase {
+  margin: 0;
+  height: 100%;
+}
+.modal-purchase .modal-dialog-purchase .modal-content {
+  height: auto;
+  padding: 24px 24px 30px 24px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-header {
+  border: 0;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-header h5 {
+  color: #303030;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-header .btn-close {
+  border-radius: 100px;
+  border: 1px solid rgba(48, 48, 48, 0.2);
+  padding: 12px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body2 {
+  display: none;
+  margin-top: 180px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body2.active {
+  display: block;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body2 .head-modal {
+  text-align: center;
+  color: #303030;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 16px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body2 p {
+  color: rgba(48, 48, 48, 0.6);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body2 p a {
+  color: #303030;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body {
+  display: none;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body.active {
+  display: block;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding-right: 20px;
+  margin-top: 24px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .buttons .button {
+  padding: 4px 8px 6px 8px;
+  border-radius: 4px;
+  background: #F5F7F9;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px; /* 100% */
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .buttons .button.active {
+  color: #FFF;
+  background: #50BA1E;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .buttons .button.active i {
+  color: #FFFFFF;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .input-boxs {
+  margin-top: 24px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .input-boxs .input-box {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .input-boxs .input-box input {
+  width: 100%;
+  padding: 15px 16px 16px 16px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+  border-radius: 8px;
+  background: var(--base-50, rgba(236, 239, 243, 0.5));
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .input-boxs .input-box input ::placeholder {
+  color: #A1A6AF;
+  font-size: 14px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .input-boxs .input-box textarea {
+  width: 100%;
+  padding: 15px 16px 16px 16px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+  border-radius: 8px;
+  background: var(--base-50, rgba(236, 239, 243, 0.5));
+  resize: none;
+  height: 130px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .input-boxs .input-box textarea ::placeholder {
+  color: #A1A6AF;
+  font-size: 14px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .image {
+  width: 100%;
+  margin: 16px 0;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .image img {
+  width: 100%;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .image-title {
+  display: flex;
+  align-items: start;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-body .image-title a {
+  color: #50BA1E;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  text-decoration-line: underline;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer2 {
+  display: none;
+  justify-content: start;
+  border: 0;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer2.active {
+  display: block;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer2 .button {
+  width: 100%;
+  margin: 16px 0;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer2 .button button {
+  width: 100%;
+  padding: 13px 24px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer {
+  justify-content: start;
+  border: 0;
+  display: none;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer.active {
+  display: block;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .prices h4 {
+  color: #303030;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .prices .price {
+  display: flex;
+  align-items: center;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .prices .price samp {
+  color: rgba(48, 48, 48, 0.4);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .prices .price span {
+  color: #303030;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .button {
+  width: 100%;
+  margin: 16px 0;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .button button {
+  width: 100%;
+  padding: 13px 24px;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .banks {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+.modal-purchase .modal-dialog-purchase .modal-content .modal-footer .banks p {
+  color: rgba(48, 48, 48, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  max-width: 198px;
+  width: 100%;
 }
 
 .max-header {
