@@ -1383,6 +1383,7 @@ footer {
   height: 40px;
 }
 footer .container-footer .inner {
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
