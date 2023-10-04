@@ -96,7 +96,7 @@ body {
   background: #fff;
   overflow: hidden;
   height: 615px;
-  transition: 0.8s;
+  transition: 0.5s;
   z-index: 1;
 }
 .max-header nav .nav-menu {
@@ -113,21 +113,21 @@ body {
   left: 50%;
   top: 255px;
   transform: translate(-50%, -50%);
-  transition: 0.8s;
+  transition: 0.5s;
 }
 .max-header nav .nav-logo svg {
   width: 100%;
   height: 100%;
 }
 .max-header nav .nav-logo svg path {
-  transition: 0.8s;
+  transition: 0.5s;
 }
 .max-header nav .home-for-people {
   margin-left: 0;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 .max-header nav .btn-menu, .max-header nav .btn-white {
-  transition: 0.8s;
+  transition: 0.5s;
 }
 .max-header header {
   width: 100%;
@@ -135,7 +135,7 @@ body {
   background: url("../images/header-bg.png") no-repeat center;
   background-size: cover;
   transform: translateY(615px);
-  transition: 0.8s;
+  transition: 0.5s;
 }
 .max-header.nav--fixed header {
   transform: translateY(96px);
@@ -170,6 +170,29 @@ body {
 }
 .max-header.nav--fixed nav .btn-white {
   border-color: #fff;
+}
+.max-header.nav--fixed.nav-color-black .nav-logo {
+  width: 104px;
+  height: 32px;
+  left: 0;
+  top: 27px;
+  transform: translate(0, 0);
+}
+.max-header.nav--fixed.nav-color-black .nav-logo svg {
+  width: 100%;
+  height: 100%;
+}
+.max-header.nav--fixed.nav-color-black .nav-logo svg path {
+  fill: #303030;
+}
+.max-header.nav--fixed.nav-color-black a {
+  color: #303030;
+}
+.max-header.nav--fixed.nav-color-black .btn-menu {
+  color: #303030;
+}
+.max-header.nav--fixed.nav-color-black .btn-white {
+  border-color: #303030;
 }
 .max-header .good-luck {
   display: flex;
@@ -1283,6 +1306,76 @@ body {
   line-height: 1;
   opacity: 0.75;
   color: #303030;
+}
+.map {
+  min-height: 80vh;
+  position: relative;
+}
+.map iframe {
+  opacity: 0.6;
+}
+.map .container-map {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+}
+.map .container-map .wrapper {
+  max-width: 360px;
+  width: 100%;
+  padding: 24px;
+  background: #fff;
+  position: absolute;
+  left: 130px;
+  top: 40px;
+  z-index: 7;
+}
+.map .container-map .wrapper .box-image {
+  display: flex;
+  align-items: center;
+}
+.map .container-map .wrapper .box-image .title h4 {
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+}
+.map .container-map .wrapper .box-image .title span {
+  color: rgba(48, 48, 48, 0.6);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+.map .container-map .wrapper .time {
+  margin-top: 24px;
+}
+.map .container-map .wrapper .time .number {
+  color: #50BA1E;
+  font-feature-settings: "salt" on;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+  display: block;
+  cursor: pointer;
+}
+.map .container-map .wrapper .time .times {
+  color: #303030;
+  font-feature-settings: "salt" on;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 24px;
+}
+.map .container-map .wrapper .time .mail {
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+  display: block;
+}
+.map .container-map .wrapper .button .btn-green {
+  padding: 13px 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

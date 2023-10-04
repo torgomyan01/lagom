@@ -19,6 +19,12 @@ ScrollTrigger.create({
     toggleClass: {className: 'nav--fixed', targets: '.max-header'},
 });
 
+ScrollTrigger.create({
+    start: 'top -900',
+    end: 99999,
+    toggleClass: {className: 'nav-color-black', targets: '.max-header'},
+});
+
 $(window).scroll();
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
@@ -420,6 +426,7 @@ panelss.forEach((panel, i) => {
 const allslicLengt = document.querySelectorAll('.slider .image')
 const span_count = document.querySelector('.slider-text samp')
 span_count.innerText = allslicLengt.length
+let activeIndex = 1;
 
 $('.slider').slick({
     dots: false,
@@ -460,5 +467,10 @@ $('.slider').slick({
         // instead of a settings object
     ]
 }).on('afterChange', function (e, i){
-    console.log(e, i)
+    $('.slider-text .count span').text(activeIndex)
+    activeIndex++;
+
+    if(activeIndex === 8){
+        activeIndex = 8;
+    }
 });

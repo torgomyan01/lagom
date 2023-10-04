@@ -87,7 +87,7 @@ body{
   line-height: 14px;
 }
 
-$transMenu: 0.8s;
+$transMenu: 0.5s;
 
 
 .heading{
@@ -98,6 +98,16 @@ $transMenu: 0.8s;
   letter-spacing: -12.96px;
   text-transform: capitalize;
 }
+
+//......... Modal End
+
+
+
+
+
+// ..... Modal end
+
+
 
 
 // Max Header
@@ -192,6 +202,31 @@ $transMenu: 0.8s;
       }
       .btn-white{
         border-color: #fff;
+      }
+    }
+    &.nav-color-black{
+      .nav-logo{
+        width: 104px;
+        height: 32px;
+        left: 0;
+        top: 27px;
+        transform: translate(0, 0);
+        svg{
+          width: 100%;
+          height: 100%;
+          path{
+            fill: #303030;
+          }
+        }
+      }
+      a{
+        color: #303030;
+      }
+      .btn-menu{
+        color: #303030;
+      }
+      .btn-white{
+        border-color: #303030;
       }
     }
   }
@@ -1515,3 +1550,105 @@ $transMenu: 0.8s;
 
 
 // ........ Team End
+
+
+
+///...... .MAp
+
+.map{
+  min-height: 80vh;
+  position: relative;
+  iframe{
+    opacity: .6;
+  }
+
+  .container-map{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+
+    .wrapper{
+      max-width: 360px;
+      width: 100%;
+      padding: 24px;
+      background: #fff;
+      position: absolute;
+      left: 130px;
+      top: 40px;
+      z-index: 7;
+
+
+      .box-image{
+        display: flex;
+        align-items: center;
+
+        .title{
+          h4{
+            color: #303030;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 16px; /* 114.286% */
+          }
+          span{
+            color: rgba(48, 48, 48, 0.60);
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 16px; /* 114.286% */
+          }
+
+        }
+
+      }
+
+      .time{
+        margin-top: 24px;
+
+        .number{
+          color: #50BA1E;
+          font-feature-settings: 'salt' on;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px; /* 114.286% */
+          display: block;
+          cursor: pointer;
+        }
+        .times{
+          color: #303030;
+          font-feature-settings: 'salt' on;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px;
+          display: block;
+          margin-bottom: 24px;
+        }
+        .mail{
+          color: #303030;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px; /* 114.286% */
+          display: block;
+
+        }
+
+      }
+
+      .button{
+        .btn-green{
+          padding: 13px 24px;
+        }
+      }
+
+
+
+    }
+
+
+  }
+
+
+
+}
+
+
+//........... Map End
