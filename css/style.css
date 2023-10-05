@@ -1586,7 +1586,7 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  top: 10px;
+  top: 0;
   left: 0;
 }
 .youll-get .container-youl-get .youll-get-head {
@@ -1594,14 +1594,13 @@ body {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  top: 25px;
 }
 .youll-get .container-youl-get .box-title {
   max-width: 660px;
   width: 100%;
   position: absolute;
   right: 0;
-  top: 300px;
+  top: 280px;
 }
 .youll-get .container-youl-get .box-title .title1 {
   color: rgba(48, 48, 48, 0.6);
@@ -1611,6 +1610,7 @@ body {
 }
 .youll-get .container-youl-get .box-title .heading-you {
   font-size: 13.125rem;
+  letter-spacing: -0.7875rem;
 }
 .youll-get .container-youl-get .box-title .buttons {
   display: flex;
@@ -1673,7 +1673,7 @@ body {
   position: absolute;
   right: 10px;
   z-index: 5;
-  top: 65px;
+  top: -20px;
 }
 .youll-get .container-youl-get .section_nav a {
   display: block;
@@ -1685,7 +1685,7 @@ body {
 }
 
 .authorsProject {
-  margin-top: 72px !important;
+  margin-top: 4.5rem;
 }
 .authorsProject .container .head {
   color: #303030;
@@ -1706,8 +1706,8 @@ body {
   color: #303030;
   font-size: 1rem;
   font-weight: 700;
-  margin-top: 24px;
-  margin-bottom: 8px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .authorsProject .container .col-box .col-title span {
   color: #303030;
@@ -1718,11 +1718,19 @@ body {
 .authorsProject .container .col-box p {
   color: rgba(48, 48, 48, 0.6);
   text-align: end;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 24px; /* 150% */
-  max-width: 362px;
+  max-width: 22.625rem;
+  margin-bottom: 99px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .authorsProject .container .col-box p {
+    margin-bottom: 3.125rem;
+    margin-top: 20px;
+    text-align: start;
+  }
 }
 
 .team .slider-text {
@@ -1731,14 +1739,26 @@ body {
   align-items: center;
   margin-top: 4rem;
 }
+@media (max-width: 576px) {
+  .team .slider-text {
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .team .slider-text p {
   color: rgba(48, 48, 48, 0.6);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 1.5rem; /* 150% */
 }
 .team .slider-text .count {
   margin-right: 160px;
+}
+@media (max-width: 576px) {
+  .team .slider-text .count {
+    margin: 0;
+  }
 }
 .team .slider-text .count span {
   color: #303030;
@@ -1814,6 +1834,11 @@ body {
   font-size: 0;
   transition: 0.2s;
 }
+@media (max-width: 425px) {
+  .team .slider .slick-next {
+    top: -78px;
+  }
+}
 .team .slider .slick-next:active {
   border: 1px solid #303030;
 }
@@ -1840,6 +1865,11 @@ body {
   font-size: 0;
   transition: 0.2s;
 }
+@media (max-width: 425px) {
+  .team .slider .slick-prev {
+    top: -77px;
+  }
+}
 .team .slider .slick-prev:active {
   border: 1px solid #303030;
 }
@@ -1854,7 +1884,13 @@ body {
 .map {
   min-height: 80vh;
   position: relative;
-  margin-top: 110px;
+  margin-top: 6.875rem;
+}
+@media (max-width: 768px) {
+  .map {
+    margin-top: 4rem;
+    min-height: 70vh;
+  }
 }
 .map iframe {
   opacity: 0.6;
@@ -1868,12 +1904,27 @@ body {
 .map .container-map .wrapper {
   max-width: 360px;
   width: 100%;
-  padding: 24px;
+  padding: 1.5rem;
   background: #fff;
   position: absolute;
-  left: 130px;
+  left: 8.125rem;
   top: 40px;
   z-index: 7;
+}
+@media (max-width: 576px) {
+  .map .container-map .wrapper {
+    left: 5rem;
+  }
+}
+@media (max-width: 475px) {
+  .map .container-map .wrapper {
+    left: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .map .container-map .wrapper {
+    left: -1rem;
+  }
 }
 .map .container-map .wrapper .box-image {
   display: flex;
@@ -1883,16 +1934,16 @@ body {
   color: #303030;
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 16px; /* 114.286% */
+  line-height: 1rem; /* 114.286% */
 }
 .map .container-map .wrapper .box-image .title span {
   color: rgba(48, 48, 48, 0.6);
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 16px; /* 114.286% */
+  line-height: 1rem; /* 114.286% */
 }
 .map .container-map .wrapper .time {
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 .map .container-map .wrapper .time .number {
   color: #50BA1E;
@@ -1927,6 +1978,11 @@ footer {
   background: #50BA1E;
   height: 40px;
   margin-top: -50px;
+}
+@media (max-width: 768px) {
+  footer {
+    margin-top: 0;
+  }
 }
 footer .container-footer .inner {
   height: 40px;

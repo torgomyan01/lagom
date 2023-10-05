@@ -379,7 +379,7 @@ gsap.to(".panel-youl", {
     stagger: 1,
     scrollTrigger: {
         trigger: "#container",
-        start: "top",
+        start: "top +90",
         end: `${scrollTop + (panelss.length * contHeight)}`,
         scrub: 0,
         pin: true,
@@ -425,7 +425,7 @@ panelss.forEach((panel, i) => {
 
 const allslicLengt = document.querySelectorAll('.slider .image')
 const span_count = document.querySelector('.slider-text samp')
-span_count.innerText = allslicLengt.length
+span_count.innerText = `/ ${allslicLengt.length} `
 let activeIndex = 1;
 
 $('.slider').slick({
@@ -467,11 +467,10 @@ $('.slider').slick({
         // instead of a settings object
     ]
 }).on('afterChange', function (e, i){
-    $('.slider-text .count span').text(activeIndex)
+    $('.slider-text .count span').text(`${activeIndex} `)
     activeIndex++;
-
     if(activeIndex === 8){
-        activeIndex = 8;
+        activeIndex = 1;
     }
 });
 

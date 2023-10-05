@@ -1746,7 +1746,7 @@ $transMenu: 0.5s;
       width: 100%;
       min-height: 100vh;
       position: relative;
-      top: 10px;
+      top: 0;
       left: 0;
     }
 
@@ -1755,7 +1755,6 @@ $transMenu: 0.5s;
       font-size: 24px;
       font-weight: 600;
       position: relative;
-      top: 25px;
     }
 
     .box-title{
@@ -1763,7 +1762,7 @@ $transMenu: 0.5s;
       width: 100%;
       position: absolute;
       right: 0;
-      top: 300px;
+      top: 280px;
 
       .title1{
         color: rgba(48, 48, 48, 0.60);
@@ -1774,6 +1773,7 @@ $transMenu: 0.5s;
 
       .heading-you{
         font-size: 13.125rem;
+        letter-spacing: -0.7875rem;
       }
 
       .buttons{
@@ -1849,7 +1849,7 @@ $transMenu: 0.5s;
       position: absolute;
       right: 10px;
       z-index: 5;
-      top: 65px;
+      top: -20px;
     }
     .section_nav a {
       display: block;
@@ -1872,7 +1872,7 @@ $transMenu: 0.5s;
 //........ AutorsProject
 
 .authorsProject{
-  margin-top: 72px !important;
+  margin-top: 4.5rem;
   .container{
 
  .head{
@@ -1883,38 +1883,40 @@ $transMenu: 0.5s;
  }
 
    .col-box{
-      position: relative;
+     position: relative;
      width: 100%;
      height: 100%;
      .col-title{
        max-width: 191px;
        width: 100%;
-
        h4{
          color: #303030;
          font-size: 1rem;
          font-weight: 700;
-         margin-top: 24px;
-         margin-bottom: 8px;
+         margin-top: 1.5rem;
+         margin-bottom: 0.5rem;
        }
-
        span{
          color: #303030;
          font-size: 0.875rem;
          font-weight: 400;
          opacity: 0.6;
        }
-
      }
-
      p{
        color: rgba(48, 48, 48, 0.60);
        text-align: end;
-       font-size: 16px;
+       font-size: 1rem;
        font-weight: 400;
        line-height: 24px; /* 150% */
-       max-width: 362px;
+       max-width: 22.625rem;
+       margin-bottom: 99px;
        width: 100%;
+       @media (max-width: 768px) {
+         margin-bottom: 3.125rem;
+         margin-top: 20px;
+         text-align: start;
+       }
      }
 
    }
@@ -1940,14 +1942,22 @@ $transMenu: 0.5s;
   justify-content: space-between;
   align-items: center;
   margin-top: 4rem;
+  @media (max-width: 576px) {
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+  }
   p{
     color: rgba(48, 48, 48, 0.60);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 1.5rem; /* 150% */
   }
   .count{
     margin-right: 160px;
+    @media (max-width: 576px) {
+      margin: 0;
+    }
     span{
       color: #303030;
       font-size: 16px;
@@ -2034,6 +2044,9 @@ $transMenu: 0.5s;
       border: 1px solid rgba(48, 48, 48, 0.20);
       font-size: 0;
       transition: .2s;
+      @media (max-width: 425px) {
+        top: -78px;
+      }
       &:active{
         border: 1px solid #303030;
       }
@@ -2062,6 +2075,9 @@ $transMenu: 0.5s;
       z-index: 32;
       font-size: 0;
       transition: .2s;
+      @media (max-width: 425px) {
+        top: -77px;
+      }
       &:active{
         border: 1px solid #303030;
       }
@@ -2103,7 +2119,11 @@ $transMenu: 0.5s;
 .map{
   min-height: 80vh;
   position: relative;
-  margin-top: 110px;
+  margin-top: 6.875rem;
+  @media (max-width: 768px) {
+    margin-top: 4rem;
+    min-height: 70vh;
+  }
   iframe{
     opacity: .6;
   }
@@ -2117,13 +2137,21 @@ $transMenu: 0.5s;
     .wrapper{
       max-width: 360px;
       width: 100%;
-      padding: 24px;
+      padding: 1.5rem;
       background: #fff;
       position: absolute;
-      left: 130px;
+      left: 8.125rem;
       top: 40px;
       z-index: 7;
-
+      @media (max-width: 576px) {
+        left: 5rem;
+      }
+      @media (max-width: 475px) {
+        left: 1rem;
+      }
+      @media (max-width: 375px) {
+        left: -1rem;
+      }
 
       .box-image{
         display: flex;
@@ -2134,13 +2162,13 @@ $transMenu: 0.5s;
             color: #303030;
             font-size: 0.875rem;
             font-weight: 600;
-            line-height: 16px; /* 114.286% */
+            line-height: 1rem; /* 114.286% */
           }
           span{
             color: rgba(48, 48, 48, 0.60);
             font-size: 0.875rem;
             font-weight: 400;
-            line-height: 16px; /* 114.286% */
+            line-height: 1rem; /* 114.286% */
           }
 
         }
@@ -2148,7 +2176,7 @@ $transMenu: 0.5s;
       }
 
       .time{
-        margin-top: 24px;
+        margin-top: 1.5rem;
 
         .number{
           color: #50BA1E;
@@ -2206,6 +2234,9 @@ footer{
   background: #50BA1E;
   height: 40px;
   margin-top: -50px;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
   .container-footer{
     .inner{
       height: 40px;
