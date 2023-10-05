@@ -34,7 +34,7 @@
 <body>
 <div class="overflow-hidden">
 
-  <div class="max-header">
+   <div class="max-header">
     <nav>
       <div class="container">
         <div class="nav-menu">
@@ -47,10 +47,15 @@
           <a href="#" class="fs-14 fw-bold c-black home-for-people">
             Дом для счастливых людей
           </a>
-          <div class="d-flex justify-content-end align-items-center">
+          <div class="d-flex justify-content-end align-items-center menu1">
             <a href="tel: +7 (912) 999-99-99" class="me-24 c-black fs-14 fw-bold trans">+7 (912) 999-99-99</a>
             <button class="btn btn-green me-8">Заказать проект</button>
             <button class="btn btn-white me-40 border">Заказать проект</button>
+            <button  class="btn c-black fs-14 fw-bold btn-menu"
+                     data-bs-toggle="modal"
+                     data-bs-target="#exampleModal">Меню</button>
+          </div>
+          <div class="d-flex justify-content-end align-items-center menu2">
             <button  class="btn c-black fs-14 fw-bold btn-menu"
                      data-bs-toggle="modal"
                      data-bs-target="#exampleModal">Меню</button>
@@ -85,7 +90,23 @@
     </nav>
 
     <header>
-
+     <div class="container container-header">
+       <div class="header-info">
+         <div class="title">
+           Простота и функциональность
+         </div>
+         <div class="buttons">
+           <button class="btn-white me-4">
+             Видео о доме
+             <i class="fa-solid fa-play ms-1"></i>
+           </button>
+           <button class="btn-scroll">
+             Scroll
+             <i class="fa-light fa-arrow-down-long ms-1"></i>
+           </button>
+         </div>
+       </div>
+     </div>
     </header>
   </div>
 
@@ -119,7 +140,7 @@
   </section>
 
 
-  <section id="panels">
+  <section id="panels" style="display: none">
 
     <div id="panels-container" style="width: 800%;">
       <article id="panel-1" class="panel full-screen ">
@@ -161,6 +182,23 @@
       </article>
       <article id="panel-2" class="panel full-screen ">
         <div class="container">
+          <div class="panel2-info">
+            <div class="title">
+              5 принципов дома Лагом
+            </div>
+            <div class="buttons">
+              <p class="me-4 pt-2">
+                <span>Более 100 планировок</span> <br>
+                2 типов проектов домов ЛАГОМ
+              </p>
+              <button class="btn-green me-4">
+                Выбрать проект
+              </button>
+              <button class="btn-white">
+                Пропустить
+              </button>
+            </div>
+          </div>
           <div class="inner">
             <div class="box-title">
               <h3>
@@ -492,7 +530,7 @@
           </div>
           <div class="buttons">
             <button id="btn-prev" class="btn-green me-1">Назад</button>
-            <button id="btn-buy" class="btn-white">Купить</button>
+            <button id="btn-buy" class="btn-white" data-bs-toggle="modal" data-bs-target="#modal-purchase">Купить</button>
           </div>
         </div>
       </div>
@@ -532,7 +570,7 @@
       </div>
       <div class="buttons">
         <button  class="btn-white me-1">Назад</button>
-        <button  class="btn-green">Купить</button>
+        <button  class="btn-green" data-bs-toggle="modal" data-bs-target="#modal-purchase">Купить</button>
       </div>
     </div>
 
@@ -596,7 +634,7 @@
               во всех сферах жизни человека, это умение распределить
               время между работой и отдыхом, вместе и в
               одиночестве. Оцените и почувствуйте данный принцип в проекте дома «Лагом».</p>
-            <h2 class="heading" >Лагом</h2>
+            <h2 class="heading heading-you" >Лагом</h2>
             <div class="buttons">
               <span>Доставим курьером за 5 дней <br> в любую точку России</span>
               <button data-bs-toggle="modal" data-bs-target="#modal-application" class="ms-4">Оставить заявку</button>
@@ -916,7 +954,7 @@
   </div>
 </div>
 
-<div class="modal modal-purchase fade show" style="display: block" id="modal-purchase" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<div class="modal modal-purchase fade "  id="modal-purchase" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
   <div class="modal-dialog modal-dialog-purchase">
     <div class="modal-content">
       <div class="modal-header">
@@ -926,7 +964,7 @@
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body active">
+      <div id="modal-bd1" class="modal-body active">
          <div class="buttons">
              <div class="button active">
                <i class="fa-solid fa-bolt-lightning"></i>
@@ -967,7 +1005,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-body2">
+      <div id="modal-bd2" class="modal-body2">
           <div class="image text-center">
             <img src="images/check-green.svg" alt="check">
           </div>
@@ -981,7 +1019,7 @@
           <a href="mailto:mail@mail.ru">личном кабинете.</a>
         </p>
       </div>
-      <div class="modal-footer active">
+      <div id="modal-ft1" class="modal-footer active">
         <div class="prices">
           <h4>К оплате:</h4>
           <div class="price">
@@ -990,7 +1028,7 @@
           </div>
         </div>
         <div class="button">
-          <button class="btn-green">
+          <button id="btn-ft1" class="btn-green">
             Отправить
           </button>
         </div>
@@ -1005,10 +1043,10 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer2 ">
-        <div class="button">
-          <button class="btn-green">
-            Отправить
+      <div id="modal-ft2" class="modal-footer2 ">
+        <div  class="button">
+          <button id="btn-ft2" class="btn-green">
+            Закрыть
           </button>
         </div>
       </div>

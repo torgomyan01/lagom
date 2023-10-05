@@ -474,3 +474,29 @@ $('.slider').slick({
         activeIndex = 8;
     }
 });
+
+
+//...... Modals
+
+
+const modal_purchase = new bootstrap.Modal(document.getElementById('modal-purchase'), {
+    keyboard: false
+})
+const modal_bd1 = document.getElementById('modal-bd1')
+const modal_bd2 = document.getElementById('modal-bd2')
+const modal_ft1 = document.getElementById('modal-ft1')
+const modal_ft2 = document.getElementById('modal-ft2')
+const modal_btn1 = document.getElementById('btn-ft1')
+const modal_btn2 = document.getElementById('btn-ft2')
+
+
+modal_btn1.addEventListener('click', ()=>{
+    modal_bd1.classList.remove('active')
+    modal_bd2.classList.add('active')
+    modal_ft1.classList.remove('active')
+    modal_ft2.classList.add('active')
+})
+
+modal_btn2.addEventListener('click', ()=>{
+    modal_purchase.hide()
+})
