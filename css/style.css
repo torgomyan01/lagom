@@ -818,7 +818,7 @@ body {
 
 .panel-title {
   color: #303030;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -831,7 +831,7 @@ body {
 }
 .panel2-info .title {
   color: rgba(48, 48, 48, 0.4);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .panel2-info .buttons {
@@ -841,7 +841,7 @@ body {
 }
 .panel2-info .buttons p {
   color: rgba(48, 48, 48, 0.4);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   max-width: 300px;
   text-align: right;
@@ -851,11 +851,11 @@ body {
   text-align: right;
 }
 .panel2-info .buttons .btn-green {
-  padding: 13px 24px;
+  padding: 0.8125rem 1.5rem;
   white-space: nowrap;
 }
 .panel2-info .buttons .btn-white {
-  padding: 13px 24px;
+  padding: 0.8125rem 1.5rem;
   border-radius: 100px;
   border: 1px solid rgba(48, 48, 48, 0.2);
 }
@@ -1172,7 +1172,7 @@ body {
 }
 .planning .col-green .col-box h5 {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem; /* 133.333% */
   letter-spacing: -0.36px;
@@ -1577,7 +1577,7 @@ body {
 .youll-get {
   border-top: 1px solid rgba(153, 153, 153, 0.38);
   border-bottom: 1px solid rgba(153, 153, 153, 0.32);
-  padding-bottom: 30px;
+  padding-bottom: -20px;
 }
 .youll-get .container-youl-get {
   margin-top: 30px;
@@ -1591,7 +1591,7 @@ body {
 }
 .youll-get .container-youl-get .youll-get-head {
   color: #303030;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   position: relative;
 }
@@ -1600,13 +1600,13 @@ body {
   width: 100%;
   position: absolute;
   right: 0;
-  top: 280px;
+  top: 200px;
 }
 .youll-get .container-youl-get .box-title .title1 {
   color: rgba(48, 48, 48, 0.6);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 1.5rem; /* 150% */
 }
 .youll-get .container-youl-get .box-title .heading-you {
   font-size: 13.125rem;
@@ -1620,22 +1620,22 @@ body {
 .youll-get .container-youl-get .box-title .buttons span {
   color: rgba(48, 48, 48, 0.4);
   text-align: right;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: 16px; /* 133.333% */
 }
 .youll-get .container-youl-get .box-title .buttons button {
   display: flex;
-  padding: 16px 24px 18px 24px;
+  padding: 1rem 1.5rem 1.125rem 1.5rem;
   justify-content: center;
   align-items: center;
   gap: 8px;
   border-radius: 100px;
   background: #50BA1E;
   color: #FFF;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 14px; /* 100% */
+  line-height: 0.875rem; /* 100% */
 }
 .youll-get .container-youl-get .panel.description {
   padding-bottom: 60px;
@@ -1660,6 +1660,7 @@ body {
   padding: 10px;
 }
 .youll-get .container-youl-get .panel-youl .image {
+  margin-top: -50px;
   max-width: 660px;
   width: 100%;
   height: 443px;
@@ -1977,7 +1978,6 @@ body {
 footer {
   background: #50BA1E;
   height: 40px;
-  margin-top: -50px;
 }
 @media (max-width: 768px) {
   footer {
@@ -1992,21 +1992,21 @@ footer .container-footer .inner {
 }
 footer .container-footer .inner span {
   color: rgba(255, 255, 255, 0.4);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 16px; /* 133.333% */
-  letter-spacing: -0.24px;
+  line-height: 1rem; /* 133.333% */
+  letter-spacing: -0.015rem;
 }
 footer .container-footer .inner p {
   color: rgba(255, 255, 255, 0.4);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  line-height: 16px; /* 133.333% */
+  line-height: 1rem; /* 133.333% */
   margin: 0;
 }
 footer .container-footer .inner p a {
   color: rgba(255, 255, 255, 0.4);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 16px; /* 133.333% */
   text-decoration: underline;
