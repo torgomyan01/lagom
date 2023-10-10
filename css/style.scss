@@ -1255,10 +1255,19 @@ $transMenu: 0.5s;
       position: absolute;
       max-width: 496px;
       width: 100%;
-      right: 100px;
+      right: 6.25rem;
       height: 0;
-      top: 306px;
+      top: 82px;
       transition: .2s;
+      @media (max-width: 1100px) {
+        right: 2rem;
+      }
+      @media (max-width: 992px) {
+        position: relative;
+        top: 20px;
+        right: 0;
+        margin: 0 auto;
+      }
       &.active{
         height: 680px;
       }
@@ -1289,6 +1298,9 @@ $transMenu: 0.5s;
         padding: 10px 0;
         &.active{
           display: flex;
+          @media (max-width: 992px) {
+            display: none;
+          }
         }
         i{
           font-size: 16px;
@@ -1359,11 +1371,17 @@ $transMenu: 0.5s;
           display: flex;
           justify-content: left;
           align-items: center;
-
+          @media (max-width: 576px) {
+            flex-wrap: wrap;
+            gap: 10px;
+          }
           .check{
             margin-right: 26px;
             display: flex;
             align-items: center;
+            @media (max-width: 576px) {
+              margin-right: 0;
+            }
             &:last-child{
               margin-right: 0;
             }
@@ -1606,6 +1624,17 @@ $transMenu: 0.5s;
       .image-box{
         width: 533px;
         height: 429px;
+        @media (max-width: 992px) {
+          margin: 0 auto;
+        }
+        @media (max-width: 576px) {
+          width: 433px;
+          height: 329px;
+        }
+        @media (max-width: 475px) {
+          width: 333px;
+          height: 229px;
+        }
         img{
           object-fit: cover;
           width: 100%;
@@ -1629,11 +1658,18 @@ $transMenu: 0.5s;
       display: flex;
       justify-content: end;
       align-items: end;
+      @media (max-width: 992px) {
+        justify-content: center;
+        margin-top: 20px;
+      }
     }
 
     .count{
       margin-right: 24px;
       margin-bottom: 45px;
+      @media (max-width: 475px) {
+        margin-right: 12px;
+      }
       span{
         color: #FFF;
         font-size: 16px;
@@ -1652,8 +1688,14 @@ $transMenu: 0.5s;
     }
 
     .slider-icon{
-      margin-right: 100px;
+      margin-right: 6.25rem;
       margin-bottom: 45px;
+      @media (max-width: 992px) {
+        margin-right: 4.5rem;
+      }
+      @media (max-width: 576px) {
+        margin-right: 1rem;
+      }
       i{
         width: 48px;
         height: 48px;
@@ -1665,14 +1707,26 @@ $transMenu: 0.5s;
         cursor: pointer;
 
       }
+
     }
 
     .buttons{
       display: flex;
       align-items: center;
-      margin-right: 160px;
+      margin-right: 10rem;
       width: 30%;
       margin-bottom: 40px;
+      @media (max-width: 992px) {
+        margin-right: 7rem;
+      }
+      @media (max-width: 576px) {
+        margin-right: 0;
+        margin-left: 2rem;
+      }
+      @media (max-width: 425px) {
+        margin-right: 0;
+        margin-left: .5rem;
+      }
       button{
         display: flex;
         padding: 1rem 1.5rem 1.125rem 1.5rem;
@@ -1709,6 +1763,21 @@ $transMenu: 0.5s;
     left: 25%;
     bottom: 40px;
     z-index: 1;
+    @media (max-width: 992px) {
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 768px) {
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 576px) {
+      bottom: 140px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     span {
       i{
         color: #fff;
