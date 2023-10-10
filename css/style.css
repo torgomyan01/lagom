@@ -1600,10 +1600,6 @@ body {
 .youll-get {
   border-top: 1px solid rgba(153, 153, 153, 0.38);
   border-bottom: 1px solid rgba(153, 153, 153, 0.32);
-  padding-bottom: -20px;
-}
-.youll-get .container-youl-get {
-  margin-top: 30px;
 }
 .youll-get .container-youl-get #container {
   width: 100%;
@@ -1617,6 +1613,7 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   position: relative;
+  top: 30px;
 }
 .youll-get .container-youl-get .box-title {
   max-width: 660px;
@@ -1704,7 +1701,7 @@ body {
   position: absolute;
   right: 5px;
   z-index: 5;
-  top: -20px;
+  top: 0;
 }
 .youll-get .container-youl-get .section_nav a {
   display: block;
