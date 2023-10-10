@@ -22,8 +22,10 @@ ScrollTrigger.create({
 ScrollTrigger.create({
     start: 'top -900',
     end: 99999,
-    toggleClass: {className: 'nav-color-black', targets: '.max-header'},
+    toggleClass: {className: 'nav-color-black', targets: '.max-header'}
 });
+
+
 
 $(window).scroll();
 
