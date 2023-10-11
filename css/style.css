@@ -866,6 +866,22 @@ body {
   text-align: left;
 }
 
+@media (max-width: 992px) {
+  #panel-1 {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 768px) {
+  #panel-1 {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 768px) {
+  #panel-1 {
+    transform: scale(0.6);
+  }
+}
+
 .panel-title {
   color: #303030;
   font-size: 1.5rem;

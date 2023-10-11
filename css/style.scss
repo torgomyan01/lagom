@@ -930,6 +930,18 @@ $transMenu: 0.5s;
   text-align: left;
 }
 
+#panel-1{
+  @media (max-width: 992px) {
+    transform: scale(.9);
+  }
+  @media (max-width: 768px) {
+    transform: scale(.8);
+  }
+  @media (max-width: 768px) {
+    transform: scale(.6);
+  }
+}
+
 .panel-title{
   color: #303030;
   font-size: 1.5rem;
