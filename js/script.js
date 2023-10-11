@@ -153,7 +153,29 @@ btn_prev.addEventListener('click', ()=>{
     col_box2.classList.remove('active')
 })
 
+const headerSliderArray = [
+    'images/slider1.png',
+    'https://picsum.photos/2440/1730?random=1',
+    'https://picsum.photos/2440/1730?random=2',
+    'https://picsum.photos/2440/1730?random=3',
+    'https://picsum.photos/2440/1730?random=4',
+]
+
+let headerSliderArraySuccess = true;
+
+
 switch_planning.addEventListener('change', (e)=>{
+
+    if(headerSliderArraySuccess){
+        headerSliderArray.forEach((url) => {
+            const img = new Image();
+            img.src = url;
+            img.onload = () => console.log('loaded')
+        })
+        headerSliderArraySuccess = false;
+    }
+
+
     if(!e.currentTarget.checked){
         container1.classList.add('active')
         slider_planning.classList.remove('active')
@@ -203,13 +225,6 @@ btn_buy_slider.addEventListener('click', ()=>{
 // ......
 
 
-const headerSliderArray = [
-    'images/slider1.png',
-    'https://picsum.photos/2440/1730?random=1',
-    'https://picsum.photos/2440/1730?random=2',
-    'https://picsum.photos/2440/1730?random=3',
-    'https://picsum.photos/2440/1730?random=4',
-]
 
 const left_btn = document.querySelector('.left-btn')
 const right_btn = document.querySelector('.right-btn')

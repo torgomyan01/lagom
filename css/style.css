@@ -1177,7 +1177,7 @@ body {
   right: 4.25rem;
   height: 0;
   top: 0;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 @media (max-width: 1100px) {
   .planning .col-green {
@@ -1201,7 +1201,7 @@ body {
   transition: 0.3s;
 }
 .planning .col-green .col-green2.active {
-  height: auto;
+  height: 620px;
 }
 .planning .col-green .open-close {
   display: flex;
@@ -1219,6 +1219,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+  transition: 0.3s;
 }
 @media (max-width: 992px) {
   .planning .col-green .open-close {
