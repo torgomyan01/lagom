@@ -1258,7 +1258,6 @@ $transMenu: 0.5s;
 
 .planning{
   position: relative;
-  min-height: 80vh;
 
     .col-green{
       position: absolute;
@@ -1629,7 +1628,7 @@ $transMenu: 0.5s;
 
     .container1{
       display: none;
-      min-height: 85vh;
+      min-height: 730px;
       &.active{
         display: block;
       }
@@ -1662,7 +1661,7 @@ $transMenu: 0.5s;
 
 
   .slider-image{
-    min-height: 85vh;
+    min-height: 700px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1799,7 +1798,7 @@ $transMenu: 0.5s;
   .switch-planning {
     position: absolute;
     left: 25%;
-    top: calc(26% + 640px);
+    top: calc(26% + 650px);
     z-index: 1;
     cursor: pointer;
     @media (max-width: 992px) {
@@ -1898,12 +1897,13 @@ $transMenu: 0.5s;
 
 
 .youll-get{
+  margin-top: 90px;
+  .container-youl-get{
     border-top: 1px solid rgba(153, 153, 153, 0.38);
     border-bottom: 1px solid rgba(153, 153, 153, 0.32);
-  .container-youl-get{
     #container {
       width: 100%;
-      min-height: 100vh;
+      min-height: 740px;
       position: relative;
       top: 0;
       left: 0;
