@@ -518,7 +518,7 @@ body {
 }
 .max-header nav .home-for-people {
   margin-left: 200px;
-  color: #fff;
+  color: #303030;
 }
 @media (max-width: 1100px) {
   .max-header nav .home-for-people {
@@ -576,6 +576,8 @@ body {
 }
 .max-header nav .btn-menu, .max-header nav .btn-white {
   transition: 0.5s;
+  position: absolute;
+  top: calc(50% + 124px);
 }
 .max-header.nav-color-black nav {
   background: #FFF !important;
@@ -641,6 +643,9 @@ body {
 .max-header.nav--fixed nav {
   height: 96px;
   background: transparent;
+}
+.max-header.nav--fixed nav .good-luck {
+  display: none;
 }
 .max-header.nav--fixed nav .nav-logo {
   width: 104px;
@@ -708,6 +713,8 @@ body {
   border-color: #303030;
 }
 .max-header .good-luck {
+  position: absolute;
+  bottom: 30px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -1835,6 +1842,7 @@ body {
   display: block;
   color: rgba(48, 48, 48, 0.6);
   font-size: 24px;
+  text-align: right;
   font-weight: 600;
   line-height: 24px; /* 100% */
   margin: 10px 0;
