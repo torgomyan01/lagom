@@ -612,6 +612,8 @@ $transMenu: 0.5s;
     }
     .btn-menu, .btn-white{
       transition: $transMenu;
+    }
+    .btn-video{
       position: absolute;
       top: calc(50% + 124px);
     }
@@ -1256,15 +1258,15 @@ $transMenu: 0.5s;
 
 .planning{
   position: relative;
-
+  min-height: 80vh;
 
     .col-green{
       position: absolute;
       max-width: 496px;
       width: 100%;
-      right: 6.25rem;
+      right: 4.25rem;
       height: 0;
-      top: 82px;
+      top: 0;
       transition: .2s;
       @media (max-width: 1100px) {
         right: 2rem;
@@ -1276,7 +1278,7 @@ $transMenu: 0.5s;
         margin: 0 auto;
       }
       &.active{
-        height: 680px;
+        height: 620px;
       }
       .col-green2{
         overflow: hidden;
@@ -1288,7 +1290,7 @@ $transMenu: 0.5s;
       }
 
       .open-close{
-        display: none;
+        display: flex;
         cursor: pointer;
         border-radius: 0 0 16px 16px;
         background: #FFF;
@@ -1303,6 +1305,9 @@ $transMenu: 0.5s;
         justify-content: center;
         align-items: center;
         padding: 10px 0;
+        @media (max-width: 992px) {
+          display: none;
+        }
         &.active{
           display: flex;
           @media (max-width: 992px) {
@@ -1318,7 +1323,7 @@ $transMenu: 0.5s;
       .col-box{
         width: 100%;
         height: 100%;
-        padding: 40px;
+        padding: 35px;
         background: linear-gradient(0deg, #50BA1E 0%, #50BA1E 100%);
 
         h5{
@@ -1350,10 +1355,6 @@ $transMenu: 0.5s;
 
           .select{
             width: 45%;
-            margin-bottom: 25px;
-
-
-
             select{
               width: 100%;
               padding: 16px;
@@ -1410,7 +1411,7 @@ $transMenu: 0.5s;
 
         .btn-planning{
           width: 100%;
-          margin-top: 180px;
+          margin-top: 175px;
           button{
             display: flex;
             width: 100%;
@@ -1441,8 +1442,8 @@ $transMenu: 0.5s;
           display: block;
         }
         .buttons-icons{
-          margin-top: 24px;
-          margin-bottom: 20px;
+          margin-top: 10px;
+          margin-bottom: 10px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -1455,6 +1456,9 @@ $transMenu: 0.5s;
             font-weight: 600;
             line-height: 14px; /* 100% */
             cursor: pointer;
+            &:active{
+              background: #c3c6cb;
+            }
           }
 
           .icon{
@@ -1476,7 +1480,7 @@ $transMenu: 0.5s;
           font-size: 16px;
           font-weight: 700;
           line-height: 16px;
-          margin: 24px 0;
+          margin: 15px 0;
         }
 
 
@@ -1498,10 +1502,12 @@ $transMenu: 0.5s;
         }
 
         .switch-box{
-          padding: 24px 0;
+          padding: 15px 0;
           display: flex;
           border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+
           span{
+            cursor: pointer;
             color: #FFF;
             text-align: center;
             font-size: 14px;
@@ -1515,7 +1521,7 @@ $transMenu: 0.5s;
         .price-box{
           display: flex;
           justify-content: space-between;
-          margin: 24px 0;
+          margin: 20px 0;
           h4{
             color: rgba(255, 255, 255, 0.60);
             font-size: 0.875rem;
@@ -1623,14 +1629,17 @@ $transMenu: 0.5s;
 
     .container1{
       display: none;
-      margin-top: 90px;
-      min-height: 100vh;
+      min-height: 85vh;
       &.active{
         display: block;
       }
+      .col-image{
+        margin-left: 90px;
+        margin-top: 25px;
+      }
       .image-box{
-        width: 533px;
-        height: 429px;
+        width: 100%;
+        height: 100%;
         @media (max-width: 992px) {
           margin: 0 auto;
         }
@@ -1653,8 +1662,7 @@ $transMenu: 0.5s;
 
 
   .slider-image{
-    margin-top: 90px;
-    min-height: 100vh;
+    min-height: 85vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1670,10 +1678,23 @@ $transMenu: 0.5s;
         margin-top: 20px;
       }
     }
-
+      &.ok{
+        .slider-icon{
+          left: -4%;
+        }
+        .count{
+          left: -5%;
+        }
+      }
     .count{
-      margin-right: 24px;
-      margin-bottom: 45px;
+      position: relative;
+      left: -46%;
+      margin-bottom: 50px;
+      @media (max-width: 992px) {
+        position: unset;
+        left: 0;
+        margin-right: 30px;
+      }
       @media (max-width: 475px) {
         margin-right: 12px;
       }
@@ -1695,10 +1716,13 @@ $transMenu: 0.5s;
     }
 
     .slider-icon{
-      margin-right: 6.25rem;
-      margin-bottom: 45px;
+      position: relative;
+      left: -45%;
+      margin-bottom: 50px;
       @media (max-width: 992px) {
         margin-right: 4.5rem;
+        position: unset;
+        left: 0;
       }
       @media (max-width: 576px) {
         margin-right: 1rem;
@@ -1718,13 +1742,20 @@ $transMenu: 0.5s;
     }
 
     .buttons{
-      display: flex;
+      display: none;
       align-items: center;
       margin-right: 10rem;
       width: 30%;
       margin-bottom: 40px;
+      &.active{
+        display: flex;
+        .slider-icon{
+          left: -5%;
+        }
+      }
       @media (max-width: 992px) {
         margin-right: 7rem;
+        display: flex;
       }
       @media (max-width: 576px) {
         margin-right: 0;
@@ -1768,8 +1799,9 @@ $transMenu: 0.5s;
   .switch-planning {
     position: absolute;
     left: 25%;
-    bottom: 40px;
+    top: calc(26% + 640px);
     z-index: 1;
+    cursor: pointer;
     @media (max-width: 992px) {
       bottom: 100px;
       left: 50%;
@@ -1899,6 +1931,14 @@ $transMenu: 0.5s;
         line-height: 1.5rem; /* 150% */
         text-align: right;
         padding-left: 60px;
+        transition: 0.3s;
+        transform: translateY(-100px);
+        height: 160px;
+        opacity: 0;
+        &.active{
+          transform: translateY(0);
+          opacity: 1;
+        }
       }
 
       .heading-you{
@@ -1964,19 +2004,32 @@ $transMenu: 0.5s;
       text-align: center;
       color: white;
       box-sizing: border-box;
-    }
-
-    .panel-youl .image{
-      margin-top: -50px;
-      max-width: 660px;
-      width: 100%;
-      height: 443px;
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      transition: 0.3s;
+      transform: translateY(-100px);
+      opacity: 0;
+      &.active{
+        transform: translateY(0);
+        opacity: 1;
+      }
+      .image{
+         max-width: 660px;
+         width: 100%;
+         height: 443px;
+        position: absolute;
+        top: 170px;
+         img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+         }
+       }
+      .image-home{
+        position: absolute;
+        top: 325px;
       }
     }
+
+
 
 
     .section_nav {
@@ -1994,7 +2047,10 @@ $transMenu: 0.5s;
       line-height: 24px; /* 100% */
       margin: 10px 0;
       transform: unset !important;
-      &:active{
+      &.active{
+        color: #303030;
+      }
+      &:active,{
         transform: scale(1) !important;
       }
       &:hover{

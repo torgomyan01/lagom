@@ -42,28 +42,11 @@ let panelsSection = document.querySelector("#panels"),
   panelsContainer = document.querySelector("#panels-container"),
   tween;
 
-// document.querySelectorAll(".anchor").forEach(anchor => {
-//     anchor.addEventListener("click", function(e) {
-//         e.preventDefault();
-//         let targetElem = document.querySelector(e.target.getAttribute("href")),
-//           y = targetElem;
-//         if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
-//             let totalScroll = tween.scrollTrigger.end - tween.scrollTrigger.start,
-//               totalMovement = (panels.length - 1) * targetElem.offsetWidth;
-//             y = Math.round(tween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
-//         }
-//         gsap.to(window, {
-//             scrollTo: {
-//                 y: y,
-//                 autoKill: false
-//             },
-//             duration: 1
-//         });
-//     });
-// });
 
 
 /* Panels */
+
+
 const panels = gsap.utils.toArray("#panels-container .panel");
 tween = gsap.to(panels, {
     xPercent: -100 * ( panels.length - 1 ),
@@ -147,6 +130,9 @@ tween = gsap.to(panels, {
 const btn_col = document.querySelector('#col-box1-btn')
 const btn_buy = document.querySelector('#btn-buy')
 const btn_prev = document.querySelector('#btn-prev')
+const btn_prev_slider = document.querySelector('#btn-white-slider')
+const btn_buy_slider = document.querySelector('#btn-green-slider')
+const buttons_slider = document.querySelector('#buttons-slider')
 const col_box1 = document.querySelector('#col-box1')
 const col_box2 = document.querySelector('#col-box2')
 const switch_planning = document.querySelector('#switch-planning input')
@@ -161,6 +147,7 @@ btn_col.addEventListener('click', ()=>{
     col_box2.classList.add('active')
 })
 
+
 btn_prev.addEventListener('click', ()=>{
     col_box1.classList.add('active')
     col_box2.classList.remove('active')
@@ -170,7 +157,6 @@ switch_planning.addEventListener('change', (e)=>{
     if(!e.currentTarget.checked){
         container1.classList.add('active')
         slider_planning.classList.remove('active')
-        open_close.classList.remove('active')
     } else {
         slider_planning.classList.add('active')
         container1.classList.remove('active')
@@ -182,8 +168,37 @@ switch_planning.addEventListener('change', (e)=>{
 open_close.addEventListener('click', ()=>{
     col_green2.classList.toggle('active')
     col_green.classList.toggle('active')
+
+    if(!col_green.classList.contains('active')){
+        buttons_slider.classList.add('active')
+        slider_planning.classList.add('ok')
+    } else {
+        buttons_slider.classList.remove('active')
+        slider_planning.classList.remove('ok')
+    }
+
 })
 
+btn_prev_slider.addEventListener('click', ()=>{
+    buttons_slider.classList.remove('active')
+    slider_planning.classList.remove('ok')
+    if(!col_green.classList.contains('active')){
+        col_green.classList.add('active')
+        col_green2.classList.add('active')
+    }
+})
+
+
+btn_buy_slider.addEventListener('click', ()=>{
+    col_box1.classList.remove('active')
+    col_box2.classList.add('active')
+    buttons_slider.classList.remove('active')
+    slider_planning.classList.remove('ok')
+    if(!col_green.classList.contains('active')){
+        col_green.classList.add('active')
+        col_green2.classList.add('active')
+    }
+})
 
 // ......
 
@@ -234,30 +249,8 @@ function ChangeSlider(numStatus){
 
 
 
-// /* Panels */
-// const youAdd = gsap.utils.toArray("#you");
-// const aaa = gsap.to(youAdd, {
-//     yPercent: 100,
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: "#you-add-body",
-//         pin: true,
-//         start: "top",
-//         end: "top",
-//         scrub: 1,
-//         snap: {
-//             snapTo: 2,
-//             inertia: false,
-//             // duration: {min: 0.1, max: 0.1}
-//         },
-//     }
-// });
-
-
 //......... Youll Get
 
-
-// gsap.registerPlugin(ScrollTrigger);
 
 
 // const scrollTop = $('#youll-get').offset().top;
@@ -265,15 +258,15 @@ function ChangeSlider(numStatus){
 // const panelss = gsap.utils.toArray(".panel-youl");
 //
 //
-// gsap.to(".panel-youl:not(:last-child)", {
+// gsap.to(".panel-youl", {
 //     yPercent: -100,
 //     ease: "slow",
-//     stagger: 0.5,
+//     stagger: 1,
 //     scrollTrigger: {
 //         trigger: "#container",
-//         start: "top top",
-//         end: `+=${panelss.length * contHeight}px`,
-//         scrub: 1,
+//         start: "top +90",
+//         end: `${scrollTop + (panelss.length * contHeight)}`,
+//         scrub: 0,
 //         pin: true,
 //     }
 // });
@@ -282,7 +275,7 @@ function ChangeSlider(numStatus){
 // gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
 // const navLinks = gsap.utils.toArray(".section_nav a");
 // navLinks.forEach((link, i) => {
-//     link.addEventListener("click", e => {
+//     link.addEventListener("mouseover", e => {
 //         e.preventDefault();
 //         console.log(i)
 //         gsap.to(window,
@@ -295,62 +288,7 @@ function ChangeSlider(numStatus){
 // panelss.forEach((panel, i) => {
 //     ScrollTrigger.create({
 //         start: 0,
-//         end: scrollTop + (i * contHeight) - contHeight,
-//         markers: true,
-//         onLeave: () => {
-//             if(navLinks[i + 1]) {
-//                 gsap.to(navLinks[i + 1], {scale: 1.3, color: "red"});
-//                 gsap.to(navLinks[i], {scale: 1, color: "blue"});
-//             }
-//         },
-//         onEnterBack: () => {
-//             gsap.to(navLinks[i], {scale: 1.3, color: "red"});
-//             if(navLinks[i + 1]) {
-//                 gsap.to(navLinks[i + 1], {scale: 1, color: "blue"});
-//             }
-//         },
-//     })
-// });
-
-
-////  22
-
-// gsap.to(".panel-youl:not(:last-child)", {
-//     yPercent: -100,
-//     ease: "slow",
-//     stagger: 0.5,
-//     scrollTrigger: {
-//         trigger: "#container",
-//         start: "top top",
-//         end: "+=500%",
-//         scrub: 1,
-//         pin: true
-//     }
-// });
-//
-// gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
-//
-//
-// const scrollTop = $('#youll-get').offset().top;
-// const contHeight = $('#container').height();
-//
-// const pinSpacer = document.querySelector('.pin-spacer');
-//
-//
-// const navLinks = gsap.utils.toArray(".section_nav a");
-// navLinks.forEach((link, i) => {
-//     link.addEventListener("mouseover", e => {
-//         e.preventDefault();
-//         gsap.to(window, {scrollTo: scrollTop + (i * contHeight)});
-//     });
-// });
-//
-// const panelss = gsap.utils.toArray(".panel-youl");
-// panelss.forEach((panel, i) => {
-//     console.log(navLinks)
-//     ScrollTrigger.create({
-//         start: `${scrollTop}` - 50 ,
-//         end: (i + 1) * contHeight * 2.2,
+//         end: `${scrollTop + (i * contHeight) + contHeight}`,
 //         onLeave: () => {
 //             if(navLinks[i + 1]) {
 //                 gsap.to(navLinks[i + 1], {scale: 1.3, color: "#303030"});
@@ -365,61 +303,38 @@ function ChangeSlider(numStatus){
 //         },
 //     })
 // });
+//
+//
 
 
-// 2
+const panelYoul = $('.panel-youl');
+const panelNav = $('.section_nav a');
+const youlTexts = $('.box-title .title1');
+
+panelNav.on('mouseenter', function (e){
+    e.preventDefault();
+    const thisElement = $(this);
+    const href = thisElement.attr('href');
+    panelYoul.addClass('d-none').removeClass('active');
+    $(href).removeClass('d-none');
+
+    youlTexts.addClass('d-none').removeClass('active');
+    $(`#text-${href.replace(/#/g, '')}`).removeClass('d-none')
 
 
-const scrollTop = $('#youll-get').offset().top;
-const contHeight = $('#container').height();
-const panelss = gsap.utils.toArray(".panel-youl");
+    setTimeout(() => {
+        $(href).addClass('active')
+        $(`#text-${href.replace(/#/g, '')}`).addClass('active')
+    }, 100);
+
+    panelNav.removeClass('active');
+    thisElement.addClass('active');
+})
 
 
-gsap.to(".panel-youl", {
-    yPercent: -100,
-    ease: "slow",
-    stagger: 1,
-    scrollTrigger: {
-        trigger: "#container",
-        start: "top +90",
-        end: `${scrollTop + (panelss.length * contHeight)}`,
-        scrub: 0,
-        pin: true,
-    }
-});
-
-
-gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
-const navLinks = gsap.utils.toArray(".section_nav a");
-navLinks.forEach((link, i) => {
-    link.addEventListener("mouseover", e => {
-        e.preventDefault();
-        console.log(i)
-        gsap.to(window,
-          {
-              scrollTo: scrollTop + (i * contHeight)
-          });
-    });
-});
-
-panelss.forEach((panel, i) => {
-    ScrollTrigger.create({
-        start: 0,
-        end: `${scrollTop + (i * contHeight) + contHeight}`,
-        onLeave: () => {
-            if(navLinks[i + 1]) {
-                gsap.to(navLinks[i + 1], {scale: 1.3, color: "#303030"});
-                gsap.to(navLinks[i], {scale: 1, color: "#30303099"});
-            }
-        },
-        onEnterBack: () => {
-            gsap.to(navLinks[i], {scale: 1.3, color: "#303030"});
-            if(navLinks[i + 1]) {
-                gsap.to(navLinks[i + 1], {scale: 1, color: "#30303099"});
-            }
-        },
-    })
-});
+panelNav.on('click', function (e){
+    e.preventDefault();
+})
 
 
 
@@ -479,6 +394,15 @@ $('.slider').slick({
 
 //...... Modals
 
+const modal_links = document.querySelectorAll('#links a')
+const modal_menu = new bootstrap.Modal(document.getElementById('exampleModal'), {
+    keyboard: false
+})
+modal_links.forEach((link)=>{
+    link.addEventListener('click', ()=>{
+        modal_menu.hide()
+    })
+})
 
 const modal_purchase = new bootstrap.Modal(document.getElementById('modal-purchase'), {
     keyboard: false
