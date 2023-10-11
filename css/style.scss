@@ -931,16 +931,121 @@ $transMenu: 0.5s;
 }
 
 #panel-1{
-  @media (max-width: 992px) {
-    transform: scale(.9);
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.7) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.6) !important;
+    }
   }
-  @media (max-width: 768px) {
-    transform: scale(.8);
-  }
-  @media (max-width: 768px) {
-    transform: scale(.6);
-  }
+
 }
+#panel-2{
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.9) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.7) !important;
+    }
+  }
+
+}
+#panel-3{
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.9) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.7) !important;
+    }
+  }
+
+}
+#panel-4{
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.9) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.7) !important;
+    }
+  }
+
+}
+#panel-5{
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.9) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.7) !important;
+    }
+  }
+
+}
+#panel-6{
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.9) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.7) !important;
+    }
+  }
+
+}
+#panel-7{
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.9) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.7) !important;
+    }
+  }
+
+}
+#panel-8{
+  .container{
+    @media (max-width: 992px) {
+      transform: scale(.9) !important;
+    }
+    @media (max-width: 768px) {
+      transform: scale(.8) !important;
+    }
+    @media (max-width: 576px) {
+      transform: scale(.7) !important;
+    }
+  }
+
+}
+
+
+
+
 
 .panel-title{
   color: #303030;
@@ -1013,6 +1118,11 @@ $transMenu: 0.5s;
     left: 100px;
     max-width: 212px;
     width: 100%;
+    @media (max-width: 992px) {
+      max-width: 25vw;
+      top: -10px;
+      left: -20px;
+    }
     img {
     width: 100%;
     height: 100%;
@@ -1027,10 +1137,30 @@ $transMenu: 0.5s;
 
   .box3{
     position: absolute;
-    top: 450px;
-    left: 280px;
+    top: 28.125rem;
+    left: 17.5rem;
     max-width: 282px;
     width: 100%;
+    @media (max-width: 992px) {
+      max-width: 29vw;
+      top: 30rem;
+      left: 1rem;
+    }
+    @media (max-width: 768px) {
+      max-width: 29vw;
+      top: 23rem;
+      left: 1rem;
+    }
+    @media (max-width: 576px) {
+      max-width: 32vw;
+      top: 20rem;
+      left: 1rem;
+    }
+    @media (max-width: 375px) {
+      max-width: 36vw;
+      top: 14rem;
+      left: 1rem;
+    }
     img {
     width: 100%;
     height: 100%;
@@ -1049,6 +1179,16 @@ $transMenu: 0.5s;
     top: -40px;
     max-width: 308px;
     width: 100%;
+    @media (max-width: 992px) {
+      max-width: 32vw;
+      right: 0;
+      top: -40px;
+    }
+    @media (max-width: 768px) {
+      max-width: 35vw;
+      right: 0;
+      top: -40px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -1062,10 +1202,30 @@ $transMenu: 0.5s;
   }
   .box5{
     position: absolute;
-    right: 80px;
-    top: 490px;
-    max-width: 230px;
+    right: 5rem;
+    top: 30.625rem;
+    max-width: 14.375rem;
     width: 100%;
+    @media (max-width: 992px) {
+      max-width: 26vw;
+      right: 3rem;
+      top: 25.625rem;
+    }
+    @media (max-width: 768px) {
+      max-width: 27vw;
+      right: 1rem;
+      top: 20.625rem;
+    }
+    @media (max-width: 576px) {
+      max-width: 27vw;
+      right: 1rem;
+      top: 16.625rem;
+    }
+    @media (max-width: 375px) {
+      max-width: 27vw;
+      right: 1rem;
+      top: 12.625rem;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -1085,6 +1245,10 @@ $transMenu: 0.5s;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    justify-content: center;
+  }
   width: 100%;
   height: 100%;
   .box-title{
@@ -1202,7 +1366,11 @@ $transMenu: 0.5s;
   gap: 120px;
   width: 100%;
   height: 100%;
-
+  @media (max-width: 992px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
   .title{
     color: #303030;
     font-size: 1rem;
@@ -1259,6 +1427,11 @@ $transMenu: 0.5s;
 .inner3{
   justify-content: center;
   gap: 600px;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
 }
 
 //........... principles_of_Lagom_house End
