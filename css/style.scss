@@ -1560,7 +1560,7 @@ $transMenu: 0.5s;
 
 .planning{
   position: relative;
-
+    margin-top: -40px;
     .col-green{
       position: absolute;
       max-width: 496px;
@@ -1580,6 +1580,9 @@ $transMenu: 0.5s;
       }
       &.active{
         height: 620px;
+        @media (max-width: 992px) {
+          height: 690px;
+        }
       }
       .col-green2{
         overflow: hidden;
@@ -1587,6 +1590,9 @@ $transMenu: 0.5s;
         transition: .3s;
         &.active{
           height: 620px;
+          @media (max-width: 992px) {
+            height: 690px;
+          }
         }
       }
 
@@ -1677,6 +1683,7 @@ $transMenu: 0.5s;
               option{
                 padding: 15px 0;
               }
+
             }
 
           }
@@ -1747,6 +1754,10 @@ $transMenu: 0.5s;
         .check-box{
           display: flex;
           align-items: center;
+          @media (max-width: 992px) {
+            position: relative;
+            top: 130px;
+          }
           @media (max-width: 576px) {
             flex-wrap: wrap;
             gap: 10px;
@@ -2029,18 +2040,31 @@ $transMenu: 0.5s;
     .container1{
       display: none;
       min-height: 730px;
+      @media (max-width: 992px) {
+        min-height: 600px;
+        margin-top: 50px;
+      }
+      @media (max-width: 768px) {
+        min-height: 550px;
+      }
       &.active{
         display: block;
       }
       .col-image{
         margin-left: 90px;
         margin-top: 25px;
+        @media (max-width: 992px) {
+          margin: 0 auto;
+        }
       }
       .image-box{
         width: 100%;
         height: 100%;
         @media (max-width: 992px) {
           margin: 0 auto;
+          margin-top: -30px;
+          width: 533px;
+          height: 423px;
         }
         @media (max-width: 576px) {
           width: 433px;
@@ -2068,13 +2092,19 @@ $transMenu: 0.5s;
     background-position: center;
     display: none;
     transition: .3s;
+    @media (max-width: 992px) {
+      min-height: 600px;
+    }
+    @media (max-width: 768px) {
+      min-height: 550px;
+    }
     &.active{
       display: flex;
       justify-content: end;
       align-items: end;
       @media (max-width: 992px) {
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 75px;
       }
     }
       &.ok{
@@ -2117,10 +2147,11 @@ $transMenu: 0.5s;
     .slider-icon{
       position: relative;
       left: -45%;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       @media (max-width: 992px) {
         margin-right: 4.5rem;
         position: unset;
+        margin-bottom: 34px;
         left: 0;
       }
       @media (max-width: 576px) {
@@ -2205,7 +2236,7 @@ $transMenu: 0.5s;
     z-index: 1;
     cursor: pointer;
     @media (max-width: 992px) {
-      bottom: 100px;
+      top: 90%;
       left: 50%;
       transform: translateX(-50%);
     }
