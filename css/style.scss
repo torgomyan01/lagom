@@ -886,11 +886,11 @@ $transMenu: 0.5s;
     height: 4rem;
   background: #50BA1E;
   text-align: right;
-  padding: 8px 8px 0 0;
+  padding: 0.5rem 0.5rem 0 0;
   cursor: pointer;
   img{
-    width: 32px !important;
-    height: 32px !important;
+    width: 2rem !important;
+    height: 2rem !important;
   }
 }
 
@@ -1130,8 +1130,9 @@ $transMenu: 0.5s;
   }
     .link-right1{
       position: absolute;
-      left: -64px;
-      bottom: -64px;
+      left: 0;
+      bottom: 0;
+      transform: translate(-100%, 100%);
     }
   }
   .box2{
@@ -1157,8 +1158,9 @@ $transMenu: 0.5s;
   }
     .link-right1{
       position: absolute;
-      left: -64px;
-      bottom: -64px;
+      left: 0;
+      bottom: 0;
+      transform: translate(-100%, 100%);
     }
   }
 
@@ -1200,8 +1202,9 @@ $transMenu: 0.5s;
   }
     .link-right1{
       position: absolute;
-      right: -64px;
-      top: -64px;
+      right: 0;
+      top: 0;
+      transform: translate(100%, -100%);
     }
   }
 
@@ -1228,8 +1231,9 @@ $transMenu: 0.5s;
     }
     .link-right1{
       position: absolute;
-      left: -64px;
-      bottom: -64px;
+      left: 0;
+      bottom: 0;
+      transform: translate(-100%, 100%);
     }
   }
   .box5{
@@ -1265,8 +1269,9 @@ $transMenu: 0.5s;
     }
     .link-right1{
       position: absolute;
-      right: -64px;
-      top: -64px;
+      right: 0;
+      top: 0;
+      transform: translate(100%, -100%);
     }
   }
 
