@@ -24,7 +24,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="icons/icons.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
@@ -65,7 +64,7 @@
         <div class="d-flex justify-content-center align-items-center">
           <button class="btn btn-white btn-video d-flex justify-content-center align-items-center border pt-13 pb-13 ps-24 pe-24">
             Видео о доме
-            <i class="fa-solid fa-play ms-2"></i>
+            <img class="ms-2" src="images/play.svg" alt="play">
           </button>
         </div>
 
@@ -74,13 +73,13 @@
                data-bs-toggle="tooltip" data-bs-placement="top"
                data-bs-custom-class="custom-tooltip"
                data-bs-title="Лучший проект в номинации «Строительство домов Лагом»">
-            <i class="fa-solid fa-trophy"></i>
+            <img src="images/champions.svg" alt="champion">
           </div>
           <div class="good-luck-item"
                data-bs-toggle="tooltip" data-bs-placement="top"
                data-bs-custom-class="custom-tooltip"
                data-bs-title="Лучший проект в номинации «Строительство домов Лагом»">
-            <i class="fa-solid fa-star"></i>
+            <img src="images/star.svg" alt="star">
           </div>
         </div>
 
@@ -98,11 +97,11 @@
          <div class="buttons">
            <button class="btn-white me-4">
              Видео о доме
-             <i class="fa-solid fa-play ms-1"></i>
+             <img class="ms-1" src="images/play.svg" alt="play">
            </button>
            <button class="btn-scroll">
              Scroll
-             <i class="fa-light fa-arrow-down-long ms-1"></i>
+             <img class="ms-1" src="images/arrow-up.svg" alt="arrow">
            </button>
          </div>
        </div>
@@ -243,7 +242,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </article>
       <article id="panel-3" class="panel full-screen ">
@@ -410,15 +408,15 @@
               в любой климатической зоне. Проект подходит
               для строительства в любой климатической зоне. </p>
             <div class="select-box mb-3">
-              <div class="select">
-                <h5>Кол-во человек в семье</h5>
+              <div class="select select1">
+                <h5>Кол-во человек</h5>
                 <select name="select">
-                  <option value="1 человек">1 человек</option>
-                  <option value="1 человек">1 человек</option>
-                  <option value="1 человек">1 человек</option>
+                  <option value="1 человек">1</option>
+                  <option value="1 человек">1 </option>
+                  <option value="1 человек">1 </option>
                 </select>
               </div>
-              <div class="select">
+              <div class="select select1">
                 <h5>Мастер-спальня</h5>
                 <select name="select">
                   <option value="Да">Да</option>
@@ -426,7 +424,7 @@
                   <option value="Да">Да</option>
                 </select>
               </div>
-              <div class="select">
+              <div class="select select2">
                 <h5>Тип участка</h5>
                 <select name="select">
                   <option value="Прямоугольный">Прямоугольный</option>
@@ -434,33 +432,50 @@
                   <option value="Прямоугольный">Прямоугольный</option>
                 </select>
               </div>
-              <div class="select">
-                <h5>Кол-во этажей</h5>
-                <select name="select">
-                  <option value="2">1</option>
-                  <option value="2">1</option>
-                  <option value="2">1</option>
-                </select>
-              </div>
-
             </div>
             <h5>Дополнительно</h5>
+            <div class="switch-box">
+              <label class="def-switch cursor-pointer">
+                <input type="checkbox">
+                <span></span>
+              </label>
+              <span class="ps-3 pt-1">Баня</span>
+              <label class="def-switch cursor-pointer ms-50">
+                <input type="checkbox">
+                <span></span>
+              </label>
+              <span class="ps-3 pt-1">Терраса</span>
+            </div>
             <div class="check-box mt-3">
-              <div class="check">
-                <input type="checkbox">
-                <span class="ps-2">Баня</span>
+              <div class="inner">
+                <h5>Гараж</h5>
+                <label class="check">
+                  <input type="radio">
+                  <span class="ps-3">Нет</span>
+                </label>
+                <label class="check">
+                  <input type="radio">
+                  <span class="ps-3">1 машина</span>
+                </label>
+                <label class="check">
+                  <input type="radio">
+                  <span class="ps-3">2 машины</span>
+                </label>
               </div>
-              <div class="check">
-                <input type="checkbox">
-                <span class="ps-2">Гараж</span>
-              </div>
-              <div class="check">
-                <input type="checkbox">
-                <span class="ps-2">Навес</span>
-              </div>
-              <div class="check">
-                <input type="checkbox">
-                <span class="ps-2">Терраса</span>
+              <div class="inner">
+                <h5>Навес</h5>
+                <label class="check">
+                  <input type="radio">
+                  <span class="ps-3">Нет</span>
+                </label>
+                <label class="check">
+                  <input type="radio">
+                  <span class="ps-3">1 машина</span>
+                </label>
+                <label class="check">
+                  <input type="radio">
+                  <span class="ps-3">2 машины</span>
+                </label>
               </div>
             </div>
             <div class="btn-planning">
@@ -547,7 +562,7 @@
         </div>
         <div id="open-close" class="open-close">
           Свернуть характеристки
-          <i class="fa-solid fa-caret-up ms-3 mt-1"></i>
+          <img class="ms-3 mt-1" src="images/arrow-black-top.svg" alt="arrow">
         </div>
       </div>
     </div>
@@ -568,9 +583,13 @@
         <span>1 /</span>
         <samp></samp>
       </div>
-      <div class="slider-icon">
-        <i class="fa-regular fa-arrow-left left-btn me-2"></i>
-        <i class="fa-regular fa-arrow-right right-btn"></i>
+      <div class="slider-icon d-flex align-items-center">
+        <div class="icon text-center me-2">
+          <img class="left-btn " src="images/arrow-left.svg" alt="left">
+        </div>
+        <div class="icon text-center">
+          <img class="right-btn" src="images/arrow-right.svg" alt="left">
+        </div>
       </div>
       <div id="buttons-slider" class="buttons ">
         <button id="btn-white-slider"  class="btn-white me-1">Назад</button>
@@ -756,7 +775,7 @@
       <div class="button  text-center mt-4">
         <button class="btn-green">
           Видео о команде
-          <i class="fa-solid fa-play ms-2"></i>
+          <img class="ms-2" src="images/play-white.svg" alt="play">
         </button>
       </div>
 
@@ -876,7 +895,7 @@
         <div class="button mt-3">
           <button class="btn-green">
             Записаться на консультацию
-            <i class="fa-solid fa-phone ms-1"></i>
+            <img class="ms-1" src="images/phone.svg" alt="phone">
           </button>
         </div>
       </div>
@@ -918,7 +937,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
           <a href="tel:+7(912)999-99-99">+7 (912) 999-99-99</a>
-          <i class="fa-solid fa-user ms-2"></i>
+          <img class="ms-2" src="images/user.svg" alt="user">
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -940,7 +959,7 @@
         <div class="button">
           <button class="btn-green">
             Записаться на консультацию
-            <i class="fa-solid fa-phone ms-2"></i>
+            <img class="ms-2" src="images/phone.svg" alt="phone">
           </button>
         </div>
       </div>
@@ -1003,7 +1022,7 @@
       <div id="modal-bd1" class="modal-body active">
          <div class="buttons">
              <div class="button active">
-               <i class="fa-solid fa-bolt-lightning"></i>
+               <img src="images/Frame.svg" alt="frame">
                Скидка 10%
              </div>
              <div class="button">

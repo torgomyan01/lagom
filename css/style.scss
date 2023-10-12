@@ -74,7 +74,7 @@ body{
   background: #50BA1E;
   color: #fff;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 14px;
   padding: 11px 24px;
 }
@@ -84,7 +84,7 @@ body{
   background: #FFF;
   color: #303030;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 14px;
 }
 
@@ -151,7 +151,7 @@ $transMenu: 0.5s;
           a{
             color: #303030;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
           }
           i{
             font-size: 14px;
@@ -172,7 +172,7 @@ $transMenu: 0.5s;
               margin-bottom: 12px;
               color: rgba(48, 48, 48, 0.60);
               font-size: 24px;
-              font-weight: 700;
+              font-weight: 600;
               transition: .2s;
               &:hover{
                 color: #303030;
@@ -220,7 +220,7 @@ $transMenu: 0.5s;
         h5{
           color: #303030;
           font-size: 1.5rem;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 100%; /* 24px */
         }
 
@@ -319,7 +319,7 @@ $transMenu: 0.5s;
         h5{
           color: #303030;
           font-size: 24px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 100%;
         }
         .btn-close{
@@ -338,7 +338,7 @@ $transMenu: 0.5s;
             text-align: center;
             color: #303030;
             font-size: 2rem;
-            font-weight: 700;
+            font-weight: 600;
             line-height: normal;
             margin-top: 16px;
           }
@@ -861,7 +861,7 @@ $transMenu: 0.5s;
     h4{
       color: #303030;
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 600;
     }
     span{
       color: #303030;
@@ -936,10 +936,7 @@ $transMenu: 0.5s;
       transform: scale(.8) !important;
     }
     @media (max-width: 768px) {
-      transform: scale(.7) !important;
-    }
-    @media (max-width: 576px) {
-      transform: scale(.6) !important;
+      transform: scale(.8) !important;
     }
   }
 
@@ -982,6 +979,12 @@ $transMenu: 0.5s;
     }
     @media (max-width: 576px) {
       transform: scale(.7) !important;
+    }
+    .inner{
+      @media (max-width: 992px) {
+        left: 0;
+        top: 0;
+      }
     }
   }
 
@@ -1050,7 +1053,7 @@ $transMenu: 0.5s;
 .panel-title{
   color: #303030;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .panel2-info{
@@ -1059,6 +1062,12 @@ $transMenu: 0.5s;
   width: 100%;
   position: relative;
   top: 80px;
+  @media (max-width: 992px) {
+    top: 1.25rem;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .title{
     color: rgba(48, 48, 48, 0.40);
     font-size: 0.875rem;
@@ -1068,6 +1077,9 @@ $transMenu: 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 992px) {
+      display: block;
+    }
     p{
       color: rgba(48, 48, 48, 0.40);
       font-size: 0.875rem;
@@ -1075,8 +1087,14 @@ $transMenu: 0.5s;
       max-width: 300px;
       text-align: right;
       width: 100%;
+      @media (max-width: 992px) {
+        text-align: left;
+      }
       span{
         text-align: right;
+        @media (max-width: 992px) {
+          text-align: center;
+        }
       }
     }
     .btn-green{
@@ -1095,6 +1113,10 @@ $transMenu: 0.5s;
   position: relative;
   left: -30px;
   top: 80px;
+  @media (max-width: 992px) {
+    top: 240px;
+    left: 15px;
+  }
   .box1{
     position: absolute;
     left: 50%;
@@ -1122,6 +1144,11 @@ $transMenu: 0.5s;
       max-width: 25vw;
       top: -10px;
       left: -20px;
+    }
+    @media (max-width: 475px) {
+      max-width: 25vw;
+      top: -15px;
+      left: -25px;
     }
     img {
     width: 100%;
@@ -1154,6 +1181,11 @@ $transMenu: 0.5s;
     @media (max-width: 576px) {
       max-width: 32vw;
       top: 20rem;
+      left: 1rem;
+    }
+    @media (max-width: 475px) {
+      max-width: 32vw;
+      top: 16rem;
       left: 1rem;
     }
     @media (max-width: 375px) {
@@ -1209,12 +1241,12 @@ $transMenu: 0.5s;
     @media (max-width: 992px) {
       max-width: 26vw;
       right: 3rem;
-      top: 25.625rem;
+      top: 28.625rem;
     }
     @media (max-width: 768px) {
       max-width: 27vw;
       right: 1rem;
-      top: 20.625rem;
+      top: 23.625rem;
     }
     @media (max-width: 576px) {
       max-width: 27vw;
@@ -1245,29 +1277,43 @@ $transMenu: 0.5s;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
   @media (max-width: 992px) {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: -120px;
   }
-  width: 100%;
-  height: 100%;
   .box-title{
     position: relative;
     top: 50px;
     left: -30px;
+    @media (max-width: 992px) {
+      left: 0;
+      top: -45px;
+    }
     h3{
       color: #303030;
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 
   .gallery2{
     position: relative;
     left: -180px;
+    @media (max-width: 992px) {
+      left: 0;
+    }
     .box1{
       max-width: 400px;
       width: 100%;
+      @media (max-width: 992px) {
+        max-width: 60vw;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -1285,9 +1331,15 @@ $transMenu: 0.5s;
         font-size: 1rem;
         font-weight: 400;
         letter-spacing: -0.32px;
+        @media (max-width: 992px) {
+          right: -130px;
+        }
       }
       .box2-text{
         right: -120px ;
+        @media (max-width: 992px) {
+          right: -100px;
+        }
       }
     }
     .box2{
@@ -1296,6 +1348,18 @@ $transMenu: 0.5s;
       position: absolute;
       left: -170px;
       top: 20px;
+      @media (max-width: 992px) {
+        max-width: 25vw;
+        left: -120px;
+      }
+      @media (max-width: 576px) {
+        max-width: 25vw;
+        left: -90px;
+      }
+      @media (max-width: 475px) {
+        max-width: 25vw;
+        left: -60px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -1314,13 +1378,25 @@ $transMenu: 0.5s;
         font-size: 1rem;
         font-weight: 400;
         letter-spacing: -0.32px;
+        @media (max-width: 992px) {
+          left: -120px;
+        }
+        @media (max-width: 475px) {
+          left: -110px;
+        }
         span{
           margin-left: 60px;
+          @media (max-width: 992px) {
+            margin-left: 45px;
+          }
         }
       }
       .box2-text{
        span{
          margin-left: 80px;
+         @media (max-width: 992px) {
+           margin-left: 65px;
+         }
        }
       }
     }
@@ -1330,6 +1406,21 @@ $transMenu: 0.5s;
       position: absolute;
       bottom: -30px;
       right: -110px;
+      @media (max-width: 992px) {
+        max-width: 25vw;
+        bottom: -30px;
+        right: -100px;
+      }
+      @media (max-width: 576px) {
+        max-width: 25vw;
+        bottom: -30px;
+        right: -90px;
+      }
+      @media (max-width: 475px) {
+        max-width: 25vw;
+        bottom: -30px;
+        right: -50px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -1348,9 +1439,15 @@ $transMenu: 0.5s;
         font-size: 1rem;
         font-weight: 400;
         letter-spacing: -0.32px;
+        @media (max-width: 992px) {
+          right: -110px;
+        }
       }
       .box2-text{
         right: -120px;
+        @media (max-width: 992px) {
+          right: -100px;
+        }
         }
     }
 
@@ -1397,12 +1494,15 @@ $transMenu: 0.5s;
     max-width: 511px;
     width: 100%;
     margin-left: -70px;
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
   }
 
   .heading-5{
     color: #303030;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .green-box{
@@ -1416,8 +1516,25 @@ $transMenu: 0.5s;
     cursor: pointer;
     color: #FFF;
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 0.875rem; /* 100% */
+  }
+
+  .image{
+    @media (max-width: 768px) {
+      max-width: 60vw;
+    }
+    @media (max-width: 576px) {
+      max-width: 70vw;
+    }
+    @media (max-width: 475px) {
+      max-width: 80vw;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
 
@@ -1522,7 +1639,7 @@ $transMenu: 0.5s;
         .box-head{
           color: #FFF;
           font-size: 1.5rem;
-          font-weight: 700;
+          font-weight: 600;
         }
 
         .box-title{
@@ -1537,9 +1654,16 @@ $transMenu: 0.5s;
           justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
+          gap: 10px;
+
+          .select1{
+            width: 23%;
+          }
+          .select2{
+            width: 47%;
+          }
 
           .select{
-            width: 45%;
             select{
               width: 100%;
               padding: 16px;
@@ -1559,37 +1683,127 @@ $transMenu: 0.5s;
 
         }
 
+        .switch-box{
+          padding: 15px 0;
+          display: flex;
+
+          span{
+            cursor: pointer;
+            color: #FFF;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px; /* 114.286% */
+          }
+
+        }
+
+
+        .def-switch {
+          span {
+            border-radius: 30px;
+            background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+            width: 44px;
+            height: 24px;
+            padding: 0 2px;
+            position: relative;
+            display: inline-block;
+            -webkit-transition: 0.3s background-color;
+            transition: 0.3s background-color;
+            &:hover {
+              background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+            }
+            &:after {
+              content: "";
+              width: 20px;
+              height: 20px;
+              border-radius: 22px;
+              background: #fff;
+              -webkit-transition: 0.3s;
+              transition: 0.3s;
+              position: absolute;
+              left: 2px;
+              top: 2px;
+            }
+          }
+          input {
+            display: none;
+            &:checked {
+              ~ {
+                span {
+                  &:after {
+                    left: 21px;
+                  }
+                  background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+                  &:hover {
+                    background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+                  }
+                }
+              }
+            }
+          }
+        }
 
         .check-box{
           display: flex;
-          justify-content: left;
           align-items: center;
           @media (max-width: 576px) {
             flex-wrap: wrap;
             gap: 10px;
           }
-          .check{
-            margin-right: 26px;
-            display: flex;
-            align-items: center;
-            @media (max-width: 576px) {
-              margin-right: 0;
-            }
-            &:last-child{
-              margin-right: 0;
-            }
-            input{
-              width: 20px;
-              height: 20px;
-            }
-            span{
-              color: #FFF;
-              font-size: 14px;
-              font-weight: 600;
-              line-height: 16px; /* 114.286% */
-              letter-spacing: -0.42px;
-            }
-          }
+         .inner{
+           display: block;
+           width: 35%;
+           h5{
+             color: rgba(255, 255, 255, 0.60);
+             font-size: 12px;
+             font-weight: 400;
+             line-height: 16px; /* 133.333% */
+             letter-spacing: -0.36px;
+             margin-bottom: 15px;
+           }
+           .check{
+             display: flex;
+             align-items: center;
+             margin-bottom: 15px;
+             @media (max-width: 576px) {
+               margin-right: 0;
+             }
+             &:last-child{
+               margin-right: 0;
+             }
+             input[type="radio"] {
+               /* remove standard background appearance */
+               -webkit-appearance: none;
+               -moz-appearance: none;
+               appearance: none;
+               /* create custom radiobutton appearance */
+               display: inline-block;
+               width: 20px;
+               height: 20px;
+               padding: 4px;
+               /* background-color only for content */
+               background-clip: content-box;
+               border: 1px solid rgba(255, 255, 255, 0.80);
+               background-color: transparent;
+               border-radius: 50%;
+             }
+
+             /* appearance for checked radiobutton */
+             input[type="radio"]:checked {
+               background-color: #fff;
+             }
+             span{
+               color: #FFF;
+               font-size: 14px;
+               font-weight: 600;
+               line-height: 16px; /* 114.286% */
+               letter-spacing: -0.42px;
+             }
+           }
+
+
+         }
 
         }
 
@@ -1607,7 +1821,7 @@ $transMenu: 0.5s;
             background: #FFF;
             color: #303030;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 14px; /* 100% */
           }
         }
@@ -1663,7 +1877,7 @@ $transMenu: 0.5s;
         .box-title2{
           color: #FFF;
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 16px;
           margin: 15px 0;
         }
@@ -1744,7 +1958,7 @@ $transMenu: 0.5s;
             background: #FFF;
             color: #303030;
             font-size: 0.875rem;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 14px; /* 100% */
           }
           .btn-white{
@@ -1912,7 +2126,10 @@ $transMenu: 0.5s;
       @media (max-width: 576px) {
         margin-right: 1rem;
       }
-      i{
+      .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 48px;
         height: 48px;
         border-radius: 50%;
@@ -1959,7 +2176,7 @@ $transMenu: 0.5s;
         background: #FFF;
         color: #303030;
         font-size: 0.875rem;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 14px; /* 100% */
       }
       .btn-white{
@@ -2160,7 +2377,7 @@ $transMenu: 0.5s;
           background: #50BA1E;
           color: #FFF;
           font-size: 0.875rem;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 0.875rem; /* 100% */
         }
 
@@ -2276,7 +2493,7 @@ $transMenu: 0.5s;
        h4{
          color: #303030;
          font-size: 1rem;
-         font-weight: 700;
+         font-weight: 600;
          margin-top: 1.5rem;
          margin-bottom: 0.5rem;
        }
@@ -2381,7 +2598,7 @@ $transMenu: 0.5s;
         h4 {
           color: #303030;
           font-size: 1rem;
-          font-weight: 700;
+          font-weight: 600;
           margin-top: 24px;
           margin-bottom: 8px;
         }
@@ -2441,12 +2658,14 @@ $transMenu: 0.5s;
         border: 1px solid #303030;
       }
       &:before{
-        content: '\f061';
-        font-family: 'FontAwesome';
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("../images/arrow-right.svg") no-repeat center center;
+        background-size: contain;
         font-size: 20px;
-        line-height: 1;
         opacity: .75;
-        color: #303030;
+        display: block;
       }
     }
 
@@ -2472,12 +2691,14 @@ $transMenu: 0.5s;
         border: 1px solid #303030;
       }
       &:before{
-        content: '\f060';
-        font-family: 'FontAwesome';
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("../images/arrow-left.svg") no-repeat center center;
+        background-size: contain;
         font-size: 20px;
-        line-height: 1;
         opacity: .75;
-        color: #303030;
+        display: block;
       }
       @media (max-width: 1200px) {
 
