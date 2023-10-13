@@ -1736,6 +1736,7 @@ $transMenu: 0.5s;
           font-weight: 400;
           line-height: 1rem; /* 133.333% */
           letter-spacing: -0.36px;
+          white-space: nowrap;
         }
 
         .box-head{
@@ -1755,16 +1756,16 @@ $transMenu: 0.5s;
           display: flex;
           align-items: center;
           flex-wrap: wrap;
-          gap: 10px;
+          gap: 11px;
 
           .select1{
-            width: 23%;
+            width: 24%;
             @media (max-width: 576px) {
               width: 48%;
             }
           }
           .select2{
-            width: 47%;
+            width: 44%;
             @media (max-width: 576px) {
               width: 98%;
             }

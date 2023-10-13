@@ -1734,6 +1734,7 @@ body {
   font-weight: 400;
   line-height: 1rem; /* 133.333% */
   letter-spacing: -0.36px;
+  white-space: nowrap;
 }
 .planning .col-green .col-box .box-head {
   color: #FFF;
@@ -1750,10 +1751,10 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 11px;
 }
 .planning .col-green .col-box .select-box .select1 {
-  width: 23%;
+  width: 24%;
 }
 @media (max-width: 576px) {
   .planning .col-green .col-box .select-box .select1 {
@@ -1761,7 +1762,7 @@ body {
   }
 }
 .planning .col-green .col-box .select-box .select2 {
-  width: 47%;
+  width: 44%;
 }
 @media (max-width: 576px) {
   .planning .col-green .col-box .select-box .select2 {
