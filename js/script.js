@@ -26,6 +26,16 @@ ScrollTrigger.create({
 });
 
 
+const PannelsTop = $('#panels').offset().top
+console.log(PannelsTop)
+
+ScrollTrigger.create({
+    start: `top -${PannelsTop + 500}` ,
+    end: 99999,
+    toggleClass: {className: 'nav-change', targets: '.max-header'}
+});
+
+
 
 $(window).scroll();
 
