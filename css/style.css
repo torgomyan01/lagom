@@ -66,7 +66,7 @@ body {
   background: #50BA1E;
   color: #fff;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 14px;
   padding: 11px 24px;
 }
@@ -76,7 +76,7 @@ body {
   background: #FFF;
   color: #303030;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 14px;
 }
 
@@ -84,7 +84,7 @@ body {
   color: #303030;
   font-size: 13.5rem;
   line-height: 100%;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.81rem;
   text-transform: capitalize;
 }
@@ -150,7 +150,7 @@ body {
 .modal-menu .modal-dialog-menu .modal-content .modal-header h5 a {
   color: #303030;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .modal-menu .modal-dialog-menu .modal-content .modal-header h5 i {
   font-size: 14px;
@@ -166,7 +166,7 @@ body {
   margin-bottom: 12px;
   color: rgba(48, 48, 48, 0.6);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   transition: 0.2s;
 }
 .modal-menu .modal-dialog-menu .modal-content .modal-body .links a:hover {
@@ -205,7 +205,7 @@ body {
 .modal-application .modal-dialog-application .modal-content .modal-header h5 {
   color: #303030;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 100%; /* 24px */
 }
 .modal-application .modal-dialog-application .modal-content .modal-header .btn-close {
@@ -291,7 +291,7 @@ body {
 .modal-purchase .modal-dialog-purchase .modal-content .modal-header h5 {
   color: #303030;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 100%;
 }
 .modal-purchase .modal-dialog-purchase .modal-content .modal-header .btn-close {
@@ -405,7 +405,7 @@ body {
 .modal-purchase .modal-dialog-purchase .modal-content .modal-body .image-title a {
   color: #50BA1E;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 18px;
   text-decoration-line: underline;
 }
@@ -753,6 +753,48 @@ body {
   display: none !important;
 }
 
+.custom-tooltip1 .tooltip-inner {
+  background: transparent;
+  text-align: right;
+  font-size: 1rem;
+  color: rgba(48, 48, 48, 0.6);
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  max-width: 11.75rem;
+  width: 100%;
+}
+.custom-tooltip1 .tooltip-arrow:before {
+  display: none !important;
+}
+
+.custom-tooltip2 .tooltip-inner {
+  background: transparent;
+  text-align: right;
+  font-size: 1rem;
+  color: rgba(48, 48, 48, 0.6);
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  max-width: 11.75rem;
+  width: 100%;
+}
+.custom-tooltip2 .tooltip-arrow:before {
+  display: none !important;
+}
+
+.custom-tooltip3 .tooltip-inner {
+  background: transparent;
+  text-align: left;
+  font-size: 16px;
+  color: rgba(48, 48, 48, 0.6);
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  max-width: 188px;
+  width: 100%;
+}
+.custom-tooltip3 .tooltip-arrow:before {
+  display: none !important;
+}
+
 .lagom-about {
   margin-top: 9.375rem;
   margin-bottom: 6.25rem;
@@ -813,7 +855,8 @@ body {
 .lagom-about .user-about h4 {
   color: #303030;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-align: right;
 }
 .lagom-about .user-about span {
   color: #303030;
@@ -831,7 +874,18 @@ body {
   padding: 0.5rem 0.5rem 0 0;
   cursor: pointer;
 }
+@media (max-width: 576px) {
+  .link-right {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .link-right img {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.link-right3 {
   width: 2rem !important;
   height: 2rem !important;
 }
@@ -1003,7 +1057,7 @@ body {
 #panels .panel-title {
   color: #303030;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 @media (max-width: 576px) {
   #panels .panel-title {
@@ -1127,9 +1181,9 @@ body {
 }
 #panels .gallery .box2 .link-right1 {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-  transform: translate(-100%, 100%);
+  transform: translate(100%, 100%);
 }
 #panels .gallery .box3 {
   position: absolute;
@@ -1293,7 +1347,7 @@ body {
 #panels .inner .box-title h3 {
   color: #303030;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 #panels .inner .gallery2 {
   position: relative;
@@ -1328,6 +1382,11 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+#panels .inner .gallery2 .box1 .link-right2 {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 #panels .inner .gallery2 .box1 .box1-text {
   position: absolute;
@@ -1455,7 +1514,7 @@ body {
 }
 #panels .inner .gallery2 .box3 .link-right1 {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
 }
 #panels .inner .gallery2 .box3 .box1-text {
@@ -1528,7 +1587,7 @@ body {
 #panels .inner2 .heading-5 {
   color: #303030;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 #panels .inner2 .green-box {
   width: 172px;
@@ -1541,7 +1600,7 @@ body {
   cursor: pointer;
   color: #FFF;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 0.875rem; /* 100% */
 }
 @media (max-width: 768px) {
@@ -1679,7 +1738,7 @@ body {
 .planning .col-green .col-box .box-head {
   color: #FFF;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .planning .col-green .col-box .box-title {
   color: rgba(255, 255, 255, 0.8);
@@ -1728,12 +1787,12 @@ body {
   display: flex;
 }
 .planning .col-green .col-box .switch-box span {
-  cursor: pointer;
   color: #FFF;
-  text-align: center;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 16px; /* 114.286% */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.42px;
 }
 .planning .col-green .col-box .def-switch span {
   border-radius: 30px;
@@ -1822,8 +1881,8 @@ body {
   appearance: none;
   /* create custom radiobutton appearance */
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   padding: 4px;
   /* background-color only for content */
   background-clip: content-box;
@@ -1838,8 +1897,7 @@ body {
   color: #FFF;
   font-size: 14px;
   font-weight: 600;
-  line-height: 16px; /* 114.286% */
-  letter-spacing: -0.42px;
+  line-height: 16px;
 }
 .planning .col-green .col-box .btn-planning {
   width: 100%;
@@ -1860,7 +1918,7 @@ body {
   background: #FFF;
   color: #303030;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 14px; /* 100% */
 }
 .planning .col-green .col-box1 {
@@ -1888,7 +1946,7 @@ body {
   background: #F5F7F9;
   color: #303030;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 14px; /* 100% */
   cursor: pointer;
 }
@@ -1980,7 +2038,7 @@ body {
   background: #FFF;
   color: #303030;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 14px; /* 100% */
 }
 .planning .col-green .col-box2 .buttons .btn-white {
@@ -2498,7 +2556,7 @@ body {
   background: #50BA1E;
   color: #FFF;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 0.875rem; /* 100% */
 }
 .youll-get .container-youl-get .panel.description {
@@ -2622,7 +2680,7 @@ body {
 .authorsProject .container .col-box .col-title h4 {
   color: #303030;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -2709,7 +2767,7 @@ body {
 .team .slider .col-box .col-title h4 {
   color: #303030;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 24px;
   margin-bottom: 8px;
 }

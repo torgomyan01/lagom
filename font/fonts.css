@@ -1,42 +1,25 @@
 
-@font-face {
-    font-family: 'RF Dewi Extended';
-    src: url('RFDewi-Thin.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 200;
-}
+
 
 @font-face {
     font-family: 'RF Dewi Extended';
-    src: url('RFDewi-Light.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'RF Dewi Extended';
-    src: url('RFDewi-Regular.ttf') format('truetype');
+    src: url('RFDewiExtended-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
 }
 
-@font-face {
-    font-family: 'RF Dewi Extended';
-    src: url('RFDewi-Semibold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 500;
-}
+
 
 @font-face {
     font-family: 'RF Dewi Extended';
-    src: url('RFDewi-Bold.ttf') format('truetype');
+    src: url('RFDewiExtended-Semibold.ttf') format('truetype');
     font-style: normal;
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'RF Dewi Extended';
-    src: url('RFDewi-Ultrabold.ttf') format('truetype');
+    src: url('RFDewiExtended-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: 700;
 }

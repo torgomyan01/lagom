@@ -74,7 +74,7 @@ body{
   background: #50BA1E;
   color: #fff;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 14px;
   padding: 11px 24px;
 }
@@ -84,7 +84,7 @@ body{
   background: #FFF;
   color: #303030;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 14px;
 }
 
@@ -95,7 +95,7 @@ $transMenu: 0.5s;
   color: #303030;
   font-size: 13.5rem;
   line-height: 100%;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.81rem;
   text-transform: capitalize;
   @media (max-width: 1200px) {
@@ -151,7 +151,7 @@ $transMenu: 0.5s;
           a{
             color: #303030;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
           }
           i{
             font-size: 14px;
@@ -172,7 +172,7 @@ $transMenu: 0.5s;
               margin-bottom: 12px;
               color: rgba(48, 48, 48, 0.60);
               font-size: 24px;
-              font-weight: 600;
+              font-weight: 700;
               transition: .2s;
               &:hover{
                 color: #303030;
@@ -220,7 +220,7 @@ $transMenu: 0.5s;
         h5{
           color: #303030;
           font-size: 1.5rem;
-          font-weight: 600;
+          font-weight: 700;
           line-height: 100%; /* 24px */
         }
 
@@ -319,7 +319,7 @@ $transMenu: 0.5s;
         h5{
           color: #303030;
           font-size: 24px;
-          font-weight: 600;
+          font-weight: 700;
           line-height: 100%;
         }
         .btn-close{
@@ -434,7 +434,7 @@ $transMenu: 0.5s;
             a{
               color: #50BA1E;
               font-size: 16px;
-              font-weight: 500;
+              font-weight: 400;
               line-height: 18px;
               text-decoration-line: underline;
             }
@@ -806,6 +806,64 @@ $transMenu: 0.5s;
 }
 
 
+.custom-tooltip1{
+
+  .tooltip-inner{
+    background: transparent;
+    text-align: right;
+    font-size: 1rem;
+    color: rgba(48, 48, 48, 0.60);
+    font-weight: 400;
+    letter-spacing: -0.32px;
+    max-width: 11.75rem;
+    width: 100%;
+  }
+  .tooltip-arrow{
+    &:before{
+      display: none !important;
+    }
+  }
+}
+
+.custom-tooltip2{
+
+  .tooltip-inner{
+    background: transparent;
+    text-align: right;
+    font-size: 1rem;
+    color: rgba(48, 48, 48, 0.60);
+    font-weight: 400;
+    letter-spacing: -0.32px;
+    max-width: 11.75rem;
+    width: 100%;
+  }
+  .tooltip-arrow{
+    &:before{
+      display: none !important;
+    }
+  }
+}
+
+.custom-tooltip3{
+
+  .tooltip-inner{
+    background: transparent;
+    text-align: left;
+    font-size: 16px;
+    color: rgba(48, 48, 48, 0.60);
+    font-weight: 400;
+    letter-spacing: -0.32px;
+    max-width: 188px;
+    width: 100%;
+  }
+  .tooltip-arrow{
+    &:before{
+      display: none !important;
+    }
+  }
+}
+
+
 //.. Max header
 
 
@@ -864,7 +922,8 @@ $transMenu: 0.5s;
     h4{
       color: #303030;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
+      text-align: right ;
     }
     span{
       color: #303030;
@@ -891,12 +950,21 @@ $transMenu: 0.5s;
   text-align: right;
   padding: 0.5rem 0.5rem 0 0;
   cursor: pointer;
+  @media (max-width: 576px) {
+    width: 3rem;
+    height: 3rem;
+  }
   img{
     width: 2rem !important;
     height: 2rem !important;
   }
 }
 
+
+.link-right3{
+  width: 2rem !important;
+  height: 2rem !important;
+}
 
 .full-screen {
   display: block;
@@ -1057,7 +1125,7 @@ $transMenu: 0.5s;
   .panel-title{
     color: #303030;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     @media (max-width: 576px) {
       transform: translateY(30px);
     }
@@ -1165,9 +1233,9 @@ $transMenu: 0.5s;
       }
       .link-right1{
         position: absolute;
-        left: 0;
+        right: 0;
         bottom: 0;
-        transform: translate(-100%, 100%);
+        transform: translate(100%, 100%);
       }
     }
 
@@ -1310,7 +1378,7 @@ $transMenu: 0.5s;
       h3{
         color: #303030;
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 700;
       }
     }
 
@@ -1339,6 +1407,12 @@ $transMenu: 0.5s;
           position: absolute;
           left: 0;
           bottom: 0;
+        }
+
+        .link-right2{
+          position: absolute;
+          right: 0 ;
+          top:  0;
         }
         .box1-text{
           position: absolute;
@@ -1444,7 +1518,7 @@ $transMenu: 0.5s;
         }
         .link-right1{
           position: absolute;
-          left: 0;
+          right: 0;
           bottom: 0;
         }
         .box1-text{
@@ -1518,7 +1592,7 @@ $transMenu: 0.5s;
     .heading-5{
       color: #303030;
       font-size: 2rem;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .green-box{
@@ -1532,7 +1606,7 @@ $transMenu: 0.5s;
       cursor: pointer;
       color: #FFF;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 0.875rem; /* 100% */
     }
 
@@ -1667,7 +1741,7 @@ $transMenu: 0.5s;
         .box-head{
           color: #FFF;
           font-size: 1.5rem;
-          font-weight: 600;
+          font-weight: 700;
         }
 
         .box-title{
@@ -1722,12 +1796,12 @@ $transMenu: 0.5s;
           display: flex;
 
           span{
-            cursor: pointer;
             color: #FFF;
-            text-align: center;
             font-size: 14px;
-            font-weight: 400;
-            line-height: 16px; /* 114.286% */
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: -0.42px;
           }
 
         }
@@ -1817,8 +1891,8 @@ $transMenu: 0.5s;
                appearance: none;
                /* create custom radiobutton appearance */
                display: inline-block;
-               width: 20px;
-               height: 20px;
+               width: 24px;
+               height: 24px;
                padding: 4px;
                /* background-color only for content */
                background-clip: content-box;
@@ -1835,8 +1909,7 @@ $transMenu: 0.5s;
                color: #FFF;
                font-size: 14px;
                font-weight: 600;
-               line-height: 16px; /* 114.286% */
-               letter-spacing: -0.42px;
+               line-height: 16px;
              }
            }
 
@@ -1862,7 +1935,7 @@ $transMenu: 0.5s;
             background: #FFF;
             color: #303030;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 14px; /* 100% */
           }
         }
@@ -1893,7 +1966,7 @@ $transMenu: 0.5s;
             background: #F5F7F9;
             color: #303030;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 14px; /* 100% */
             cursor: pointer;
             &:active{
@@ -1999,7 +2072,7 @@ $transMenu: 0.5s;
             background: #FFF;
             color: #303030;
             font-size: 0.875rem;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 14px; /* 100% */
           }
           .btn-white{
@@ -2502,7 +2575,7 @@ $transMenu: 0.5s;
           background: #50BA1E;
           color: #FFF;
           font-size: 0.875rem;
-          font-weight: 600;
+          font-weight: 700;
           line-height: 0.875rem; /* 100% */
         }
 
@@ -2642,7 +2715,7 @@ $transMenu: 0.5s;
        h4{
          color: #303030;
          font-size: 16px;
-         font-weight: 600;
+         font-weight: 700;
          margin-top: 1.5rem;
          margin-bottom: 0.5rem;
        }
@@ -2747,7 +2820,7 @@ $transMenu: 0.5s;
         h4 {
           color: #303030;
           font-size: 1rem;
-          font-weight: 600;
+          font-weight: 700;
           margin-top: 24px;
           margin-bottom: 8px;
         }
