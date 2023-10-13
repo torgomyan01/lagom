@@ -1780,7 +1780,7 @@ body {
 @media (max-width: 992px) {
   .planning .col-green .col-box .check-box {
     position: relative;
-    top: 130px;
+    top: 10px;
   }
 }
 @media (max-width: 576px) {
