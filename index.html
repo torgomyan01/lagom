@@ -22,11 +22,13 @@
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
   <title>Лагом</title>
 </head>
@@ -94,10 +96,10 @@
               <span>Более 100 планировок</span> <br>
               2 типов проектов домов ЛАГОМ
             </p>
-            <button class="btn-green me-4">
+            <button class="btn-green me-sm-4 me-0">
               Выбрать проект
             </button>
-            <button class="btn-white">
+            <button class="btn-white btn-white-panel">
               Пропустить
             </button>
           </div>
@@ -113,7 +115,7 @@
            Простота и функциональность
          </div>
          <div class="buttons">
-           <button class="btn-white me-4">
+           <button class="btn-white me-sm-4 me-0">
              Видео о доме
              <img class="ms-1" src="images/play.svg" alt="play">
            </button>
@@ -353,7 +355,7 @@
             <div class="box">
               <img src="images/panel-5-1.png" alt="panel-1">
             </div>
-            <div class="box me-5">
+            <div class="box me-ms-5 me-0">
               <div class="green-box">
                 Выбрать <br>
                 свой Лагом
@@ -386,10 +388,15 @@
             <div class="select-box mb-3">
               <div class="select select1">
                 <h5>Кол-во человек</h5>
-                <select name="select">
-                  <option value="1 человек">1</option>
-                  <option value="1 человек">1 </option>
-                  <option value="1 человек">1 </option>
+<!--                <select name="select">-->
+<!--                  <option value="1 человек">1</option>-->
+<!--                  <option value="1 человек">1 </option>-->
+<!--                  <option value="1 человек">1 </option>-->
+<!--                </select>-->
+                <select class="js-example-basic-single" name="state">
+                  <option value="AL">Alabama</option>
+                  ...
+                  <option value="WY">Wyoming</option>
                 </select>
               </div>
               <div class="select select1">
