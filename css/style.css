@@ -2392,7 +2392,7 @@ body {
 .planning .switch-planning {
   position: absolute;
   left: 25%;
-  top: calc(26% + 650px);
+  top: calc(26% + 630px);
   z-index: 1;
   cursor: pointer;
 }
