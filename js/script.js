@@ -35,7 +35,9 @@ ScrollTrigger.create({
     toggleClass: {className: 'nav-change', targets: '.max-header'}
 });
 
-
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
 
 $(window).scroll();
 
