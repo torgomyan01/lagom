@@ -588,18 +588,22 @@ body {
   top: calc(50% + 124px);
 }
 .max-header .container-nav2 {
-  transform: translateY(-300px);
+  position: absolute;
+  left: 50%;
+  transform: translateY(-300px) translateX(-50%);
   transition: 0.3s linear;
 }
 .max-header .container-nav1 {
+  position: absolute;
+  left: 50%;
   transition: 0.3s linear;
+  transform: translateY(0) translateX(-50%);
 }
 .max-header.nav-change .container-nav1 {
-  transform: translateX(-300px);
-  display: none;
+  transform: translateY(-300px) translateX(-50%);
 }
 .max-header.nav-change .container-nav2 {
-  transform: translateY(0);
+  transform: translateY(0) translateX(-50%);
 }
 .max-header.nav-change .container-nav2 .panel2-info {
   display: flex;
@@ -2727,6 +2731,9 @@ body {
 .youll-get .container-youl-get .panel-youl .image-home {
   position: absolute;
   top: 360px;
+  animation-timing-function: cubic-bezier(0.94, 0.22, 0.42, 0.83);
+  animation-duration: 1000ms;
+  pointer-events: none;
 }
 @media (max-width: 992px) {
   .youll-get .container-youl-get .panel-youl .image-home {

@@ -623,21 +623,25 @@ $transMenu: 0.5s;
   }
 
   .container-nav2{
-    transform: translateY(-300px);
+    position: absolute;
+    left: 50%;
+    transform: translateY(-300px) translateX(-50%);
     transition: .3s linear;
   }
 
   .container-nav1{
+    position: absolute;
+    left: 50%;
     transition: .3s linear;
+    transform: translateY(0) translateX(-50%);
   }
 
   &.nav-change{
     .container-nav1{
-      transform: translateX(-300px);
-      display: none;
+      transform: translateY(-300px) translateX(-50%);
     }
     .container-nav2{
-      transform: translateY(0);
+      transform: translateY(0) translateX(-50%);
       .panel2-info{
         display: flex;
         justify-content: space-between;
@@ -2741,6 +2745,9 @@ $transMenu: 0.5s;
       .image-home{
         position: absolute;
         top: 360px;
+        animation-timing-function: cubic-bezier(0.94, 0.22, 0.42, 0.83);
+        animation-duration: 1000ms;
+        pointer-events: none;
         @media (max-width: 992px) {
           top: 310px;
           left: 10px;
