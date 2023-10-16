@@ -31,7 +31,7 @@ console.log(PannelsTop)
 
 ScrollTrigger.create({
     start: `top -${PannelsTop + 500}` ,
-    end: 99999,
+    end: 9009,
     toggleClass: {className: 'nav-change', targets: '.max-header'}
 });
 

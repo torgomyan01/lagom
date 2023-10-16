@@ -532,7 +532,7 @@ $transMenu: 0.5s;
   position: relative;
   z-index: 1000;
 
-  .nav-menu{
+  nav{
     position: fixed;
     top: 0;
     left: 0;
@@ -542,7 +542,6 @@ $transMenu: 0.5s;
     height: 100vh;
     transition: $transMenu;
     z-index: 10000000;
-
     .menu1{
       display: flex !important;
       @media (max-width: 992px) {
@@ -619,45 +618,25 @@ $transMenu: 0.5s;
     }
   }
 
-  .nav-menu2{
+  .container-nav2{
     display: none;
   }
 
-  &.nav-color-black{
-    .nav-menu{
-      background: #FFF !important;
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.06);
-      height: 80px !important;
-      .nav-menu{
-        height: 80px !important;
-      }
-      .nav-logo{
-        top: 20px !important;
-      }
-    }
-  }
-
   &.nav-change{
-    .nav-menu {
+    .container-nav1{
       display: none;
     }
-    .nav-menu2{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #fff;
-      overflow: hidden;
-      height: 96px;
-      transition: $transMenu;
-      z-index: 10000000;
-      display: initial;
+    .container-nav2{
+      display: block;
       .panel2-info{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 90px;
+        height: 96px;
+        @media (max-width: 475px) {
+          height: 105px;
+        }
         .title{
           color: rgba(48, 48, 48, 0.40);
           font-size: 14px;
@@ -667,8 +646,10 @@ $transMenu: 0.5s;
           display: flex;
           align-items: center;
           justify-content: center;
-          @media (max-width: 992px) {
-            display: block;
+          @media (max-width: 475px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
           }
           p{
             color: rgba(48, 48, 48, 0.40);
@@ -678,7 +659,7 @@ $transMenu: 0.5s;
             text-align: right;
             width: 100%;
             @media (max-width: 992px) {
-              text-align: left;
+              display: none;
             }
             span{
               text-align: right;
@@ -690,6 +671,9 @@ $transMenu: 0.5s;
           .btn-green{
             padding: 0.8125rem 1.5rem;
             white-space: nowrap;
+            @media (max-width: 475px) {
+              margin-bottom: 7px;
+            }
           }
           .btn-white{
             padding: 0.8125rem 1.5rem;
@@ -697,6 +681,23 @@ $transMenu: 0.5s;
             border: 1px solid rgba(48, 48, 48, 0.20);
           }
         }
+      }
+    }
+  }
+
+  &.nav-color-black{
+    nav{
+      background: #FFF !important;
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.06);
+      height: 80px !important;
+      @media (max-width: 475px) {
+        height: 105px !important;
+      }
+      .nav-menu{
+        height: 80px !important;
+      }
+      .nav-logo{
+        top: 20px !important;
       }
     }
   }
@@ -755,7 +756,7 @@ $transMenu: 0.5s;
     header{
       transform: translateY(96px);
     }
-    .nav-menu{
+    nav{
       height: 96px;
       background: transparent;
       .good-luck{
@@ -1198,7 +1199,6 @@ $transMenu: 0.5s;
       transform: translateY(30px);
     }
   }
-
 
 
   .gallery{
@@ -1674,7 +1674,7 @@ $transMenu: 0.5s;
       position: absolute;
       max-width: 496px;
       width: 100%;
-      right: 1.25rem;
+      right: 4.25rem;
       height: 0;
       top: 0;
       transition: .3s;
@@ -1688,15 +1688,9 @@ $transMenu: 0.5s;
         margin: 0 auto;
       }
       &.active{
-        height: 660px;
+        height: 620px;
         @media (max-width: 992px) {
-          height: 660px;
-        }
-        @media (max-width: 576px) {
-          height: 730px;
-        }
-        @media (max-width: 475px) {
-          height: 740px;
+          height: 690px;
         }
       }
       .col-green2{
@@ -1704,15 +1698,12 @@ $transMenu: 0.5s;
         height: 0;
         transition: .3s;
         &.active{
-          height: 660px;
+          height: 620px;
           @media (max-width: 992px) {
-            height: 660px;
-          }
-          @media (max-width: 576px) {
-            height: 730px;
+            height: 690px;
           }
           @media (max-width: 475px) {
-            height: 740px;
+            height: 720px;
           }
         }
       }
@@ -1836,7 +1827,7 @@ $transMenu: 0.5s;
         .def-switch {
           span {
             border-radius: 30px;
-            background: #96d678;
+            background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
             width: 44px;
             height: 24px;
             padding: 0 2px;
@@ -1845,7 +1836,7 @@ $transMenu: 0.5s;
             -webkit-transition: 0.3s background-color;
             transition: 0.3s background-color;
             &:hover {
-              background: #96d678;
+              background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
             }
             &:after {
               content: "";
@@ -1868,9 +1859,9 @@ $transMenu: 0.5s;
                   &:after {
                     left: 21px;
                   }
-                  background: #96d678;
+                  background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
                   &:hover {
-                    background: #96d678;
+                    background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
                   }
                 }
               }
@@ -1884,9 +1875,6 @@ $transMenu: 0.5s;
           @media (max-width: 992px) {
             position: relative;
             top: 10px;
-          }
-          @media (max-width: 475px) {
-            justify-content: space-between;
           }
           @media (max-width: 576px) {
             flex-wrap: wrap;
@@ -1950,7 +1938,7 @@ $transMenu: 0.5s;
 
         .btn-planning{
           width: 100%;
-          margin-top: 80px;
+          margin-top: 175px;
           @media (max-width: 576px) {
             margin-top: 120px;
           }
@@ -2121,7 +2109,7 @@ $transMenu: 0.5s;
         .def-switch {
           span {
             border-radius: 30px;
-            background: #96d678;
+            background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
             width: 44px;
             height: 24px;
             padding: 0 2px;
@@ -2130,7 +2118,7 @@ $transMenu: 0.5s;
             -webkit-transition: 0.3s background-color;
             transition: 0.3s background-color;
             &:hover {
-              background: #96d678;
+              background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
             }
             &:after {
               content: "";
@@ -2153,9 +2141,9 @@ $transMenu: 0.5s;
                   &:after {
                     left: 21px;
                   }
-                  background: #96d678;
+                  background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
                   &:hover {
-                    background: #96d678;
+                    background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
                   }
                 }
               }
@@ -2219,7 +2207,7 @@ $transMenu: 0.5s;
 
 
   .slider-image{
-    min-height: 750px;
+    min-height: 700px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2365,8 +2353,8 @@ $transMenu: 0.5s;
 
   .switch-planning {
     position: absolute;
-    left: 28%;
-    top: calc(26% + 690px);
+    left: 25%;
+    top: calc(26% + 650px);
     z-index: 1;
     cursor: pointer;
     @media (max-width: 992px) {
@@ -2519,8 +2507,6 @@ $transMenu: 0.5s;
         padding-left: 60px;
         transition: 0.3s;
         transform: translateY(-100px);
-        position: relative;
-        left: 25px;
         height: 160px;
         opacity: 0;
         @media (max-width: 992px) {
@@ -2584,7 +2570,7 @@ $transMenu: 0.5s;
         justify-content: end;
         align-items: end;
         width: 100%;
-        margin-left: 23px;
+        margin-left: 25px;
         @media (max-width: 992px) {
           margin-left: 0;
         }
@@ -2661,7 +2647,7 @@ $transMenu: 0.5s;
        }
       .image-home{
         position: absolute;
-        top: 360px;
+        top: 325px;
         @media (max-width: 768px) {
           top: 300px;
           left: 10px;
@@ -2674,12 +2660,9 @@ $transMenu: 0.5s;
 
     .section_nav {
       position: absolute;
-      right: 15px;
+      right: 5px;
       z-index: 5;
       top: 0;
-      @media (max-width: 576px) {
-        right: 5px;
-      }
     }
     .section_nav a {
       display: block;
