@@ -854,6 +854,19 @@ body {
   display: none !important;
 }
 
+.custom-tooltip-white .tooltip-inner {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0.125rem 1rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  color: #222;
+  text-align: left;
+  width: 100%;
+}
+.custom-tooltip-white .tooltip-arrow:before {
+  display: none !important;
+}
+
 .custom-tooltip1 .tooltip-inner {
   background: transparent;
   text-align: right;
@@ -2513,6 +2526,7 @@ body {
   font-weight: 600;
   position: relative;
   top: 30px;
+  left: 5px;
 }
 @media (max-width: 475px) {
   .youll-get .container-youl-get .youll-get-head {
@@ -2524,7 +2538,7 @@ body {
   max-width: 660px;
   width: 100%;
   position: absolute;
-  right: 40px;
+  right: 11px;
   top: 250px;
 }
 @media (max-width: 992px) {
@@ -2582,7 +2596,7 @@ body {
   margin-right: 100px;
   margin-top: -50px;
   position: relative;
-  left: -45px;
+  left: -65px;
 }
 @media (max-width: 992px) {
   .youll-get .container-youl-get .box-title .heading-you {
@@ -2638,7 +2652,6 @@ body {
   justify-content: end;
   align-items: end;
   width: 100%;
-  margin-left: 25px;
 }
 @media (max-width: 992px) {
   .youll-get .container-youl-get .box-title .buttons {
@@ -2671,7 +2684,7 @@ body {
 .youll-get .container-youl-get .panel-youl {
   position: absolute;
   will-change: transform;
-  left: 0;
+  left: 5px;
   width: 46%;
   height: 100%;
   display: -webkit-box;
@@ -2729,9 +2742,14 @@ body {
 }
 .youll-get .container-youl-get .section_nav {
   position: absolute;
-  right: 5px;
+  right: 11px;
   z-index: 5;
   top: 0;
+}
+@media (max-width: 576px) {
+  .youll-get .container-youl-get .section_nav {
+    right: 0;
+  }
 }
 .youll-get .container-youl-get .section_nav a {
   display: block;
