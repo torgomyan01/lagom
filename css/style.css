@@ -827,6 +827,7 @@ body {
   color: #fff;
   margin-left: -0.625rem;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 .max-header .good-luck-item:first-child {
   margin-left: 0;
