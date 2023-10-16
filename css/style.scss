@@ -1697,7 +1697,7 @@ $transMenu: 0.5s;
       position: absolute;
       max-width: 496px;
       width: 100%;
-      right: 4.25rem;
+      right: 2.25rem;
       height: 0;
       top: 0;
       transition: .3s;
@@ -2417,8 +2417,8 @@ $transMenu: 0.5s;
 
   .switch-planning {
     position: absolute;
-    left: 25%;
-    top: calc(26% + 630px);
+    left: 28%;
+    top: calc(26% + 640px);
     z-index: 1;
     cursor: pointer;
     @media (max-width: 992px) {

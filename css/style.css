@@ -1686,7 +1686,7 @@ body {
   position: absolute;
   max-width: 496px;
   width: 100%;
-  right: 4.25rem;
+  right: 2.25rem;
   height: 0;
   top: 0;
   transition: 0.3s;
@@ -2391,8 +2391,8 @@ body {
 }
 .planning .switch-planning {
   position: absolute;
-  left: 25%;
-  top: calc(26% + 630px);
+  left: 28%;
+  top: calc(26% + 640px);
   z-index: 1;
   cursor: pointer;
 }
