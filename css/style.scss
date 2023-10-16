@@ -623,15 +623,21 @@ $transMenu: 0.5s;
   }
 
   .container-nav2{
-    display: none;
+    transform: translateY(-300px);
+    transition: .3s linear;
+  }
+
+  .container-nav1{
+    transition: .3s linear;
   }
 
   &.nav-change{
     .container-nav1{
+      transform: translateX(-300px);
       display: none;
     }
     .container-nav2{
-      display: block;
+      transform: translateY(0);
       .panel2-info{
         display: flex;
         justify-content: space-between;
@@ -1705,7 +1711,7 @@ $transMenu: 0.5s;
         margin: 0 auto;
       }
       &.active{
-        height: 620px;
+        height: 630px;
         //@media (max-width: 992px) {
         //  height: 690px;
         //}
@@ -1724,7 +1730,7 @@ $transMenu: 0.5s;
         height: 0;
         transition: .3s;
         &.active{
-          height: 620px;
+          height: 630px;
           //@media (max-width: 992px) {
           //  height: 690px;
           //}
@@ -2167,7 +2173,7 @@ $transMenu: 0.5s;
         .def-switch {
           span {
             border-radius: 30px;
-            background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+            background: #96d678;
             width: 44px;
             height: 24px;
             padding: 0 2px;
@@ -2176,7 +2182,7 @@ $transMenu: 0.5s;
             -webkit-transition: 0.3s background-color;
             transition: 0.3s background-color;
             &:hover {
-              background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
+              background: #96d678;
             }
             &:after {
               content: "";
@@ -2265,7 +2271,7 @@ $transMenu: 0.5s;
 
 
   .slider-image{
-    min-height: 700px;
+    min-height: 730px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2298,7 +2304,7 @@ $transMenu: 0.5s;
     .count{
       position: relative;
       left: -46%;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       @media (max-width: 992px) {
         position: unset;
         left: 0;
@@ -2327,7 +2333,7 @@ $transMenu: 0.5s;
     .slider-icon{
       position: relative;
       left: -45%;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       @media (max-width: 992px) {
         margin-right: 4.5rem;
         position: unset;
