@@ -1808,11 +1808,17 @@ $transMenu: 0.5s;
             @media (max-width: 576px) {
               width: 48%;
             }
+            @media (max-width: 420px) {
+              width: 47%;
+            }
           }
           .select2{
             width: 44%;
             @media (max-width: 576px) {
-              width: 98%;
+              width: 99%;
+            }
+            @media (max-width: 420px) {
+              width: 99%;
             }
           }
 
@@ -1913,6 +1919,12 @@ $transMenu: 0.5s;
          .inner{
            display: block;
            width: 35%;
+           @media (max-width: 420px) {
+             width: 45%;
+           }
+           @media (max-width: 375px) {
+             width: 46%;
+           }
            h5{
              color: rgba(255, 255, 255, 0.60);
              font-size: 12px;

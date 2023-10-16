@@ -1803,12 +1803,22 @@ body {
     width: 48%;
   }
 }
+@media (max-width: 420px) {
+  .planning .col-green .col-box .select-box .select1 {
+    width: 47%;
+  }
+}
 .planning .col-green .col-box .select-box .select2 {
   width: 44%;
 }
 @media (max-width: 576px) {
   .planning .col-green .col-box .select-box .select2 {
-    width: 98%;
+    width: 99%;
+  }
+}
+@media (max-width: 420px) {
+  .planning .col-green .col-box .select-box .select2 {
+    width: 99%;
   }
 }
 .planning .col-green .col-box .select-box .select select {
@@ -1895,6 +1905,16 @@ body {
 .planning .col-green .col-box .check-box .inner {
   display: block;
   width: 35%;
+}
+@media (max-width: 420px) {
+  .planning .col-green .col-box .check-box .inner {
+    width: 45%;
+  }
+}
+@media (max-width: 375px) {
+  .planning .col-green .col-box .check-box .inner {
+    width: 46%;
+  }
 }
 .planning .col-green .col-box .check-box .inner h5 {
   color: rgba(255, 255, 255, 0.6);
