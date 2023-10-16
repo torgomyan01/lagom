@@ -1865,7 +1865,9 @@ $transMenu: 0.5s;
 
 
         .def-switch {
+          cursor: pointer;
           span {
+
             border-radius: 30px;
             background: #96d678;
             width: 44px;
@@ -1949,6 +1951,7 @@ $transMenu: 0.5s;
                margin-right: 0;
              }
              input[type="radio"] {
+               cursor: pointer;
                /* remove standard background appearance */
                -webkit-appearance: none;
                -moz-appearance: none;
@@ -1973,6 +1976,7 @@ $transMenu: 0.5s;
                color: #FFF;
                font-size: 14px;
                font-weight: 600;
+               cursor: pointer;
                line-height: 16px;
                white-space: nowrap;
              }
@@ -2712,7 +2716,11 @@ $transMenu: 0.5s;
        }
       .image-home{
         position: absolute;
-        top: 325px;
+        top: 360px;
+        @media (max-width: 992px) {
+          top: 310px;
+          left: 10px;
+        }
         @media (max-width: 768px) {
           top: 300px;
           left: 10px;

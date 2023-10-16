@@ -1851,6 +1851,9 @@ body {
   line-height: 16px;
   letter-spacing: -0.42px;
 }
+.planning .col-green .col-box .def-switch {
+  cursor: pointer;
+}
 .planning .col-green .col-box .def-switch span {
   border-radius: 30px;
   background: #96d678;
@@ -1943,6 +1946,7 @@ body {
   margin-right: 0;
 }
 .planning .col-green .col-box .check-box .inner .check input[type=radio] {
+  cursor: pointer;
   /* remove standard background appearance */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1965,6 +1969,7 @@ body {
   color: #FFF;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
   line-height: 16px;
   white-space: nowrap;
 }
@@ -2703,7 +2708,13 @@ body {
 }
 .youll-get .container-youl-get .panel-youl .image-home {
   position: absolute;
-  top: 325px;
+  top: 360px;
+}
+@media (max-width: 992px) {
+  .youll-get .container-youl-get .panel-youl .image-home {
+    top: 310px;
+    left: 10px;
+  }
 }
 @media (max-width: 768px) {
   .youll-get .container-youl-get .panel-youl .image-home {
