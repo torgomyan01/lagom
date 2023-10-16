@@ -26,17 +26,19 @@ ScrollTrigger.create({
 });
 
 
-const PannelsTop = $('#panels').offset().top
-console.log(PannelsTop)
+const PannelsTop = $('#panels').offset().top;
+const panelWidths = $('#panels-container').width();
+console.log(panelWidths)
+
 
 ScrollTrigger.create({
     start: `top -${PannelsTop + 500}` ,
-    end: 9009,
+    end: `${panelWidths}`,
     toggleClass: {className: 'nav-change', targets: '.max-header'}
 });
 
-$(document).ready(function() {
-    $('.js-example-basic-single').select2();
+$('.js-example-basic-single').select2({
+    minimumResultsForSearch: Infinity
 });
 
 $(window).scroll();
