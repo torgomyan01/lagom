@@ -619,6 +619,9 @@ $transMenu: 0.5s;
     .btn-video{
       position: absolute;
       top: calc(50% + 124px);
+      @media (max-width: 475px) {
+        top: calc(50% + 80px);
+      }
     }
   }
 
@@ -859,6 +862,9 @@ $transMenu: 0.5s;
     position: absolute;
     bottom: 30px;
     @include flex('s', 'c');
+    @media (max-width: 475px) {
+      bottom: 50px;
+    }
     &-item{
       width: 48px;
       height: 48px;
@@ -1252,6 +1258,9 @@ $transMenu: 0.5s;
     top: 80px;
     @media (max-width: 992px) {
       left: 15px;
+    }
+    @media (max-width: 576px) {
+      top: 185px;
     }
     .box1{
       position: absolute;

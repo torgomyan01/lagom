@@ -587,6 +587,11 @@ body {
   position: absolute;
   top: calc(50% + 124px);
 }
+@media (max-width: 475px) {
+  .max-header nav .btn-video {
+    top: calc(50% + 80px);
+  }
+}
 .max-header .container-nav2 {
   position: absolute;
   left: 50%;
@@ -825,6 +830,11 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+@media (max-width: 475px) {
+  .max-header .good-luck {
+    bottom: 50px;
+  }
 }
 .max-header .good-luck-item {
   width: 48px;
@@ -1193,6 +1203,11 @@ body {
 @media (max-width: 992px) {
   #panels .gallery {
     left: 15px;
+  }
+}
+@media (max-width: 576px) {
+  #panels .gallery {
+    top: 185px;
   }
 }
 #panels .gallery .box1 {
