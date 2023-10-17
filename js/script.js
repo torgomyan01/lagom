@@ -13,6 +13,20 @@ AOS.init();
 
 
 
+// const YoulGet = $('#youll-get').offset().top;
+// console.log(YoulGet)
+//
+// ScrollTrigger.create({
+//     trigger: '.panel-youl',
+//     start: `top -${YoulGet + 1500}` ,
+//     end: 9999,
+//     pin: true,
+//     toggleClass: {className: 'stop-scroll', targets: '.youll-get'},
+// });
+//
+//
+
+
 ScrollTrigger.create({
     start: 'top -50',
     end: 99999,
@@ -28,14 +42,6 @@ ScrollTrigger.create({
 
 const PannelsTop = $('#panels').offset().top;
 const panelWidths = $('#panels-container').width();
-const YoulGet = $('#youll-get').offset().top;
-console.log(YoulGet)
-
-ScrollTrigger.create({
-    start: `top -${YoulGet + 1500}` ,
-    end: 9999,
-    toggleClass: {className: 'stop-scroll', targets: '.youll-get'},
-});
 
 
 ScrollTrigger.create({

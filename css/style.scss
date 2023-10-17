@@ -1128,10 +1128,10 @@ $transMenu: 0.5s;
 #panel-2{
   .container{
     @media (max-width: 992px) {
-      transform: scale(.9) !important;
+      transform: scale(.8) !important;
     }
     @media (max-width: 768px) {
-      transform: scale(.8) !important;
+      transform: scale(.7) !important;
     }
     @media (max-width: 576px) {
       transform: scale(.7) !important;
@@ -1142,10 +1142,10 @@ $transMenu: 0.5s;
 #panel-3{
   .container{
     @media (max-width: 992px) {
-      transform: scale(.9) !important;
+      transform: scale(.8) !important;
     }
     @media (max-width: 768px) {
-      transform: scale(.8) !important;
+      transform: scale(.7) !important;
     }
     @media (max-width: 576px) {
       transform: scale(.7) !important;
@@ -1156,10 +1156,10 @@ $transMenu: 0.5s;
 #panel-4{
   .container{
     @media (max-width: 992px) {
-      transform: scale(.9) !important;
+      transform: scale(.8) !important;
     }
     @media (max-width: 768px) {
-      transform: scale(.8) !important;
+      transform: scale(.7) !important;
     }
     @media (max-width: 576px) {
       transform: scale(.7) !important;
@@ -1176,10 +1176,10 @@ $transMenu: 0.5s;
 #panel-5{
   .container{
     @media (max-width: 992px) {
-      transform: scale(.9) !important;
+      transform: scale(.8) !important;
     }
     @media (max-width: 768px) {
-      transform: scale(.8) !important;
+      transform: scale(.7) !important;
     }
     @media (max-width: 576px) {
       transform: scale(.7) !important;
@@ -1190,10 +1190,10 @@ $transMenu: 0.5s;
 #panel-6{
   .container{
     @media (max-width: 992px) {
-      transform: scale(.9) !important;
+      transform: scale(.8) !important;
     }
     @media (max-width: 768px) {
-      transform: scale(.8) !important;
+      transform: scale(.7) !important;
     }
     @media (max-width: 576px) {
       transform: scale(.7) !important;
@@ -1218,10 +1218,10 @@ $transMenu: 0.5s;
 #panel-8{
   .container{
     @media (max-width: 992px) {
-      transform: scale(.9) !important;
+      transform: scale(.8) !important;
     }
     @media (max-width: 768px) {
-      transform: scale(.8) !important;
+      transform: scale(.7) !important;
     }
     @media (max-width: 576px) {
       transform: scale(.7) !important;
@@ -1251,7 +1251,6 @@ $transMenu: 0.5s;
     left: -30px;
     top: 80px;
     @media (max-width: 992px) {
-      top: 230px;
       left: 15px;
     }
     .box1{
@@ -2605,11 +2604,14 @@ $transMenu: 0.5s;
           padding-bottom: 0;
           height: 120px;
           font-size: 14px;
+          max-width: 660px;
+          margin: 0 auto;
           position: relative;
           top: 65px;
         }
         @media (max-width: 576px) {
           top: 25px;
+          margin: 0 0 0 0;
         }
         @media (max-width: 420px) {
           top: 0;
