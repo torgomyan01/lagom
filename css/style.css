@@ -2580,7 +2580,7 @@ body {
   line-height: 1.5rem; /* 150% */
   text-align: right;
   padding-left: 60px;
-  transition: 0.3s;
+  transition: 1s;
   transform: translateY(-100px);
   height: 160px;
   opacity: 0;
@@ -2721,8 +2721,6 @@ body {
   color: white;
   box-sizing: border-box;
   transition: 0.3s;
-  transform: translateY(-100px);
-  opacity: 0;
 }
 @media (max-width: 992px) {
   .youll-get .container-youl-get .panel-youl {
@@ -2730,21 +2728,27 @@ body {
     top: 2rem;
   }
 }
-.youll-get .container-youl-get .panel-youl.active {
-  transform: translateY(0);
-  opacity: 1;
-}
 .youll-get .container-youl-get .panel-youl .image {
   max-width: 660px;
   width: 100%;
   height: 443px;
   position: absolute;
   top: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .youll-get .container-youl-get .panel-youl .image img {
   width: 100%;
-  height: 100%;
+  height: 0;
   object-fit: cover;
+  transition: 1s;
+  opacity: 0;
+}
+.youll-get .container-youl-get .panel-youl .image img.active {
+  height: 100%;
+  opacity: 1;
 }
 .youll-get .container-youl-get .panel-youl .image-home {
   position: absolute;

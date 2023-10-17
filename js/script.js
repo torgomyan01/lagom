@@ -10,21 +10,51 @@ const {
 }
 
 AOS.init();
+let activePanelNavIndex = 0;
+let activePanelNavSuccess = true;
 
+$(window).on('load', function (){
+    const YoulGet = $('#youll-get').offset().top;
+    console.log(YoulGet, panelNav)
 
+    ScrollTrigger.create({
+        trigger: "#youll-get",
+        start: `top top-=-79` ,
+        end: `top top-=2500`,
+        pin: true,
+        onUpdate: function (e){
+            const percent = e.progress * 100;
+            const activeIndex = +(percent / (100 / panelNav.length)).toFixed()
 
-// const YoulGet = $('#youll-get').offset().top;
-// console.log(YoulGet)
-//
-// ScrollTrigger.create({
-//     trigger: '.panel-youl',
-//     start: `top -${YoulGet + 1500}` ,
-//     end: 9999,
-//     pin: true,
-//     toggleClass: {className: 'stop-scroll', targets: '.youll-get'},
-// });
-//
-//
+            if(activePanelNavSuccess && activeIndex < panelNav.length){
+                console.log(activeIndex)
+                activePanelNavIndex = activeIndex;
+                activePanelNavSuccess = false;
+                const thisElement = $(panelNav[activeIndex]);
+                const href = thisElement.attr('href');
+                $('img[data-panelyoul]').removeClass('active');
+                $(`img[data-panelyoul="${activeIndex}"]`).addClass('active');
+
+                youlTexts.addClass('d-none').removeClass('active');
+                $(`#text-${href.replace(/#/g, '')}`).removeClass('d-none')
+
+                setTimeout(() => {
+                    $(href).addClass('active')
+                    $(`#text-${href.replace(/#/g, '')}`).addClass('active')
+                }, 100);
+
+                panelNav.removeClass('active');
+                thisElement.addClass('active');
+            }
+
+            if(activePanelNavIndex !== activeIndex){
+                activePanelNavIndex = activeIndex;
+                activePanelNavSuccess = true;
+            }
+
+        }
+    });
+})
 
 
 ScrollTrigger.create({
@@ -353,25 +383,25 @@ const panelYoul = $('.panel-youl');
 const panelNav = $('.section_nav a');
 const youlTexts = $('.box-title .title1');
 
-panelNav.on('mouseenter', function (e){
-    e.preventDefault();
-    const thisElement = $(this);
-    const href = thisElement.attr('href');
-    panelYoul.addClass('d-none').removeClass('active');
-    $(href).removeClass('d-none');
-
-    youlTexts.addClass('d-none').removeClass('active');
-    $(`#text-${href.replace(/#/g, '')}`).removeClass('d-none')
-
-
-    setTimeout(() => {
-        $(href).addClass('active')
-        $(`#text-${href.replace(/#/g, '')}`).addClass('active')
-    }, 100);
-
-    panelNav.removeClass('active');
-    thisElement.addClass('active');
-})
+// panelNav.on('mouseenter', function (e){
+//     e.preventDefault();
+//     const thisElement = $(this);
+//     const href = thisElement.attr('href');
+//     panelYoul.addClass('d-none').removeClass('active');
+//     $(href).removeClass('d-none');
+//
+//     youlTexts.addClass('d-none').removeClass('active');
+//     $(`#text-${href.replace(/#/g, '')}`).removeClass('d-none')
+//
+//
+//     setTimeout(() => {
+//         $(href).addClass('active')
+//         $(`#text-${href.replace(/#/g, '')}`).addClass('active')
+//     }, 100);
+//
+//     panelNav.removeClass('active');
+//     thisElement.addClass('active');
+// })
 
 
 panelNav.on('click', function (e){
