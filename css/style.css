@@ -598,6 +598,7 @@ body {
   left: 50%;
   transition: 0.3s linear;
   transform: translateY(0) translateX(-50%);
+  height: 100%;
 }
 .max-header.nav-change .container-nav1 {
   transform: translateY(-300px) translateX(-50%);

@@ -28,7 +28,14 @@ ScrollTrigger.create({
 
 const PannelsTop = $('#panels').offset().top;
 const panelWidths = $('#panels-container').width();
-console.log(panelWidths)
+const YoulGet = $('#youll-get').offset().top;
+console.log(YoulGet)
+
+ScrollTrigger.create({
+    start: `top -${YoulGet + 1500}` ,
+    end: 9999,
+    toggleClass: {className: 'stop-scroll', targets: '.youll-get'},
+});
 
 
 ScrollTrigger.create({

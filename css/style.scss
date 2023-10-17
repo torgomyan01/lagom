@@ -634,6 +634,7 @@ $transMenu: 0.5s;
     left: 50%;
     transition: .3s linear;
     transform: translateY(0) translateX(-50%);
+    height: 100%;
   }
 
   &.nav-change{
