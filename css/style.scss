@@ -611,6 +611,9 @@ $transMenu: 0.5s;
       .btn-white {
         padding: 11px 16px;
       }
+      .btn-menu{
+        font-size: 14px !important;
+      }
     }
 
     .menu2 {
@@ -627,7 +630,7 @@ $transMenu: 0.5s;
         margin-left: 140px;
       }
       @media (max-width: 992px) {
-        font-size: 0;
+        font-size: 14px;
       }
     }
 
@@ -661,6 +664,7 @@ $transMenu: 0.5s;
       @media (max-width: 425px) {
         width: 420px;
         height: 90px;
+        margin-top: -10px;
       }
 
       svg {
@@ -720,8 +724,8 @@ $transMenu: 0.5s;
         align-items: center;
         width: 100%;
         height: 96px;
-        @media (max-width: 475px) {
-          height: 105px;
+        @media (max-width: 576px) {
+          height: 80px;
         }
 
         .title {
@@ -763,7 +767,8 @@ $transMenu: 0.5s;
             padding: 0.8125rem 1.5rem;
             white-space: nowrap;
             @media (max-width: 475px) {
-              margin-bottom: 7px;
+              margin-bottom: 5px;
+              margin-top: 2px;
             }
           }
 
@@ -789,7 +794,7 @@ $transMenu: 0.5s;
       box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.06);
       height: 80px !important;
       @media (max-width: 475px) {
-        height: 105px !important;
+        height: 80px !important;
       }
 
       .nav-menu {
@@ -850,7 +855,9 @@ $transMenu: 0.5s;
             font-size: 0.875rem;
             font-weight: 400;
             background: transparent;
-
+            @media (max-width: 576px) {
+              display: none;
+            }
             i {
               color: #FFF;
               font-size: 14px;
@@ -960,7 +967,7 @@ $transMenu: 0.5s;
     bottom: 30px;
     @include flex('s', 'c');
     @media (max-width: 475px) {
-      bottom: 50px;
+      bottom: 62px;
     }
 
     &-item {
@@ -1379,6 +1386,9 @@ $transMenu: 0.5s;
     @media (max-width: 576px) {
       top: 185px;
     }
+    @media (max-width: 475px) {
+      top: 200px;
+    }
 
     .box1 {
       position: absolute;
@@ -1773,6 +1783,7 @@ $transMenu: 0.5s;
     @media (max-width: 992px) {
       flex-direction: column;
       justify-content: center;
+      align-items: start;
       gap: 60px;
     }
 
@@ -1833,10 +1844,7 @@ $transMenu: 0.5s;
         max-width: 60vw;
       }
       @media (max-width: 576px) {
-        max-width: 70vw;
-      }
-      @media (max-width: 475px) {
-        max-width: 80vw;
+        max-width: 100%;
       }
 
       img {
@@ -2804,7 +2812,7 @@ $transMenu: 0.5s;
         max-width: unset;
         right: 0;
         left: 0;
-        top: 600px;
+        top: 647px;
       }
       @media (max-width: 576px) {
         top: 650px;
@@ -2829,16 +2837,19 @@ $transMenu: 0.5s;
           max-width: 660px;
           margin: 0 auto;
           position: relative;
-          top: 65px;
+          top: -440px;
         }
         @media (max-width: 576px) {
-          top: 25px;
+          top: -450px;
           margin: 0 0 0 0;
         }
-        @media (max-width: 420px) {
-          top: 0;
+        @media (max-width: 425px) {
+          top: -480px;
+          margin: 0 0 0 0;
         }
-
+        @media (max-width: 375px) {
+          font-size: 13px;
+        }
         &.active {
           transform: translateY(0);
           opacity: 1;
@@ -2855,6 +2866,7 @@ $transMenu: 0.5s;
         @media (max-width: 992px) {
           left: 0;
           margin: 0;
+          top: 0;
         }
         @media (max-width: 576px) {
           left: -20px;
@@ -2951,7 +2963,10 @@ $transMenu: 0.5s;
       transition: 0.3s;
       @media (max-width: 992px) {
         width: 100%;
-        top: 2rem;
+        top: 13rem;
+      }
+      @media (max-width: 425px) {
+        top: 14rem;
       }
       //&.active{
       //  transform: translateY(0);
@@ -3023,6 +3038,10 @@ $transMenu: 0.5s;
       @media (max-width: 475px) {
         margin: 7px 0;
         font-size: 1.3rem;
+      }
+      @media (max-width: 375px) {
+        margin: 7px 0;
+        font-size: 1.2rem;
       }
 
       &.active {
@@ -3504,6 +3523,10 @@ footer {
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: #96d678;
   color: white;
+}
+
+.slick-dots{
+  display: none !important;
 }
 
 //. .... Footer End

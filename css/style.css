@@ -514,6 +514,9 @@ body {
 .max-header nav .menu1 .btn-white {
   padding: 11px 16px;
 }
+.max-header nav .menu1 .btn-menu {
+  font-size: 14px !important;
+}
 .max-header nav .menu2 {
   display: none !important;
 }
@@ -533,7 +536,7 @@ body {
 }
 @media (max-width: 992px) {
   .max-header nav .home-for-people {
-    font-size: 0;
+    font-size: 14px;
   }
 }
 .max-header nav .nav-menu {
@@ -567,6 +570,7 @@ body {
   .max-header nav .nav-logo {
     width: 420px;
     height: 90px;
+    margin-top: -10px;
   }
 }
 .max-header nav .nav-logo svg {
@@ -618,9 +622,9 @@ body {
   width: 100%;
   height: 96px;
 }
-@media (max-width: 475px) {
+@media (max-width: 576px) {
   .max-header.nav-change .container-nav2 .panel2-info {
-    height: 105px;
+    height: 80px;
   }
 }
 .max-header.nav-change .container-nav2 .panel2-info .title {
@@ -667,7 +671,8 @@ body {
 }
 @media (max-width: 475px) {
   .max-header.nav-change .container-nav2 .panel2-info .buttons .btn-green {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
+    margin-top: 2px;
   }
 }
 .max-header.nav-change .container-nav2 .panel2-info .buttons .btn-white {
@@ -687,7 +692,7 @@ body {
 }
 @media (max-width: 475px) {
   .max-header.nav-color-black nav {
-    height: 105px !important;
+    height: 80px !important;
   }
 }
 .max-header.nav-color-black nav .nav-menu {
@@ -744,6 +749,11 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   background: transparent;
+}
+@media (max-width: 576px) {
+  .max-header header .container-header .header-info .buttons .btn-scroll {
+    display: none;
+  }
 }
 .max-header header .container-header .header-info .buttons .btn-scroll i {
   color: #FFF;
@@ -833,7 +843,7 @@ body {
 }
 @media (max-width: 475px) {
   .max-header .good-luck {
-    bottom: 50px;
+    bottom: 62px;
   }
 }
 .max-header .good-luck-item {
@@ -1208,6 +1218,11 @@ body {
 @media (max-width: 576px) {
   #panels .gallery {
     top: 185px;
+  }
+}
+@media (max-width: 475px) {
+  #panels .gallery {
+    top: 200px;
   }
 }
 #panels .gallery .box1 {
@@ -1625,6 +1640,7 @@ body {
   #panels .inner2 {
     flex-direction: column;
     justify-content: center;
+    align-items: start;
     gap: 60px;
   }
 }
@@ -1684,12 +1700,7 @@ body {
 }
 @media (max-width: 576px) {
   #panels .inner2 .image {
-    max-width: 70vw;
-  }
-}
-@media (max-width: 475px) {
-  #panels .inner2 .image {
-    max-width: 80vw;
+    max-width: 100%;
   }
 }
 #panels .inner2 .image img {
@@ -2565,7 +2576,7 @@ body {
     max-width: unset;
     right: 0;
     left: 0;
-    top: 600px;
+    top: 647px;
   }
 }
 @media (max-width: 576px) {
@@ -2594,18 +2605,24 @@ body {
     max-width: 660px;
     margin: 0 auto;
     position: relative;
-    top: 65px;
+    top: -440px;
   }
 }
 @media (max-width: 576px) {
   .youll-get .container-youl-get .box-title .title1 {
-    top: 25px;
+    top: -450px;
     margin: 0 0 0 0;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   .youll-get .container-youl-get .box-title .title1 {
-    top: 0;
+    top: -480px;
+    margin: 0 0 0 0;
+  }
+}
+@media (max-width: 375px) {
+  .youll-get .container-youl-get .box-title .title1 {
+    font-size: 13px;
   }
 }
 .youll-get .container-youl-get .box-title .title1.active {
@@ -2624,6 +2641,7 @@ body {
   .youll-get .container-youl-get .box-title .heading-you {
     left: 0;
     margin: 0;
+    top: 0;
   }
 }
 @media (max-width: 576px) {
@@ -2725,7 +2743,12 @@ body {
 @media (max-width: 992px) {
   .youll-get .container-youl-get .panel-youl {
     width: 100%;
-    top: 2rem;
+    top: 13rem;
+  }
+}
+@media (max-width: 425px) {
+  .youll-get .container-youl-get .panel-youl {
+    top: 14rem;
   }
 }
 .youll-get .container-youl-get .panel-youl .image {
@@ -2794,6 +2817,12 @@ body {
   .youll-get .container-youl-get .section_nav a {
     margin: 7px 0;
     font-size: 1.3rem;
+  }
+}
+@media (max-width: 375px) {
+  .youll-get .container-youl-get .section_nav a {
+    margin: 7px 0;
+    font-size: 1.2rem;
   }
 }
 .youll-get .container-youl-get .section_nav a.active {
@@ -3166,6 +3195,10 @@ footer .container-footer .inner-footer p a {
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: #96d678;
   color: white;
+}
+
+.slick-dots {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
