@@ -750,6 +750,9 @@ $transMenu: 0.5s;
             display: flex;
             flex-direction: column;
             justify-content: end;
+            button{
+              width: 166px;
+            }
           }
 
           p {
@@ -1907,6 +1910,7 @@ $transMenu: 0.5s;
     right: 2.25rem;
     height: 0;
     top: 0;
+    z-index: 1;
     transition: .3s;
     @media (max-width: 1100px) {
       right: 2rem;
@@ -2467,10 +2471,24 @@ $transMenu: 0.5s;
 
   }
 
+  .planning-3d{
+    min-height: 730px;
+    @media (max-width: 992px) {
+      margin-top: 60px;
+      min-height: 600px;
+    }
+    @media (max-width: 768px) {
+      min-height: 550px;
+    }
+    @media (max-width: 576px) {
+      margin-top: 30px;
+    }
+  }
 
   .container1 {
-    display: none;
     min-height: 730px;
+    transition: 0.3s;
+    transform: translateX(150%);
     @media (max-width: 992px) {
       min-height: 600px;
       margin-top: 50px;
@@ -2480,7 +2498,7 @@ $transMenu: 0.5s;
     }
 
     &.active {
-      display: block;
+      transform: translateX(0);
     }
 
     .col-image {
@@ -2527,8 +2545,11 @@ $transMenu: 0.5s;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: none;
     transition: .3s;
+    transform: translateX(-150%);
+    display: flex;
+    justify-content: end;
+    align-items: end;
     @media (max-width: 992px) {
       min-height: 600px;
     }
@@ -2537,12 +2558,9 @@ $transMenu: 0.5s;
     }
 
     &.active {
-      display: flex;
-      justify-content: end;
-      align-items: end;
+      transform: translateX(0);
       @media (max-width: 992px) {
         justify-content: center;
-        margin-top: 75px;
       }
     }
 
@@ -2564,9 +2582,9 @@ $transMenu: 0.5s;
         position: unset;
         left: 0;
         margin-right: 30px;
+        margin-bottom: 45px;
       }
       @media (max-width: 576px) {
-       margin-bottom: 50px;
       }
       @media (max-width: 475px) {
         margin-right: 12px;
@@ -2626,7 +2644,7 @@ $transMenu: 0.5s;
       align-items: center;
       margin-right: 10rem;
       width: 30%;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
 
       &.active {
         display: flex;
@@ -2680,6 +2698,8 @@ $transMenu: 0.5s;
     }
 
   }
+
+
 
   .switch-planning {
     position: absolute;
@@ -2863,6 +2883,7 @@ $transMenu: 0.5s;
         @media (max-width: 576px) {
           top: -450px;
           margin: 0 0 0 0;
+          height: auto;
         }
         @media (max-width: 425px) {
           top: -480px;

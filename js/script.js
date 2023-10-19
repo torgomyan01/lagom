@@ -36,7 +36,10 @@ $(window).on('load', function (){
                 $(`img[data-panelyoul="${activeIndex}"]`).addClass('active');
 
                 youlTexts.addClass('d-none').removeClass('active');
-                $(`#text-${href.replace(/#/g, '')}`).removeClass('d-none')
+                const textElem = $(`#text-${href.replace(/#/g, '')}`);
+                textElem.removeClass('d-none');
+
+                $('.youll-get .container-youl-get .panel-youl .image').css('top', `${textElem.height() + 20}px`);
 
                 setTimeout(() => {
                     $(href).addClass('active')

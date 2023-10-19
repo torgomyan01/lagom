@@ -659,6 +659,9 @@ body {
     flex-direction: column;
     justify-content: end;
   }
+  .max-header.nav-change .container-nav2 .panel2-info .buttons button {
+    width: 166px;
+  }
 }
 .max-header.nav-change .container-nav2 .panel2-info .buttons p {
   color: rgba(48, 48, 48, 0.4);
@@ -1764,6 +1767,7 @@ body {
   right: 2.25rem;
   height: 0;
   top: 0;
+  z-index: 1;
   transition: 0.3s;
 }
 @media (max-width: 1100px) {
@@ -2252,9 +2256,29 @@ body {
 .planning .col-green .col-box2 .def-switch input:checked ~ span:hover {
   background: linear-gradient(0deg, #50BA1E 0%, #52d711 100%), #FFF;
 }
-.planning .container1 {
-  display: none;
+.planning .planning-3d {
   min-height: 730px;
+}
+@media (max-width: 992px) {
+  .planning .planning-3d {
+    margin-top: 60px;
+    min-height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .planning .planning-3d {
+    min-height: 550px;
+  }
+}
+@media (max-width: 576px) {
+  .planning .planning-3d {
+    margin-top: 30px;
+  }
+}
+.planning .container1 {
+  min-height: 730px;
+  transition: 0.3s;
+  transform: translateX(150%);
 }
 @media (max-width: 992px) {
   .planning .container1 {
@@ -2268,7 +2292,7 @@ body {
   }
 }
 .planning .container1.active {
-  display: block;
+  transform: translateX(0);
 }
 .planning .container1 .col-image {
   margin-left: 90px;
@@ -2316,8 +2340,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: none;
   transition: 0.3s;
+  transform: translateX(-150%);
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 @media (max-width: 992px) {
   .planning .slider-image {
@@ -2330,14 +2357,11 @@ body {
   }
 }
 .planning .slider-image.active {
-  display: flex;
-  justify-content: end;
-  align-items: end;
+  transform: translateX(0);
 }
 @media (max-width: 992px) {
   .planning .slider-image.active {
     justify-content: center;
-    margin-top: 75px;
   }
 }
 .planning .slider-image.ok .slider-icon {
@@ -2356,11 +2380,7 @@ body {
     position: unset;
     left: 0;
     margin-right: 30px;
-  }
-}
-@media (max-width: 576px) {
-  .planning .slider-image .count {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 }
 @media (max-width: 475px) {
@@ -2418,7 +2438,7 @@ body {
   align-items: center;
   margin-right: 10rem;
   width: 30%;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 .planning .slider-image .buttons.active {
   display: flex;
@@ -2649,6 +2669,7 @@ body {
   .youll-get .container-youl-get .box-title .title1 {
     top: -450px;
     margin: 0 0 0 0;
+    height: auto;
   }
 }
 @media (max-width: 425px) {
