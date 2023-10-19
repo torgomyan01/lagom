@@ -429,7 +429,7 @@ $('.slider').slick({
         //FYI just have a look at the object to find available information
         //press f12 to access the console in most browsers
         //you could also debug or look in the source
-        console.log(slider);
+
         return  (i + 1) + '/' + slider.slideCount;
         // $('.slider-text .count span').text(`${activeIndex} `)
     },
@@ -467,7 +467,7 @@ $('.slider').slick({
     }
 
     const i = (currentSlide ? currentSlide : 0) + 1;
-    console.log(i)
+
     $('.slider-text .count').text(i + '/' + (slick.$dots[0].children.length));
 })
 
