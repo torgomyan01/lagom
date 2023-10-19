@@ -2645,7 +2645,9 @@ $transMenu: 0.5s;
       margin-right: 10rem;
       width: 30%;
       margin-bottom: 50px;
-
+      @media (max-width: 992px) {
+        margin-bottom: 38px;
+      }
       &.active {
         display: flex;
 
@@ -3496,6 +3498,7 @@ $transMenu: 0.5s;
       .button {
         .btn-green {
           padding: 13px 24px;
+          white-space: nowrap;
         }
       }
 

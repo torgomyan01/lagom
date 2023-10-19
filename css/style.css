@@ -2440,6 +2440,11 @@ body {
   width: 30%;
   margin-bottom: 50px;
 }
+@media (max-width: 992px) {
+  .planning .slider-image .buttons {
+    margin-bottom: 38px;
+  }
+}
 .planning .slider-image .buttons.active {
   display: flex;
 }
@@ -3216,6 +3221,7 @@ body {
 }
 .map .container-map .wrapper .button .btn-green {
   padding: 13px 24px;
+  white-space: nowrap;
 }
 
 footer {
