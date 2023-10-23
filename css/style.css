@@ -2596,7 +2596,7 @@ body {
     margin-top: 1rem;
   }
 }
-.youll-get .container-youl-get {
+.youll-get .container-youl-get .youl-get-border {
   border-top: 1px solid rgba(153, 153, 153, 0.38);
   border-bottom: 1px solid rgba(153, 153, 153, 0.32);
 }
@@ -2635,7 +2635,7 @@ body {
   max-width: 660px;
   width: 100%;
   position: absolute;
-  right: 11px;
+  right: 5px;
   top: 250px;
 }
 @media (max-width: 992px) {
@@ -2891,7 +2891,7 @@ body {
 }
 .youll-get .container-youl-get .section_nav {
   position: absolute;
-  right: 11px;
+  right: 5px;
   z-index: 5;
   top: 0;
 }

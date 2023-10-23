@@ -2820,8 +2820,11 @@ $transMenu: 0.5s;
   }
 
   .container-youl-get {
-    border-top: 1px solid rgba(153, 153, 153, 0.38);
-    border-bottom: 1px solid rgba(153, 153, 153, 0.32);
+
+    .youl-get-border{
+      border-top: 1px solid rgba(153, 153, 153, 0.38);
+      border-bottom: 1px solid rgba(153, 153, 153, 0.32);
+    }
 
     #container {
       width: 100%;
@@ -2854,7 +2857,7 @@ $transMenu: 0.5s;
       max-width: 660px;
       width: 100%;
       position: absolute;
-      right: 11px;
+      right: 5px;
       top: 250px;
       @media (max-width: 992px) {
         max-width: unset;
@@ -3087,7 +3090,7 @@ $transMenu: 0.5s;
 
     .section_nav {
       position: absolute;
-      right: 11px;
+      right: 5px;
       z-index: 5;
       top: 0;
       @media (max-width: 576px) {
