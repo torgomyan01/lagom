@@ -2295,7 +2295,8 @@ body {
   transform: translateX(0);
 }
 .planning .container1 .col-image {
-  margin-left: 90px;
+  position: relative;
+  left: 25%;
   margin-top: 25px;
 }
 @media (max-width: 992px) {
@@ -2646,6 +2647,11 @@ body {
     top: 650px;
   }
 }
+@media (max-width: 992px) {
+  .youll-get .container-youl-get .box-title.active {
+    top: 300px !important;
+  }
+}
 .youll-get .container-youl-get .box-title .title1 {
   color: rgba(48, 48, 48, 0.6);
   font-size: 1rem;
@@ -2846,6 +2852,15 @@ body {
   object-fit: cover;
   transition: 1s;
   opacity: 0;
+}
+.youll-get .container-youl-get .panel-youl .image img.image-homes {
+  object-fit: contain;
+  transform: scale(0.8) translateY(165px) translateX(-80px) !important;
+}
+@media (max-width: 992px) {
+  .youll-get .container-youl-get .panel-youl .image img.image-homes {
+    transform: scale(0.8) translateY(-300px) translateX(0px) !important;
+  }
 }
 .youll-get .container-youl-get .panel-youl .image img.active {
   height: 100%;

@@ -27,7 +27,6 @@ $(window).on('load', function (){
             const activeIndex = +(percent / (100 / panelNav.length)).toFixed()
 
             if(activePanelNavSuccess && activeIndex < panelNav.length){
-                console.log(activeIndex)
                 activePanelNavIndex = activeIndex;
                 activePanelNavSuccess = false;
                 const thisElement = $(panelNav[activeIndex]);
@@ -39,7 +38,16 @@ $(window).on('load', function (){
                 const textElem = $(`#text-${href.replace(/#/g, '')}`);
                 textElem.removeClass('d-none');
 
-                $('.youll-get .container-youl-get .panel-youl .image').css('top', `${textElem.height() + 20}px`);
+                if($(window).width() <= 992){
+                    $('.youll-get .container-youl-get .panel-youl .image').css('top', `${textElem.height() + 20}px`);
+                }
+
+                const box_title_youl = document.getElementById('box-title-youl')
+                if (activeIndex === 5){
+                    box_title_youl.classList.add('active')
+                } else if(activeIndex < 5) {
+                    box_title_youl.classList.remove('active')
+                }
 
                 setTimeout(() => {
                     $(href).addClass('active')

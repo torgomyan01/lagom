@@ -2502,7 +2502,8 @@ $transMenu: 0.5s;
     }
 
     .col-image {
-      margin-left: 90px;
+      position: relative;
+      left: 25%;
       margin-top: 25px;
       @media (max-width: 992px) {
         margin: 0 auto;
@@ -2860,7 +2861,11 @@ $transMenu: 0.5s;
       @media (max-width: 576px) {
         top: 650px;
       }
-
+      &.active{
+        @media (max-width: 992px) {
+          top: 300px !important;
+        }
+      }
       .title1 {
         color: rgba(48, 48, 48, 0.60);
         font-size: 1rem;
@@ -3035,12 +3040,20 @@ $transMenu: 0.5s;
         @media (max-width: 576px) {
           left: -5px;
         }
+
         img {
           width: 100%;
           height: 0;
           object-fit: cover;
           transition: 1s;
           opacity: 0;
+          &.image-homes{
+            object-fit: contain;
+            transform: scale(.8) translateY(165px) translateX(-80px) !important;
+            @media (max-width: 992px) {
+              transform: scale(.8) translateY(-300px) translateX(0px) !important;
+            }
+          }
 
           &.active {
             height: 100%;
