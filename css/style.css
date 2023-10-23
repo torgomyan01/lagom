@@ -2893,7 +2893,7 @@ body {
   position: absolute;
   right: 5px;
   z-index: 5;
-  top: 0;
+  top: -2px;
 }
 @media (max-width: 576px) {
   .youll-get .container-youl-get .section_nav {
