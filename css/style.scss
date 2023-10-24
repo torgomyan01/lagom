@@ -731,7 +731,7 @@ $transMenu: 0.5s;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 96px;
+        height: 79px;
         @media (max-width: 576px) {
           height: 80px;
         }
@@ -2571,18 +2571,19 @@ $transMenu: 0.5s;
 
     &.ok {
       .slider-icon {
-        left: -4%;
+        left: 47%;;
       }
 
       .count {
-        left: -5%;
+        left: 44%;
       }
     }
 
     .count {
-      position: relative;
-      left: -46%;
+      position: absolute;
+      left: 49%;
       margin-bottom: 60px;
+      transition: 0.3s;
       @media (max-width: 992px) {
         position: unset;
         left: 0;
@@ -2614,9 +2615,10 @@ $transMenu: 0.5s;
     }
 
     .slider-icon {
-      position: relative;
-      left: -45%;
+      position: absolute;
+      left: 52%;
       margin-bottom: 50px;
+      transition: 0.3s;
       @media (max-width: 992px) {
         margin-right: 4.5rem;
         position: unset;
