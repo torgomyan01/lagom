@@ -424,8 +424,8 @@ panelNav.on('click', function (e){
 // ........ slick
 
 const allslicLengt = document.querySelectorAll('.slider .image')
-const span_count = document.querySelector('.slider-text samp')
-span_count.innerText = `/ ${allslicLengt.length} `
+const span_count = document.querySelector('.count-box samp')
+span_count?.innerText = `/ ${allslicLengt.length} `
 let activeIndex = 1;
 
 $('.slider').slick({
@@ -479,7 +479,7 @@ $('.slider').slick({
 
     const i = (currentSlide ? currentSlide : 0) + 1;
 
-    $('.slider-text .count').text(i + '/' + (slick.$dots[0].children.length));
+    $('.count-box .count').text(i + '/' + (slick.$dots[0].children.length));
 })
 
 
