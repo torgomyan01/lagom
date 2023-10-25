@@ -319,9 +319,6 @@ $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     customPaging: function (slider, i) {
-        //FYI just have a look at the object to find available information
-        //press f12 to access the console in most browsers
-        //you could also debug or look in the source
 
         return  (i + 1) + '/' + slider.slideCount;
         // $('.slider-text .count span').text(`${activeIndex} `)
@@ -352,7 +349,7 @@ $('.slider').slick({
 
     ]
 }).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+
     if(!slick.$dots){
         return;
     }
