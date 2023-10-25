@@ -13,7 +13,27 @@ AOS.init();
 let activePanelNavIndex = 0;
 let activePanelNavSuccess = true;
 
+
+const headerSliderArray = [
+    'images/slider1.png',
+    'images/slider2.png',
+    'images/slider3.png',
+    'images/slider4.png',
+    'images/slider5.png',
+]
+
+
+
 $(window).on('load', function (){
+    headerSliderArray.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => console.log('loaded')
+    })
+
+
+
+
     const YoulGet = $('#youll-get').offset().top;
     console.log(YoulGet, panelNav)
 
@@ -221,29 +241,10 @@ btn_prev.addEventListener('click', ()=>{
     col_box2.classList.remove('active')
 })
 
-const headerSliderArray = [
-    'images/slider1.png',
-    'https://picsum.photos/2440/1730?random=1',
-    'https://picsum.photos/2440/1730?random=2',
-    'https://picsum.photos/2440/1730?random=3',
-    'https://picsum.photos/2440/1730?random=4',
-]
 
-let headerSliderArraySuccess = true;
 
 
 switch_planning.addEventListener('change', (e)=>{
-
-    if(headerSliderArraySuccess){
-        headerSliderArray.forEach((url) => {
-            const img = new Image();
-            img.src = url;
-            img.onload = () => console.log('loaded')
-        })
-        headerSliderArraySuccess = false;
-    }
-
-
     if(!e.currentTarget.checked){
         container1.classList.add('active')
         slider_planning.classList.remove('active')
