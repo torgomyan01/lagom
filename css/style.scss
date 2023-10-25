@@ -1902,6 +1902,17 @@ $transMenu: 0.5s;
 .planning {
   position: relative;
   margin-top: -40px;
+  &.heading-open{
+    .heading{
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  .heading{
+    transform: translateY(0);
+    transition: .3s;
+    margin-bottom: 70px;
+  }
 
   .col-green {
     position: absolute;

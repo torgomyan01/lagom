@@ -1760,6 +1760,15 @@ body {
   position: relative;
   margin-top: -40px;
 }
+.planning.heading-open .heading {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.planning .heading {
+  transform: translateY(0);
+  transition: 0.3s;
+  margin-bottom: 70px;
+}
 .planning .col-green {
   position: absolute;
   max-width: 496px;
