@@ -1912,6 +1912,9 @@ $transMenu: 0.5s;
     transform: translateY(0);
     transition: .3s;
     margin-bottom: 70px;
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
   }
 
   .col-green {
@@ -3155,9 +3158,15 @@ $transMenu: 0.5s;
 
 .authorsProject {
   margin-top: 4.5rem;
-
-  .container {
-
+    @media (max-width: 576px) {
+      margin-top: -28rem;
+    }
+  &-container{
+    border-top: none !important;
+    @media (max-width: 576px) {
+      padding-top: 2rem !important;
+      border-top: 1px solid rgba(153, 153, 153, 0.38) !important;
+    }
     .head {
       color: #303030;
       font-size: 1.5rem;

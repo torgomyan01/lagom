@@ -1769,6 +1769,11 @@ body {
   transition: 0.3s;
   margin-bottom: 70px;
 }
+@media (max-width: 576px) {
+  .planning .heading {
+    margin-bottom: 30px;
+  }
+}
 .planning .col-green {
   position: absolute;
   max-width: 496px;
@@ -2947,47 +2952,61 @@ body {
 .authorsProject {
   margin-top: 4.5rem;
 }
-.authorsProject .container .head {
+@media (max-width: 576px) {
+  .authorsProject {
+    margin-top: -28rem;
+  }
+}
+.authorsProject-container {
+  border-top: none !important;
+}
+@media (max-width: 576px) {
+  .authorsProject-container {
+    padding-top: 2rem !important;
+    border-top: 1px solid rgba(153, 153, 153, 0.38) !important;
+  }
+}
+.authorsProject-container .head {
   color: #303030;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 4rem;
 }
-.authorsProject .container .col-box {
+.authorsProject-container .col-box {
   position: relative;
   width: 100%;
   height: 100%;
 }
 @media (max-width: 992px) {
-  .authorsProject .container .col-box {
+  .authorsProject-container .col-box {
     padding-bottom: 20px;
   }
 }
 @media (max-width: 768px) {
-  .authorsProject .container .col-box .image img {
+  .authorsProject-container .col-box .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
-.authorsProject .container .col-box .col-title {
+.authorsProject-container .col-box .col-title {
   max-width: 191px;
   width: 100%;
 }
-.authorsProject .container .col-box .col-title h4 {
+.authorsProject-container .col-box .col-title h4 {
   color: #303030;
   font-size: 16px;
   font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.authorsProject .container .col-box .col-title span {
+.authorsProject-container .col-box .col-title span {
   color: #303030;
   font-size: 14px;
   font-weight: 400;
   opacity: 0.6;
 }
-.authorsProject .container .col-box p {
+.authorsProject-container .col-box p {
   color: rgba(48, 48, 48, 0.6);
   text-align: end;
   font-size: 14px;
@@ -2998,7 +3017,7 @@ body {
   width: 100%;
 }
 @media (max-width: 768px) {
-  .authorsProject .container .col-box p {
+  .authorsProject-container .col-box p {
     margin-bottom: 3.125rem;
     margin-top: 20px;
     text-align: start;

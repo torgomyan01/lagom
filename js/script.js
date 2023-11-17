@@ -9,7 +9,6 @@ const {
     none: 'd-none'
 }
 
-AOS.init();
 let activePanelNavIndex = 0;
 let activePanelNavSuccess = true;
 
@@ -33,13 +32,14 @@ $(window).on('load', function (){
 
 
     const Planning = $('#planning .heading').offset().top;
+    const teamHead = $('#team .heading').offset().top;
     console.log(Planning)
+    console.log(teamHead)
     ScrollTrigger.create({
         start: `${Planning - 50}`,
         end: `${Planning + 200}`,
         toggleClass: {className: 'heading-open', targets: '.planning'},
     });
-
 
 
     const YoulGet = $('#youll-get').offset().top;
@@ -93,6 +93,14 @@ $(window).on('load', function (){
 
         }
     });
+    ScrollTrigger.create({
+        start: `${teamHead}`,
+        end: `${teamHead + 200}`,
+        toggleClass: {className: 'heading-open', targets: '.team'},
+    });
+
+
+    AOS.init();
 })
 
 
@@ -161,6 +169,62 @@ tween = gsap.to(panels, {
     }
 });
 
+
+// gsap.to(".gallery2", {
+//     y: -100,
+//     x: -100,
+//     duration: 2,
+//     ease: "elastic",
+//     scrollTrigger: {
+//         trigger: ".gallery2",
+//         containerAnimation: tween,
+//         start: "left center",
+//         toggleActions: "play none none reset"
+//     }
+// });
+
+// gsap.to(".image-3-1", {
+//     y: -100,
+//     x: -100,
+//     duration: 2,
+//     ease: "elastic",
+//     scrollTrigger: {
+//         trigger: ".image-3-1",
+//         containerAnimation: tween,
+//         start: "left center",
+//         toggleActions: "play none none reset"
+//     }
+// });
+
+
+// let elements = gsap.utils.toArray(document.querySelectorAll(".panel h2"));
+// let scrollTriggerTimeline = gsap.timeline();
+//
+// console.log(elements)
+//
+// panels.forEach((panel, i) => {
+//     ScrollTrigger.create({
+//         trigger: panel,
+//         start: "top 50%",
+//
+//         onEnter: () => {
+//             // gsap
+//             //   .timeline()
+//             //   .set(button, { className: "button" }, "+=1")
+//             //   .set(button, { className: "button non-active" }, "+=1");
+//             console.log(panels[i])
+//         },
+//         onEnterBack: () => {
+//             // gsap
+//             //   .timeline()
+//             //   .set(button, { className: "button" }, "+=1")
+//             //   .set(button, { className: "button non-active" }, "+=1");
+//             // gsap.set(".nav__info button", { color: "#0a71e4", fontWeight: "normal" });
+//             // gsap.set(buttons[i], { color: "#FF4087", fontWeight: "bold" });
+//             console.log(panels[i])
+//         }
+//     });
+// });
 
 
 
@@ -289,12 +353,83 @@ function ChangeSlider(numStatus){
 
 
 
+// const scrollTop = $('#youll-get').offset().top;
+// const contHeight = $('#container').height();
+// const panelss = gsap.utils.toArray(".panel-youl");
+//
+//
+// gsap.to(".panel-youl", {
+//     yPercent: -100,
+//     ease: "slow",
+//     stagger: 1,
+//     scrollTrigger: {
+//         trigger: "#container",
+//         start: "top +90",
+//         end: `${scrollTop + (panelss.length * contHeight)}`,
+//         scrub: 0,
+//         pin: true,
+//     }
+// });
+//
+//
+// gsap.set(".panel-youl", { zIndex: (i, target, targets) => targets.length - i });
+// const navLinks = gsap.utils.toArray(".section_nav a");
+// navLinks.forEach((link, i) => {
+//     link.addEventListener("mouseover", e => {
+//         e.preventDefault();
+//         console.log(i)
+//         gsap.to(window,
+//           {
+//               scrollTo: scrollTop + (i * contHeight)
+//           });
+//     });
+// });
+//
+// panelss.forEach((panel, i) => {
+//     ScrollTrigger.create({
+//         start: 0,
+//         end: `${scrollTop + (i * contHeight) + contHeight}`,
+//         onLeave: () => {
+//             if(navLinks[i + 1]) {
+//                 gsap.to(navLinks[i + 1], {scale: 1.3, color: "#303030"});
+//                 gsap.to(navLinks[i], {scale: 1, color: "#30303099"});
+//             }
+//         },
+//         onEnterBack: () => {
+//             gsap.to(navLinks[i], {scale: 1.3, color: "#303030"});
+//             if(navLinks[i + 1]) {
+//                 gsap.to(navLinks[i + 1], {scale: 1, color: "#30303099"});
+//             }
+//         },
+//     })
+// });
+//
+//
 
 
 const panelYoul = $('.panel-youl');
 const panelNav = $('.section_nav a');
 const youlTexts = $('.box-title .title1');
 
+// panelNav.on('mouseenter', function (e){
+//     e.preventDefault();
+//     const thisElement = $(this);
+//     const href = thisElement.attr('href');
+//     panelYoul.addClass('d-none').removeClass('active');
+//     $(href).removeClass('d-none');
+//
+//     youlTexts.addClass('d-none').removeClass('active');
+//     $(`#text-${href.replace(/#/g, '')}`).removeClass('d-none')
+//
+//
+//     setTimeout(() => {
+//         $(href).addClass('active')
+//         $(`#text-${href.replace(/#/g, '')}`).addClass('active')
+//     }, 100);
+//
+//     panelNav.removeClass('active');
+//     thisElement.addClass('active');
+// })
 
 
 panelNav.on('click', function (e){
@@ -306,7 +441,7 @@ panelNav.on('click', function (e){
 // ........ slick
 
 const allslicLengt = document.querySelectorAll('.slider .image')
-const span_count = document.querySelector('.count samp')
+const span_count = document.querySelector('.slider-text samp')
 span_count.innerText = `/ ${allslicLengt.length} `
 let activeIndex = 1;
 
@@ -319,6 +454,9 @@ $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     customPaging: function (slider, i) {
+        //FYI just have a look at the object to find available information
+        //press f12 to access the console in most browsers
+        //you could also debug or look in the source
 
         return  (i + 1) + '/' + slider.slideCount;
         // $('.slider-text .count span').text(`${activeIndex} `)
@@ -346,17 +484,19 @@ $('.slider').slick({
                 slidesToScroll: 1,
             }
         }
-
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
     ]
 }).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
     if(!slick.$dots){
         return;
     }
 
     const i = (currentSlide ? currentSlide : 0) + 1;
 
-    $('.count-box .count').text(i + '/' + (slick.$dots[0].children.length));
+    $('.slider-text .count').text(i + '/' + (slick.$dots[0].children.length));
 })
 
 
@@ -393,3 +533,5 @@ modal_btn1.addEventListener('click', ()=>{
 modal_btn2.addEventListener('click', ()=>{
     modal_purchase.hide()
 })
+
+
